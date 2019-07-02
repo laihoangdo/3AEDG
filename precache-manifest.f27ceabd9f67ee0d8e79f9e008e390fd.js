@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/3AEDG/static/media/vtd.d322583f.png"
   },
   {
-    "revision": "0160bd0e8a2490579c7d",
+    "revision": "84330dee5f2a178b7550",
     "url": "/3AEDG/static/css/main.a51b7d9c.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/3AEDG/static/media/thaytien1.169d09cf.jpg"
   },
   {
-    "revision": "0160bd0e8a2490579c7d",
-    "url": "/3AEDG/static/js/main.0160bd0e.chunk.js"
+    "revision": "84330dee5f2a178b7550",
+    "url": "/3AEDG/static/js/main.84330dee.chunk.js"
   },
   {
     "revision": "077f645a9a91a1e7ddff0b98a0a0255d",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/3AEDG/static/media/logo.ee7cd8ed.svg"
   },
   {
-    "revision": "427444f4068c2c141361f6585dec51f6",
+    "revision": "234de56b77231451d94e3b331fbef44d",
     "url": "/3AEDG/index.html"
   }
 ];
