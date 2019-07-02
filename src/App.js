@@ -30,7 +30,7 @@ class App extends Component {
                           <a href="" className="site-btn header-btn">Login</a>
                           <nav className="main-menu">
                               <ul>
-                                  <li><a href="index.html">Trang chu</a></li>
+                                  <li><a href="index.html">Trang chu test</a></li>
                                   <li><a href="#">About us</a></li>
                                   <li><a href="courses.html">Courses</a></li>
                                   <li><a href="blog.html">News</a></li>
