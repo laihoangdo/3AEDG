@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import logo from './logo.svg';
 import logo1 from './images/vtd.png';
 import bg from './images/bg.jpg';
@@ -30,7 +30,7 @@ class App extends Component {
                           <a href="" className="site-btn header-btn">Login</a>
                           <nav className="main-menu">
                               <ul>
-                                  <li><a href="index.html">Home</a></li>
+                                  <li><a href="index.html">Trang chu</a></li>
                                   <li><a href="#">About us</a></li>
                                   <li><a href="courses.html">Courses</a></li>
                                   <li><a href="blog.html">News</a></li>
