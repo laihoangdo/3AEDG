@@ -1,5 +1,5 @@
 {
-  "homepage": "http://laihoangdo.github.io/3AEDG",
+  "homepage": "./",
   "name": "design-website",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +26,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "react-router-dom": "^5.0.1"
   }
 }
