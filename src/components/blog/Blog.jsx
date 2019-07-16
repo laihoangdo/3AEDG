@@ -66,7 +66,7 @@ export default class Blog extends PureComponent {
                                 <div className="center-wrap">
                                     <Link to={this.props.btnLink} className="btn-a">
                                         <div className="button">
-                                            <Icofont icon="icofont-long-arrow-left" /> {this.props.BlogBtn}
+                                            {this.props.BlogBtn} <Icofont icon="icofont-long-arrow-right" />
                                             <div className="mask"></div>
                                         </div>
                                     </Link>
@@ -92,11 +92,11 @@ Blog.propTypes = {
 //Default Props
 Blog.defaultProps = {
     SectionbgTitle: "Blog",
-    sectionTitle: "Our Blog",
+    sectionTitle: "Blog Của Chúng tôi",
     sectionDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
+        ".Góc chia sẻ kinh nghiệm học tập và những bài thực hành hay",
     btnLink: "/blog-one",
-    BlogBtn: "View All Post",
+    BlogBtn: "Tất cả",
     blogsData: [
         {
             postImage: require("../../images/design-01.jpg"),

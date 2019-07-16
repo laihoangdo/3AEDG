@@ -10,6 +10,8 @@ import { CSSTransition } from "react-transition-group";
 // import teacher from './images/thaytien1.jpg';
 // import './App.css';
 import './css/style.css';
+import './css/responsive.css';
+import './css/color-default.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './components/home';

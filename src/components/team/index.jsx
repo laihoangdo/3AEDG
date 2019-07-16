@@ -28,7 +28,8 @@ export default class Team extends PureComponent {
                         <h3 className="title">{team.Name}</h3>
                         <span className="post">{team.Profession}</span>
                         <ul className="icon">
-                            <li><Link to={team.facebookLink}><Icofont icon="icofont-facebook" /></Link></li>
+                            {/*<li><Link to={team.facebookLink}><Icofont icon="icofont-facebook" /></Link></li>*/}
+                            <li><a href={this.props.teamsData[index].facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
                             <li><Link to={team.linkedinLink}><Icofont icon="icofont-linkedin" /></Link></li>
                             <li><Link to={team.twitterLink}><Icofont icon="icofont-twitter" /></Link></li>
                         </ul>
@@ -103,40 +104,24 @@ Team.defaultProps = {
     SectionbgTitle: "Giảng Viên",
     sectionTitle: "Đội Ngũ Giảng Viên",
     sectionDescription:
-        "Giảng Viên Được Đào Tạo Bài Bản, Tận Tâm Trong Công Việc.",
+        ".Giảng Viên Được Đào Tạo Bài Bản, Tận Tâm Trong Công Việc",
     teamsData: [
         {
-            Image: require("../../images/thaytien1.jpg"),
+            Image: require("../../images/thaytien-avatar01.jpg"),
             Name: "Thầy Tiền",
             Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "/#0",
+            facebookLink: "//facebook.com/tiencanh.chonphieubong",
             linkedinLink: "/#0",
             twitterLink: "/#0",
         },
         {
-            Image: require("../../images/thaytien1.jpg"),
-            Name: "Thầy Tiền",
+            Image: require("../../images/thaychau-avatar01.jpg"),
+            Name: "Thầy Châu",
             Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "/#0",
+            facebookLink: "//facebook.com/profile.php?id=100026725434352",
             linkedinLink: "/#0",
             twitterLink: "/#0",
-        },
-        {
-            Image: require("../../images/thaytien1.jpg"),
-            Name: "Thầy Tiền",
-            Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "/#0",
-            linkedinLink: "/#0",
-            twitterLink: "/#0",
-        },
-        {
-            Image: require("../../images/thaytien1.jpg"),
-            Name: "Thầy Tiền",
-            Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "/#0",
-            linkedinLink: "/#0",
-            twitterLink: "/#0",
-        },
+        }
 
     ]
 };

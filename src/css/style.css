@@ -45,6 +45,7 @@ This files contents are outlined below>>>>>
    ========================= */
    @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
    @import url('https://fonts.googleapis.com/css?family=Monoton');
+    @import "~animate.css/animate.css";
    html, body {
        font-family: 'Poppins', sans-serif;
        font-size: 14px;
@@ -344,7 +345,8 @@ This files contents are outlined below>>>>>
    .navbar-light {
        transition: .6s;
        -webkit-transition: .6s;
-       background-color: #e9dbc8 !important;
+       /*#e9dbc8*/
+       background-color: #6666ff !important;
    }
    .navbar-light .navbar-nav .nav-link {
        color: #000;
@@ -479,10 +481,10 @@ This files contents are outlined below>>>>>
        background-image: url(../images/anhbia01.jpg);
    }
    .slide-bg-2 {
-       background-image: url(../images/logo01.png);
+       background-image: url(../images/slide-bg-02.jpg);
    }
    .slide-bg-3 {
-       background-image: url(../images/logo01.png);
+       background-image: url(../images/slide-bg-03.jpg);
    }
    .hompage-slides-wrapper {
        position: relative;

@@ -54,8 +54,8 @@ export default class  Banner extends PureComponent {
                                                 <div className="center-wrap">
                                                     <Link to={bannerone.BtnLink} className="btn-a">
                                                         <div className="button">
-                                                        <Icofont icon="icofont-long-arrow-left" />
-                                                        {bannerone.BtnName}
+
+                                                        {bannerone.BtnName} <Icofont icon="icofont-long-arrow-right" />
                                                         <div className="mask" /></div>
                                                     </Link>
                                                 </div>
@@ -117,47 +117,47 @@ Banner.defaultProps = {
     banneronesData: [
         {
             BgClass: "single-slider-item slide-bg-1",
-            TopTitle: "Clean & Creative",
-            Title: "Fully Responsive Design",
+            TopTitle: "Sáng Tạo & Đam Mê",
+            Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
+                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
             BtnLink:  "/#0",
-            BtnName: "get started"
+            BtnName: "Hành Động Thôi"
         },
         {
             BgClass: "single-slider-item slide-bg-2",
-            TopTitle: "Clean & Creative",
-            Title: "Fully Responsive Design",
+            TopTitle: "Sáng Tạo & Đam Mê",
+            Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
+                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
             BtnLink:  "/#0",
-            BtnName: "get started"
+            BtnName: "Hành Động Thôi"
         },
         {
             BgClass: "single-slider-item slide-bg-3",
-            TopTitle: "Clean & Creative",
-            Title: "Fully Responsive Design",
+            TopTitle: "Sáng Tạo & Đam Mê",
+            Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
+                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
             BtnLink:  "/#0",
-            BtnName: "get started"
+            BtnName: "Hành Động Thôi"
         }
     ],
     thumbsData: [
         {
             ThumbIcon: "icofont-rocket-alt-1",
-            ThumbTitle: "Beautiful Designs",
-            ThumbContent: "We strive to embrace and drive change in our industry which allows us to keep our clients relevant.",
+            ThumbTitle: "Cam Kết",
+            ThumbContent: "Bạn Sẽ được đào tạo bởi những người thầy giỏi có chuyên môm cao và tận tâm trong công việc.",
         },
         {
             ThumbIcon: "icofont-box",
-            ThumbTitle: "Unique Features",
-            ThumbContent: "We strive to embrace and drive change in our industry which allows us to keep our clients relevant.",
+            ThumbTitle: "Thực Hành",
+            ThumbContent: "Được thực hành 90% trong quá trình học với sự chỉ bảo của giảng viên.",
         },
         {
             ThumbIcon: "icofont-live-support",
-            ThumbTitle: "Reliable Support",
-            ThumbContent: "We strive to embrace and drive change in our industry which allows us to keep our clients relevant.",
+            ThumbTitle: "Hỗ Trợ",
+            ThumbContent: "Hỗ trợ nơi ở cho những bạn có hoàn cảnh đặc biệt khó khăn và ở xa nhà.",
         },
     ]
 };

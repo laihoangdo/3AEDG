@@ -178,8 +178,8 @@ export default class  Header extends PureComponent {
                         <div className="col-md-7 col-lg-7">
                             <div className="address-bar">
                                 <ul className="list-inline">
-                                    <li><a href={this.props.mailLink}> {this.props.mail}<Icofont icon="icofont-email"/></a></li>
-                                    <li><a href={this.props.numberLink}> {this.props.Number}<Icofont icon="icofont-ui-call" /></a></li>
+                                    <li><a href={this.props.mailLink}><Icofont icon="icofont-email"/> {this.props.mail}</a></li>
+                                    <li><a href={this.props.numberLink}><Icofont icon="icofont-ui-call" /> {this.props.Number}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -475,11 +475,11 @@ Header.propTypes = {
 Header.defaultProps = {
   MainLogo: require('../../images/logo01.png'),
   Logo2: require('../../images/logo01.png'),
-  mailLink: "mailto:name@email.com",
-  mail: "support@roxy.com ",
-  numberLink: "callto:+4917640206387",
-  Number: "+4917640206387",
-  facebookLink: "//facebook.com/envato",
-  twitterLink: "//twitter.com/envato",
-  instagramLink: "//instagram.com/envato/",
+  mailLink: "mailto:laihoangdo0506@gmail.com",
+  mail: "laihoangdo@gmail.com",
+  numberLink: "callto:+84972268792",
+  Number: "+84972268792",
+  facebookLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
+  twitterLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
+  instagramLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
 };

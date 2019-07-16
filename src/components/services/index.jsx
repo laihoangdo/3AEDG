@@ -14,6 +14,11 @@ export default class Services extends PureComponent {
                     </div>
                     <h3>{service.heading}</h3>
                     <p>{service.description}</p>
+                    <img
+                        src={service.Image}
+                        alt="Gallery"
+                        className="img-fluid"
+                    />
                 </div>
             </div>
         ));
@@ -52,47 +57,53 @@ Services.propTypes = {
 };
 //Default Props
 Services.defaultProps = {
-    SectionbgTitle: "Services",
-    sectionTitle: "Services",
+    SectionbgTitle: "Khóa Học",
+    sectionTitle: "Các Khóa Học Được Đào Tạo Ở Trung Tâm",
     sectionDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
+        "Dựa Trên Giáo Trình Được Biên Soạn Bởi Các Giảng Viên Giỏi Nhất.",
 
     servicesData: [
         {
             icon: "icofont-automation",
-            heading: "Creative Solutions",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
         {
             icon: "icofont-bullseye",
-            heading: "Excellent Features",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
         {
             icon: "icofont-woman-in-glasses",
-            heading: "Friendly Support",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
         {
             icon: "icofont-chart-growth",
-            heading: "SEO & Advertising",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
         {
             icon: "icofont-network-tower",
-            heading: "Marketing & Consulting",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
         {
             icon: "icofont-laptop-alt",
-            heading: "Design & Development",
+            heading: "Corel",
             description:
-                "We strive to embrace and drive change in our industry which allows us to keep our clients relevant."
+                "Corel",
+            Image: require("../../images/corel.jpg"),
         },
     ]
 };
