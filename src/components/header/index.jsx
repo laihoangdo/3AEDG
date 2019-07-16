@@ -255,7 +255,7 @@ export default class  Header extends PureComponent {
                                         className="smooths nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Home
+                                        Trang Chủ
                                     </Link>
                                 </Nav.Item>
 
@@ -270,7 +270,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Services
+                                        Khóa Học
                                     </Link>
                                 </Nav.Item>
 
@@ -285,7 +285,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Works
+                                        Sản Phẩm
                                     </Link>
                                 </Nav.Item>
 
@@ -300,7 +300,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        About
+                                        Về Chúng Tôi
                                     </Link>
                                 </Nav.Item>
 
@@ -315,7 +315,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Team
+                                        Giảng Viên
                                     </Link>
                                 </Nav.Item>
 
@@ -360,7 +360,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Contact
+                                        Liên Hệ
                                     </Link>
                                 </Nav.Item>
                             </React.Fragment>
@@ -372,7 +372,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Home
+                                        Trang Chủ
                                     </NavLink>
                                 </Nav.Item>
 
@@ -382,7 +382,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Services
+                                        Khóa Học
                                     </NavLink>
                                 </Nav.Item>
 
@@ -392,7 +392,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Works
+                                        Sản Phẩm
                                     </NavLink>
                                 </Nav.Item>
 
@@ -402,7 +402,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        About
+                                        Về Chúng Tôi
                                     </NavLink>
                                 </Nav.Item>
 
@@ -412,7 +412,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Team
+                                        Giảng Viên
                                     </NavLink>
                                 </Nav.Item>
 
@@ -432,7 +432,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Pricing
+                                        Lịch
                                     </NavLink>
                                 </Nav.Item>
 
@@ -442,7 +442,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Contact
+                                        Liên Hệ
                                     </NavLink>
                                 </Nav.Item>
                             </React.Fragment>

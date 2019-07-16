@@ -34,7 +34,7 @@ class App extends Component {
             <Footer/>
             </div> */}
 
-<div>
+            <div>
                         <Route
                             render={({ location }) => (
                                 <CSSTransition

@@ -7,6 +7,11 @@ import teacher from '../../images/thaytien1.jpg';
 import Header from '../header';
 import Footer from '../footer';
 import Banner from '../Banner';
+import Services from "../services";
+import Work from "../work";
+import Team from "../team";
+import Blog from "../blog/Blog";
+import Review from "../Review";
 
 export default class HomeOne extends PureComponent {
     render() {
@@ -16,7 +21,12 @@ export default class HomeOne extends PureComponent {
             <Header pageName="home" />
             {/* BannerOne: src/components/banner/BannerOne */}
             <Banner />
-            {/* Services: src/components/Services.jsx */}          
+            {/* Services: src/components/Services.jsx */}
+            <Services/>
+            <Work/>
+            <Team/>
+            <Blog/>
+            <Review/>
             <Footer />
         </React.Fragment>
         )
