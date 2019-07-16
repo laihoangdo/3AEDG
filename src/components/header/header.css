@@ -1,0 +1,12 @@
+.primary-color{
+    background-color: #4285f4!important;
+}
+.banner-header01 img{
+    height: 14rem;
+    width: 120%;
+}
+.container .name-company{
+    margin-right: 5rem;
+    font: bold;
+    font-size: 2rem;
+}

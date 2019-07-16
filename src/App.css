@@ -22,6 +22,12 @@
 .App-link {
   color: #61dafb;
 }
+.layout{
+  position: relative;
+    padding: 0 7rem;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -1595,6 +1601,10 @@ ol {
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {
+  .layout{
+    padding: 0 2.5rem;
+    width: 100vw;
+  }
   .section-title {
     padding: 0;
   }
