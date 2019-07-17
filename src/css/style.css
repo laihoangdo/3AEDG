@@ -55,7 +55,7 @@ This files contents are outlined below>>>>>
        letter-spacing: .5;
        overflow-x: hidden;
        -webkit-font-smoothing: antialiased;
-       direction: rtl;
+       /* direction: rtl; */
    }
    .navbar{
        padding: 0;

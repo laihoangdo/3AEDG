@@ -244,5 +244,5 @@ Work.defaultProps = {
     SectionbgTitle: "Trải Nghiệm",
     sectionTitle: "Sản Phẩm Học Viên",
     sectionDescription:
-        ".Sản Phẩm được học viên tại Đồ Họa Anh Em Hoàn thành",
+        "Sản Phẩm được học viên tại Đồ Họa Anh Em Hoàn thành.",
 };

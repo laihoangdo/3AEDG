@@ -2,15 +2,10 @@ import React,{PureComponent} from 'react';
 import OwlCarousel from "react-owl-carousel3";
 import Icofont from "react-icofont";
 import PropTypes from "prop-types";
-import { Link } from 'react-router-dom';
 import VisibilitySensor from "react-visibility-sensor";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default class  Banner extends PureComponent {
-
-    constructor(props){
-        super(props)
-    }
 
     render(){
         const banneronedata = this.props.banneronesData.map(
