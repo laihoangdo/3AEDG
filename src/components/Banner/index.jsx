@@ -4,6 +4,7 @@ import Icofont from "react-icofont";
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 import VisibilitySensor from "react-visibility-sensor";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default class  Banner extends PureComponent {
 
@@ -52,12 +53,13 @@ export default class  Banner extends PureComponent {
                                                     {bannerone.Content}
                                                 </p>
                                                 <div className="center-wrap">
-                                                    <Link to={bannerone.BtnLink} className="btn-a">
-                                                        <div className="button">
+                                                    <AnchorLink href="#services" className="btn btn-primary">Get Started</AnchorLink>
+                                                    {/*<Link to={bannerone.BtnLink} className="btn-a">*/}
+                                                        {/*<div className="button">*/}
 
-                                                        {bannerone.BtnName} <Icofont icon="icofont-long-arrow-right" />
-                                                        <div className="mask" /></div>
-                                                    </Link>
+                                                        {/*{bannerone.BtnName} <Icofont icon="icofont-long-arrow-right" />*/}
+                                                        {/*<div className="mask" /></div>*/}
+                                                    {/*</Link>*/}
                                                 </div>
                                             </div>
                                         </div>
@@ -121,7 +123,7 @@ Banner.defaultProps = {
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
                 ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "/#0",
+            BtnLink:  "services",
             BtnName: "Hành Động Thôi"
         },
         {
@@ -130,7 +132,7 @@ Banner.defaultProps = {
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
                 ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "/#0",
+            BtnLink:  "services",
             BtnName: "Hành Động Thôi"
         },
         {
@@ -139,7 +141,7 @@ Banner.defaultProps = {
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
                 ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "/#0",
+            BtnLink:  "services",
             BtnName: "Hành Động Thôi"
         }
     ],
