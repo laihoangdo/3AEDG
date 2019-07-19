@@ -3,9 +3,66 @@ import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import {fetchBlogsAction} from "../../store/blog/action";
+import fetchBlogs from "../../store/blog";
 
-export default class Blog extends PureComponent {
+// const mapStateToProps = state => ({
+//     // blogs: fetchBlogs(state),
+// })
+function mapStateToProps(state) {
+    return {
+        blogs: state.blogs.blogs,
+    }
+}
+
+// const mapDispatchToProps = dispatch => bindActionCreators({
+//     fetchBlogs: fetchBlogs
+// }, dispatch)
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        fetchBlogsAction,
+    }, dispatch);
+}
+
+export default
+@connect(mapStateToProps, mapDispatchToProps)
+class Blog extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            blogList : null
+        }
+    }
+    fetchBlog(){
+    // ,{ method: 'get', mode: 'no-cors',headers: {
+    //         'Access-Control-Allow-Origin':'*'
+    //     } }
+        fetch(`https://nodejssalesforce.herokuapp.com/blogs` , {method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }} ).then(res => res.json())
+            .then(data => {
+                console.log('data' , data);
+                this.setState({blogList:data})
+            })
+    }
+    callApi = async () => {
+        const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs');
+        const body = await response.json();
+        if (response.status !== 200) throw Error(body.message);
+        console.log('res' , body);
+        console.log(body.records);
+        this.setState({blogList:body.records});
+        return body;
+    };
+    componentWillMount() {
+        // const {fetchBlogs} = this.props;
+        // this.fetchBlogs();
+    }
     componentDidMount() {
+        this.callApi();
         let scrollWithOffset = (el, offset) => {
             const elementPosition = el.offsetTop - offset;
             window.scroll({
@@ -16,8 +73,20 @@ export default class Blog extends PureComponent {
         };
         this.setState({ scrollWithOffset });
     }
+    // componentDidUpdate(prevProps, prevState, snapshot) {
+    //     if(prevProps.blogs !== this.props.blogs){
+    //         this.callApi();
+    //     }
+    // }
     render() {
         //Blog loop start
+        const {blogList} = this.state;
+        if(!blogList){
+            return(
+                <div>loading</div>
+            )
+        }
+        console.log('blogs' , blogList);
         const blogdata = this.props.blogsData.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
@@ -43,6 +112,31 @@ export default class Blog extends PureComponent {
                 </div>
             </div>
         ));
+        // const blogdata = blogList.map((blog, index) => (
+        //     <div className="col-md-6 col-lg-6" key={index}>
+        //         <div className="blog-item">
+        //             <Link to={blog.Author_Link_Social__c} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+        //             <div className="blog-info">
+        //                 <div className="date-box">
+        //                     4<span className="month">5</span>
+        //                 </div>
+        //                 <div className="title-meta">
+        //                     <h2><Link to={blog.Author_Link_Social__c}>{blog.Tittle__c}</Link></h2>
+        //                     <div className="post-meta">
+        //                         <ul>
+        //                             <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
+        //                             <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
+        //                             <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>
+        //                         </ul>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //             <div className="post-content">
+        //                 <p>{blog.Content__c}</p>
+        //             </div>
+        //         </div>
+        //     </div>
+        // ));
         //Blog loop END
         return (
             <React.Fragment>
@@ -94,7 +188,7 @@ Blog.defaultProps = {
     SectionbgTitle: "Blog",
     sectionTitle: "Blog Của Chúng tôi",
     sectionDescription:
-        ".Góc chia sẻ kinh nghiệm học tập và những bài thực hành hay",
+        "Góc chia sẻ kinh nghiệm học tập và những bài thực hành hay.",
     btnLink: "/blog-one",
     BlogBtn: "Tất cả",
     blogsData: [

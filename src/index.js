@@ -5,11 +5,22 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {HashRouter} from 'react-router-dom';
+import rootReducer from "./store";
+import { createLogger } from 'redux-logger';
+import {applyMiddleware, createStore} from "redux";
+import {Provider} from "react-redux";
 
+const logger = createLogger();
+const store =  createStore(
+    rootReducer,
+    applyMiddleware(logger)
+);
 ReactDOM.render(
+    <Provider store={store}>
     <HashRouter>
         <App />
     </HashRouter>
+    </Provider>
      
      , document.getElementById('root'));
 
