@@ -2,6 +2,9 @@
     .top-header {
         display: none;
     }
+    #map {
+		height: 383px;
+	}
 
     .modal-dialog {
         width: 95%;

@@ -7,6 +7,7 @@ import Work from "../work";
 import Team from "../team";
 import Blog from "../blog/Blog";
 import Review from "../Review";
+import Contact from '../contact';
 
 export default class HomeOne extends PureComponent {
     render() {
@@ -22,6 +23,7 @@ export default class HomeOne extends PureComponent {
             <Team/>
             <Blog/>
             <Review/>
+            <Contact/>
             <Footer />
         </React.Fragment>
         )

@@ -53,7 +53,7 @@ export default class  Header extends PureComponent {
                             <div className="social-icons">
                                 <ul className="list-inline">
                                     <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-twitter" /></a></li>
+                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger" /></a></li>
                                     <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>
                                 </ul>
                             </div>
@@ -210,7 +210,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Pricing
+                                        Lịch Khai Giảng
                                     </Link>
                                 </Nav.Item>
 
@@ -342,9 +342,9 @@ Header.defaultProps = {
   Logo2: require('../../images/logo01.png'),
   mailLink: "mailto:laihoangdo0506@gmail.com",
   mail: "laihoangdo@gmail.com",
-  numberLink: "callto:+84972268792",
-  Number: "+84972268792",
+  numberLink: "callto:+84938636843",
+  Number: "0938636843",
   facebookLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
-  twitterLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
+  twitterLink: "https://zalo.me/0972268792",
   instagramLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
 };
