@@ -8,6 +8,7 @@ import Team from "../team";
 import Blog from "../blog/Blog";
 import Review from "../Review";
 import Contact from '../contact';
+import AboutUs from '../aboutus';
 
 export default class HomeOne extends PureComponent {
     render() {
@@ -22,6 +23,7 @@ export default class HomeOne extends PureComponent {
             <Work/>
             <Team/>
             <Blog/>
+            <AboutUs/>
             <Review/>
             <Contact/>
             <Footer />

@@ -157,7 +157,7 @@ export default class  Header extends PureComponent {
                                 <Nav.Item>
                                     <Link
                                         activeclass="active"
-                                        to="about"
+                                        to="aboutus"
                                         spy={true}
                                         smooth={true}
                                         offset={-200}

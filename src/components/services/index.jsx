@@ -57,8 +57,8 @@ Services.propTypes = {
 };
 //Default Props
 Services.defaultProps = {
-    SectionbgTitle: "Khóa Học",
-    sectionTitle: "Các Khóa Học Được Đào Tạo Ở Trung Tâm",
+    SectionbgTitle: "KHÓA HỌC",
+    sectionTitle: "KHÓA HỌC THIẾT KẾ ĐỒ HỌA CƠ BẢN NÂNG CAO",
     sectionDescription:
         "Dựa Trên Giáo Trình Được Biên Soạn Bởi Các Giảng Viên Giỏi Nhất.",
 
