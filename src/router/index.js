@@ -1,6 +1,9 @@
 import Home from "../components/home";
 import NotFound from "../modules/notFound";
 import AboutUs from "../components/aboutus";
+import Single from "../components/blog/Single";
+import HomeOne from "../components/HomeOne";
+import SingleBlog from "../components/blog/SingleBlog";
 
 
 
@@ -8,15 +11,19 @@ import AboutUs from "../components/aboutus";
 const routes = [
   {
       path: '/home',
-      component: Home,
+      component: HomeOne,
   },
   {
     path: '/aboutus',
     component: AboutUs
   },
   {
+    path: '/blog-posts/:id',
+    component: Single
+  },
+  {
       path: '/',
-      component: Home,
+      component: HomeOne,
       exact: true,
   },
   {

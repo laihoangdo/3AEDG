@@ -77,7 +77,7 @@ BlogPost.defaultProps = {
 
     blogpostsData: [
         {
-            postImage: require("../../assets/img/blog-three.jpg"),
+            postImage: require("../../images/design-01.jpg"),
             postLink: "/blog-details",
             date: "25",
             month: "Feb",
@@ -91,7 +91,7 @@ BlogPost.defaultProps = {
             TagLink:  "/#0",
         },
         {
-            postImage: require("../../assets/img/blog-one.jpg"),
+            postImage: require("../../images/design-01.jpg"),
             postLink: "/blog-details",
             date: "25",
             month: "Feb",
@@ -105,7 +105,7 @@ BlogPost.defaultProps = {
             TagLink:  "/#0",
         },
         {
-            postImage: require("../../assets/img/blog-two.jpg"),
+            postImage: require("../../images/design-01.jpg"),
             postLink: "/blog-details",
             date: "25",
             month: "Feb",

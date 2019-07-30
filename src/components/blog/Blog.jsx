@@ -60,9 +60,10 @@ class Blog extends PureComponent {
     componentWillMount() {
         // const {fetchBlogs} = this.props;
         // this.fetchBlogs();
+        this.callApi();
     }
     componentDidMount() {
-        this.callApi();
+        // this.callApi();
         let scrollWithOffset = (el, offset) => {
             const elementPosition = el.offsetTop - offset;
             window.scroll({
@@ -87,56 +88,56 @@ class Blog extends PureComponent {
             )
         }
         console.log('blogs' , blogList);
-        const blogdata = this.props.blogsData.map((blog, index) => (
-            <div className="col-md-6 col-lg-6" key={index}>
-                <div className="blog-item">
-                    <Link to={blog.postLink} className="blog-img"><img src={blog.postImage} alt="blog-one" /></Link>
-                    <div className="blog-info">
-                        <div className="date-box">
-                            {blog.date} <span className="month">{blog.month}</span>
-                        </div>
-                        <div className="title-meta">
-                            <h2><Link to={blog.postLink}>{blog.posttitle}</Link></h2>
-                            <div className="post-meta">
-                                <ul>
-                                    <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.authorLink}>{blog.authorName}</Link></li>
-                                    <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.CommentsLink}>{blog.TotalComments}</Link></li>
-                                    <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.TagLink}>{blog.TagName}</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="post-content">
-                        <p>{blog.postContent}</p>
-                    </div>
-                </div>
-            </div>
-        ));
-        // const blogdata = blogList.map((blog, index) => (
+        // const blogdata = this.props.blogsData.map((blog, index) => (
         //     <div className="col-md-6 col-lg-6" key={index}>
         //         <div className="blog-item">
-        //             <Link to={blog.Author_Link_Social__c} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+        //             <Link to={blog.postLink} className="blog-img"><img src={blog.postImage} alt="blog-one" /></Link>
         //             <div className="blog-info">
         //                 <div className="date-box">
-        //                     4<span className="month">5</span>
+        //                     {blog.date} <span className="month">{blog.month}</span>
         //                 </div>
         //                 <div className="title-meta">
-        //                     <h2><Link to={blog.Author_Link_Social__c}>{blog.Tittle__c}</Link></h2>
+        //                     <h2><Link to={blog.postLink}>{blog.posttitle}</Link></h2>
         //                     <div className="post-meta">
         //                         <ul>
-        //                             <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-        //                             <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-        //                             <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>
+        //                             <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.authorLink}>{blog.authorName}</Link></li>
+        //                             <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.CommentsLink}>{blog.TotalComments}</Link></li>
+        //                             <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.TagLink}>{blog.TagName}</Link></li>
         //                         </ul>
         //                     </div>
         //                 </div>
         //             </div>
         //             <div className="post-content">
-        //                 <p>{blog.Content__c}</p>
+        //                 <p>{blog.postContent}</p>
         //             </div>
         //         </div>
         //     </div>
         // ));
+        const blogdata = blogList.map((blog, index) => (
+            <div className="col-md-6 col-lg-6" key={index}>
+                <div className="blog-item">
+                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+                    <div className="blog-info">
+                        <div className="date-box">
+                            4<span className="month">5</span>
+                        </div>
+                        <div className="title-meta">
+                            <h2><Link to={blog.Author_Link_Social__c}>{blog.Tittle__c}</Link></h2>
+                            <div className="post-meta">
+                                <ul>
+                                    <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
+                                    <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
+                                    <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="post-content">
+                        <p>{blog.Content__c}</p>
+                    </div>
+                </div>
+            </div>
+        ));
         //Blog loop END
         return (
             <React.Fragment>
@@ -158,7 +159,7 @@ class Blog extends PureComponent {
                             {blogdata}
                             <div className="col-lg-12 col-md-12 all-post">
                                 <div className="center-wrap">
-                                    <Link to={this.props.btnLink} className="btn-a">
+                                    <Link to={{pathname: `blog-posts/${this.props.Id}`}} className="btn-a">
                                         <div className="button">
                                             {this.props.BlogBtn} <Icofont icon="icofont-long-arrow-right" />
                                             <div className="mask"></div>

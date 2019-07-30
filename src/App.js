@@ -8,6 +8,8 @@ import './css/responsive.css';
 import './css/color-default.css';
 import HomeOne from './components/HomeOne';
 import ScrollUpBtn from './components/scroll';
+import Single from './components/blog/Single';
+import routes from './router';
 
 class App extends Component {
   render() {
@@ -37,14 +39,27 @@ class App extends Component {
                                     classNames="fade"
                                 >
                                     <section className="route-section">
-                                        <Switch location={location}>
+                                        {/* <Switch location={location}>
                                             
                                             <Route
                                                 path="/"
                                                 component={HomeOne}
                                             />
+                                            <Route
+                                                path="/blog-posts"
+                                                component={Single}
+                                            />
                                             <Redirect to="/aboutus" />
-                                        </Switch>
+                                        </Switch> */}
+                                          <Switch location={location}>
+                                            {
+                                              routes.map(({...restRouter}) => {
+                                                return (
+                                                    <Route {...restRouter}/>
+                                                )
+                                              })
+                                            }
+                                          </Switch>
                                     </section>
                                 </CSSTransition>
                             )}

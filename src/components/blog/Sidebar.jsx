@@ -101,21 +101,21 @@ BlogSidebar.defaultProps = {
     sideData: [
         {
             postsLink: "/#0",
-            Image: require("../../assets/img/post_1.jpg"),
+            Image: require("../../images/design-01.jpg"),
             PostTitle: "Lorem ipsum dolor sit amet",
             postContent: "Lorem ipsum dolor sit amet",
             postDate: "10 Mar",
         },
         {
             postsLink: "/#0",
-            Image: require("../../assets/img/post_2.jpg"),
+            Image: require("../../images/design-01.jpg"),
             PostTitle: "Lorem ipsum dolor sit amet",
             postContent: "Lorem ipsum dolor sit amet",
             postDate: "10 Mar",
         },
         {
             postsLink: "/#0",
-            Image: require("../../assets/img/post_3.jpg"),
+            Image: require("../../images/design-01.jpg"),
             PostTitle: "Lorem ipsum dolor sit amet",
             postContent: "Lorem ipsum dolor sit amet",
             postDate: "10 Mar",
