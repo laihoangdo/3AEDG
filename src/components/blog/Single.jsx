@@ -11,16 +11,34 @@ import Footer from '../footer';
 // import Comments from "./Comment";
 
 export default class Single extends PureComponent {
+    constructor(props){
+        super(props);
+        this.state = {
+            blogDetail : {},
+        }
+    }
     componentWillMount(){
         const { id } = this.props.match.params.id;
         console.log(' id handle' , this.props.match.params.id);
+        this.callApi(this.props.match.params.id);
     }
+    callApi = async (id) => {
+        console.log('id re' , id);
+        const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs/' + id);
+        const body = await response.json();
+        if (response.status !== 200) throw Error(body.message);
+        console.log('res' , body);
+        this.setState({blogDetail:body});
+        // return body;
+    };
     // componentDidMount () {
     //     const { id } = this.props.match.params.id;
     //     console.log(' id handle' , this.props.match.params.id);
     // }
     render() {
         console.log('render');
+        console.log('blog detail' , this.state.blogDetail);
+        const {Id ,Name , Image__c, Content__c} = this.state.blogDetail;
         return (
             <React.Fragment>
                 <Header/>
@@ -46,7 +64,7 @@ export default class Single extends PureComponent {
                                     <div className="col-lg-12">
                                         <div className="blog-details">
                                             <div className="post-img">
-                                                <img src={this.props.SingleImage} alt="blog-one" />
+                                                <img src={Image__c} alt="blog-one" />
                                             </div>
                                             
                                             <div className="blog-info">
@@ -66,7 +84,7 @@ export default class Single extends PureComponent {
                                             </div>
                                 
                                             <div className="post-content">
-                                                <p>{this.props.PostContent}</p>
+                                                <p>{Content__c}</p>
                                                 
                                                 <div className="sharing-link">
                                                     <ul>
