@@ -6,7 +6,7 @@ is the file you need to edit to change the look of the
 theme.
 
 This files contents are outlined below>>>>>
-
+.search-form .form-control
 *******************************************
 *******************************************
 
@@ -1205,6 +1205,8 @@ This files contents are outlined below>>>>>
    .search-form .form-control {
        border-radius: 0;
        height: 42px;
+       /*new*/
+       margin-left: 3rem;
    }
    .search-form .btn-default {
        position: absolute;
@@ -1279,7 +1281,13 @@ This files contents are outlined below>>>>>
    .blog-details .post-content p {
        margin-bottom: 20px;
        line-height: 26px;
+       /*new*/
+       height: 9rem;
    }
+.post-content p {
+
+    height: 9rem;
+}
    .sharing-link {
        background: #fff;
        padding: 5px 15px;

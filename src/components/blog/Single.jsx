@@ -38,7 +38,7 @@ export default class Single extends PureComponent {
     render() {
         console.log('render');
         console.log('blog detail' , this.state.blogDetail);
-        const {Id ,Name , Image__c, Content__c} = this.state.blogDetail;
+        const {Id ,Name , Image__c, Content__c , Tittle__c , Tag__c , Author__c , Author_Link_Social__c} = this.state.blogDetail;
         return (
             <React.Fragment>
                 <Header/>
@@ -72,7 +72,7 @@ export default class Single extends PureComponent {
                                                 {this.props.SingleDate} <span className="month">{this.props.SingleMonth}</span>
                                                 </div>
                                                 <div className="title-meta">
-                                                    <h2>{this.props.SingleTitle}</h2>
+                                                    <h2>{Tittle__c}</h2>
                                                     <div className="post-meta">
                                                         <ul>
                                                             <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>
@@ -84,7 +84,8 @@ export default class Single extends PureComponent {
                                             </div>
                                 
                                             <div className="post-content">
-                                                <p>{Content__c}</p>
+                                                {/*<textarea value={Content__c} ></textarea>*/}
+                                                <body>{Content__c}</body>
                                                 
                                                 <div className="sharing-link">
                                                     <ul>
