@@ -91,19 +91,19 @@ Services.defaultProps = {
                 "Corel",
             Image: require("../../images/corel.jpg"),
         },
-        {
-            icon: "icofont-network-tower",
-            heading: "Corel",
-            description:
-                "Corel",
-            Image: require("../../images/corel.jpg"),
-        },
-        {
-            icon: "icofont-laptop-alt",
-            heading: "Corel",
-            description:
-                "Corel",
-            Image: require("../../images/corel.jpg"),
-        },
+        // {
+        //     icon: "icofont-network-tower",
+        //     heading: "Corel",
+        //     description:
+        //         "Corel",
+        //     Image: require("../../images/corel.jpg"),
+        // },
+        // {
+        //     icon: "icofont-laptop-alt",
+        //     heading: "Corel",
+        //     description:
+        //         "Corel",
+        //     Image: require("../../images/corel.jpg"),
+        // },
     ]
 };

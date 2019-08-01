@@ -338,8 +338,8 @@ Header.propTypes = {
   Logo2: PropTypes.string,
 };
 Header.defaultProps = {
-  MainLogo: require('../../images/logo01.png'),
-  Logo2: require('../../images/logo01.png'),
+  MainLogo: require('../../images/logo-ae.png'),
+  Logo2: require('../../images/logo-ae.png'),
   mailLink: "mailto:laihoangdo0506@gmail.com",
   mail: "laihoangdo@gmail.com",
   numberLink: "callto:+84938636843",

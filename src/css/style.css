@@ -31,7 +31,7 @@ This files contents are outlined below>>>>>
 ** - Fun Facts Area CSS
 ** - Testimonials Area CSS
 ** - FAQ Area CSS
-** - Partners Area CSS
+** - Partners Area CSSowl-thumb-item
 ** - Contact Area CSS
 ** - Footer Area CSS
 ** - Scroll Top link CSS
@@ -485,10 +485,11 @@ This files contents are outlined below>>>>>
        background-image: url(../images/anhbia01.jpg);
    }
    .slide-bg-2 {
-       background-image: url(../images/slide-bg-02.jpg);
+       background-image: url(../images/bg-2.jpg);
    }
    .slide-bg-3 {
-       background-image: url(../images/slide-bg-03.jpg);
+       /*slide-bg-03.jpg*/
+       background-image: url(../images/bg-3.jpg);
    }
    .hompage-slides-wrapper {
        position: relative;
@@ -590,7 +591,7 @@ This files contents are outlined below>>>>>
        margin: 0 15px;
        cursor: pointer;
        background-color: #fdfdfd;
-       padding: 18px;
+       /*padding: 18px;*/
        border-radius: 10px;
        position: relative;
        color: #848484;
@@ -637,7 +638,7 @@ This files contents are outlined below>>>>>
        -ms-transform: scaleX(0);
    }
    .owl-thumb-item.active, .owl-thumb-item:hover {
-       padding: 18px;
+       /*padding: 18px;*/
        transition: .4s;
        -webkit-transition: .4s;
        border-radius: 10px;

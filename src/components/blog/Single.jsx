@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
+// import html from 'react-inner-html';
 // import axios from 'axios';
 
 //Import Component
@@ -31,6 +32,10 @@ export default class Single extends PureComponent {
         this.setState({blogDetail:body});
         // return body;
     };
+    // rawMarkup() {
+    //     var md = new Remarkable();
+    //     return { __html: md.render(this.state.blogDetail.Content__c) };
+    // }
     // componentDidMount () {
     //     const { id } = this.props.match.params.id;
     //     console.log(' id handle' , this.props.match.params.id);
@@ -85,7 +90,8 @@ export default class Single extends PureComponent {
                                 
                                             <div className="post-content">
                                                 {/*<textarea value={Content__c} ></textarea>*/}
-                                                <body>{Content__c}</body>
+                                                {/*<body>{Content__c}</body>*/}
+                                                return <div dangerouslySetInnerHTML={{ __html: Content__c }} />;
                                                 
                                                 <div className="sharing-link">
                                                     <ul>

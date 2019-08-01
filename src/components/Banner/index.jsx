@@ -68,7 +68,7 @@ export default class  Banner extends PureComponent {
             )
         );
         //BannerOne loop END
-        
+
         //Thumbs loop Start
         const thumbdata = this.props.thumbsData.map((thumb, index) => (
             <div className="owl-thumb-item" key={index}>
@@ -84,8 +84,10 @@ export default class  Banner extends PureComponent {
                 <OwlCarousel
                     className="owl-theme homepage-slides"
                     items={1}
+                    autoplay={true}
                     touchDrag={false}
                     margin={0}
+                    loop={true}
                     mouseDrag={false}
                     smartSpeed={1000}
                     dotData={true}
