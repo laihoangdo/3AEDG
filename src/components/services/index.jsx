@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import Icofont from 'react-icofont';
 import PropTypes from "prop-types";
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
 
 export default class Services extends PureComponent {
     render() {
@@ -19,6 +20,18 @@ export default class Services extends PureComponent {
                         alt="Gallery"
                         className="img-fluid"
                     />
+                    {/*<div className="center-wrap">*/}
+                        {/*<Link to={{pathname: `khoa-hoc/${service.Id}`}} title="Read More" className="link-btn"><i className="fa fa-arrow-right"></i>Xem Chi Tiết</Link>*/}
+                    {/*</div>*/}
+
+                    <div className="center-wrap">
+                        <Link to={{pathname: `khoa-hoc/${service.Id}`}} className="btn-a">
+                            <div className="button">
+                               Xem Chi Tiết  <Icofont icon="icofont-long-arrow-right" />
+                                <div className="mask"></div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         ));
@@ -46,6 +59,49 @@ export default class Services extends PureComponent {
             </React.Fragment>
         );
     }
+    // render(){
+    //     return (
+    //         <section id="welcome" className="welcome-area ptb-80">
+    //             <div className="container">
+    //                 <div className="section-title">
+    //                     <h4>We are creative</h4>
+    //                     <h2>Welcome to <span>Addax</span></h2>
+    //                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    //                 </div>
+    //
+    //                 <div className="row">
+    //                     <div className="col-lg-4 col-md-6">
+    //                         <div className="single-box">
+    //                             <i className="fa fa-pencil-square-o icon"></i>
+    //                             <h3>Creative Design</h3>
+    //                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    //                             <img src={'../../images/corel.jpg'}/>
+    //                             <Link to="#" title="Read More" className="link-btn"><i className="fa fa-arrow-right"></i></Link>
+    //                         </div>
+    //                     </div>
+    //
+    //                     <div className="col-lg-4 col-md-6">
+    //                         <div className="single-box">
+    //                             <i className="fa fa-laptop icon"></i>
+    //                             <h3>Friendly Codes</h3>
+    //                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    //                             <Link to="#" title="Read More" className="link-btn"><i className="fa fa-arrow-right"></i></Link>
+    //                         </div>
+    //                     </div>
+    //
+    //                     <div className="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+    //                         <div className="single-box">
+    //                             <i className="fa fa-life-ring icon"></i>
+    //                             <h3>Fast Support</h3>
+    //                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    //                             <Link to="#" title="Read More" className="link-btn"><i className="fa fa-arrow-right"></i></Link>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         </section>
+    //     );
+    // }
 
 }
 //Props Types
@@ -64,46 +120,60 @@ Services.defaultProps = {
 
     servicesData: [
         {
+            Id: "photoshop",
             icon: "icofont-automation",
-            heading: "Corel",
+            heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
             description:
-                "Corel",
-            Image: require("../../images/corel.jpg"),
+                "PHOTOSHOP",
+            Image: require("../../images/pts-bg.jpg"),
         },
         {
+            Id: "illustrator",
             icon: "icofont-bullseye",
-            heading: "Corel",
+            heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
-                "Corel",
-            Image: require("../../images/corel.jpg"),
+                "ILLUSTRATOR",
+            Image: require("../../images/ai-bg.jpg"),
         },
         {
+            Id: "corel",
             icon: "icofont-woman-in-glasses",
-            heading: "Corel",
+            heading: "HỌC THIẾT KẾ ĐỒ HỌA COREL DRAW",
             description:
                 "Corel",
             Image: require("../../images/corel.jpg"),
         },
         {
+            Id: "indesign",
             icon: "icofont-chart-growth",
-            heading: "Corel",
+            heading: "HỌC THIẾT KẾ ĐỒ HỌA IN DESIGN",
             description:
-                "Corel",
-            Image: require("../../images/corel.jpg"),
+                "IN DESIGN",
+            Image: require("../../images/indesign-bg.jpg"),
         },
-        // {
-        //     icon: "icofont-network-tower",
-        //     heading: "Corel",
-        //     description:
-        //         "Corel",
-        //     Image: require("../../images/corel.jpg"),
-        // },
-        // {
-        //     icon: "icofont-laptop-alt",
-        //     heading: "Corel",
-        //     description:
-        //         "Corel",
-        //     Image: require("../../images/corel.jpg"),
-        // },
+        {
+            Id: "autocad",
+            icon: "icofont-network-tower",
+            heading: "HỌC THIẾT KẾ ĐỒ HỌA AUTOCAD",
+            description:
+                "AUTOCAD",
+            Image: require("../../images/autocad-bg.jpg"),
+        },
+        {
+            Id: "3ds-max",
+            icon: "icofont-laptop-alt",
+            heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
+            description:
+                "3Ds MAX",
+            Image: require("../../images/3dsmax-bg.jpeg"),
+        },
+        {
+            Id: "sketchup",
+            icon: "icofont-laptop-alt",
+            heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
+            description:
+                "SKETCHUP",
+            Image: require("../../images/sketchup-bg.jpg"),
+        },
     ]
 };

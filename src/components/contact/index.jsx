@@ -66,8 +66,10 @@ export default class Contact extends PureComponent {
                                         defaultZoom={this.props.zoom}
                                     >
                                         <CustomComponent
-                                            lat={10.836330}
-                                            lng={106.677550}
+                                            // lat={10.836330}
+                                            // lng={106.677550}
+                                            lat={10.843641}
+                                            lng={106.636033}
                                             text="Marker"
                                         />
                                     </GoogleMapReact>
@@ -117,14 +119,14 @@ Contact.defaultProps = {
     sectionTitle: "Liên Hệ Với Chúng Tôi",
     sectionDescription: "Liên Hệ với chúng tôi qua email , số điện thoại hoặc tới trực tiếp trung tâm để đăng kí.",
     AddTitle: "Địa Chỉ",
-    Address: "214/9 Nguyễn Oanh Phường 17 Quận Gò Vấp.",
+    Address: "Phòng 504, Tòa C4 Chung cư Khang Gia, Đường 38, Phường 14, Quận Gò Vấp TP Hồ Chí Minh.",
     EmailTitle: "Email",
-    Email: "laihoangdo0506@gmail.com",
+    Email: "dreamhighx00@gmail.com",
     PhoneTitle: "Phone",
-    Phone: "0972268792",
+    Phone: "0938636843",
     center: {
-        lat: 10.84,
-        lng: 106.68
+        lat: 10.843641,
+        lng: 106.636033
     },
     zoom: 14
 

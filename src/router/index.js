@@ -4,6 +4,7 @@ import AboutUs from "../components/aboutus";
 import Single from "../components/blog/Single";
 import HomeOne from "../components/HomeOne";
 import SingleBlog from "../components/blog/SingleBlog";
+import CourseDetail from "../components/services/CourseDetail";
 
 
 
@@ -21,6 +22,10 @@ const routes = [
     path: '/blog-posts/:id',
     component: Single
   },
+    {
+        path: '/khoa-hoc/:id',
+        component: CourseDetail
+    },
   {
       path: '/',
       component: HomeOne,

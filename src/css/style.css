@@ -693,7 +693,7 @@ This files contents are outlined below>>>>>
        -webkit-transition: .5s;
    }
    .service-item:hover {
-       background-color: #fff;
+       background-color: #d0ffff;
    }
    .service-item p {
        margin: 0;
@@ -1283,7 +1283,7 @@ This files contents are outlined below>>>>>
        margin-bottom: 20px;
        line-height: 26px;
        /*new*/
-       height: 9rem;
+       /*height: 9rem;*/
    }
 .post-content p {
 
