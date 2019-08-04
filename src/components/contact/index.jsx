@@ -29,7 +29,7 @@ export default class Contact extends PureComponent {
                                 <ScrollAnimation animateIn="fadeInUp">
                                     <div className="section-title">
                                         <h2>{this.props.sectionTitle}</h2>
-                                        <p>{this.props.sectionDescription}</p>
+                                        <h3>{this.props.sectionDescription}</h3>
                                         <span className="section-title-bg">{this.props.SectionbgTitle}</span>
                                     </div>
                                 </ScrollAnimation>

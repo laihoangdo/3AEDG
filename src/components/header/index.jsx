@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import '../../css/main.css';
 import './header.css';
 
 export default class  Header extends PureComponent {
@@ -40,16 +39,31 @@ export default class  Header extends PureComponent {
             <div className="top-header">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-7 col-lg-7">
-                            <div className="address-bar">
+                        <Navbar.Brand className="navbar-brand logo">
+                            <React.Fragment>
+                                <LinkContainer exact to="/">
+                                    <img
+                                        src={this.props.MainLogo}
+                                        alt="Logo"
+                                    />
+                                </LinkContainer>
+                            </React.Fragment>
+                        </Navbar.Brand>
+                        {/*<div>*/}
+                        <div className="col-md-5 header-padding">
+                            <h3 className="h2-header">TRUNG TÂM ĐÀO TẠO ĐỒ HỌA ANH EM</h3>
+                            <h4>Đào Tạo Đồ Họa 2D - 3D</h4>
+                        </div>
+                        <div className="col-md-3 header-padding-social">
+                            {/*<div className="address-bar">*/}
                                 <ul className="list-inline">
                                     <li><a href={this.props.mailLink}><Icofont icon="icofont-email"/> {this.props.mail}</a></li>
                                     <li><a href={this.props.numberLink}><Icofont icon="icofont-ui-call" /> {this.props.Number}</a></li>
                                 </ul>
-                            </div>
+                            {/*</div>*/}
                         </div>
                         
-                        <div className="col-lg-5 col-md-5">
+                        <div className="col-md-2 header-padding-social">
                             <div className="social-icons">
                                 <ul className="list-inline">
                                     <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
@@ -58,6 +72,17 @@ export default class  Header extends PureComponent {
                                 </ul>
                             </div>
                         </div>
+                        {/*</div>*/}
+                        {/*<Navbar.Brand className="navbar-brand logo">*/}
+                        {/*    <React.Fragment>*/}
+                        {/*        <LinkContainer exact to="/">*/}
+                        {/*            <img*/}
+                        {/*                src={this.props.MainLogo}*/}
+                        {/*                alt="Logo"*/}
+                        {/*            />*/}
+                        {/*        </LinkContainer>*/}
+                        {/*    </React.Fragment>*/}
+                        {/*</Navbar.Brand>*/}
                     </div>
                 </div>
             </div>
@@ -71,12 +96,12 @@ export default class  Header extends PureComponent {
                 collapseOnSelect={true}
             >
                 <Container>
-                    <Navbar.Brand className="navbar-brand logo">
+                    <Navbar.Brand className="navbar-brand logo logo-mobile">
                         <React.Fragment>
                             <LinkContainer exact to="/">
-                                <img 
-                                    src={this.props.MainLogo}
-                                    alt="Logo" 
+                                <img
+                                    src={this.props.LogoMobile}
+                                    alt="Logo"
                                 />
                             </LinkContainer>
                         </React.Fragment>
@@ -87,7 +112,7 @@ export default class  Header extends PureComponent {
                                <LinkContainer exact to="/">
                                     <img 
                                         className="img-fluid" 
-                                        src={this.props.Logo2}
+                                        src={this.props.LogoMobile}
                                         alt="Logo"
                                     />
                                 </LinkContainer>
@@ -157,21 +182,6 @@ export default class  Header extends PureComponent {
                                 <Nav.Item>
                                     <Link
                                         activeclass="active"
-                                        to="aboutus"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-200}
-                                        duration={800}
-                                        className="nav-link"
-                                        onClick={this.closeNavbar}
-                                    >
-                                        Về Chúng Tôi
-                                    </Link>
-                                </Nav.Item>
-
-                                <Nav.Item>
-                                    <Link
-                                        activeclass="active"
                                         to="team"
                                         spy={true}
                                         smooth={true}
@@ -196,6 +206,20 @@ export default class  Header extends PureComponent {
                                         onClick={this.closeNavbar}
                                     >
                                         Blog
+                                    </Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Link
+                                        activeclass="active"
+                                        to="aboutus"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-200}
+                                        duration={800}
+                                        className="nav-link"
+                                        onClick={this.closeNavbar}
+                                    >
+                                        Về Chúng Tôi
                                     </Link>
                                 </Nav.Item>
 
@@ -267,16 +291,6 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Về Chúng Tôi
-                                    </NavLink>
-                                </Nav.Item>
-
-                                <Nav.Item>
-                                    <NavLink
-                                        to="/"
-                                        className="nav-link"
-                                        activeClassName=""
-                                    >
                                         Giảng Viên
                                     </NavLink>
                                 </Nav.Item>
@@ -297,7 +311,17 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Lịch
+                                        Về Chúng Tôi
+                                    </NavLink>
+                                </Nav.Item>
+
+                                <Nav.Item>
+                                    <NavLink
+                                        to="/"
+                                        className="nav-link"
+                                        activeClassName=""
+                                    >
+                                        Lịch Khai Giảng
                                     </NavLink>
                                 </Nav.Item>
 
@@ -336,15 +360,17 @@ Header.propTypes = {
   linkedinLink: PropTypes.string,
   MainLogo: PropTypes.string,
   Logo2: PropTypes.string,
+    LogoMobile: PropTypes.string,
 };
 Header.defaultProps = {
-  MainLogo: require('../../images/logo-ae.png'),
-  Logo2: require('../../images/logo-ae.png'),
-  mailLink: "mailto:laihoangdo0506@gmail.com",
-  mail: "laihoangdo@gmail.com",
+    LogoMobile: require('../../images/logo-mobile.png'),
+  MainLogo: require('../../images/logo-bigsize.png'),
+  Logo2: require('../../images/logo-anhem.png'),
+  mailLink: "mailto:laiquoclong90@gmail.com",
+  mail: "laiquoclong90@gmail.com",
   numberLink: "callto:+84938636843",
   Number: "0938636843",
   facebookLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
-  twitterLink: "https://zalo.me/0972268792",
+  twitterLink: "https://zalo.me/0337590737",
   instagramLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
 };

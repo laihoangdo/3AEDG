@@ -46,6 +46,79 @@ This files contents are outlined below>>>>>
    @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
    @import url('https://fonts.googleapis.com/css?family=Monoton');
     @import "~animate.css/animate.css";
+/*Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+    color:#555;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+:focus {
+    outline: 0;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    text-decoration:  none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*Add your css into here*/
+.fl_left{ float: left;}
+.fl_right{ float: right;}
+
+/*End Reset*/
+
    html, body {
        font-family: 'Poppins', sans-serif;
        font-size: 14px;
@@ -115,7 +188,8 @@ This files contents are outlined below>>>>>
        z-index: 1;
    }
    .section-title-bg {
-       color: #f0f0f0;
+       /*color: #f0f0f0;*/
+       color: #c1b8b8;;
        font-size: 100px;
        line-height: 0;
        position: absolute;
@@ -312,9 +386,11 @@ This files contents are outlined below>>>>>
        Top Header CSS
       ========================= */
    .top-header {
-       background-color: #eeeeee;
+       /*background-color: #eeeeee;*/
        color: #848484;
-       padding: 10px 0 10px;
+       padding: 0px 0 10px;
+       /*new*/
+       height:  10rem;
    }
    .glyph i {
        font-size: 60px;
@@ -394,9 +470,16 @@ This files contents are outlined below>>>>>
      display: block;
      top: 8px;
    }
-   .navbar-brand.logo-2, .menu-shrink .navbar-brand.logo{
+   .logo-mobile{
+       display: none;
+   }
+   .logo img, .logo-mobile img , .logo-2 img {
+       width: 124px;
+   }
+   .navbar-brand.logo-2, .menu-shrink .navbar-brand.logo ,.menu-shrink .navbar-brand.logo-mobile {
      display: none;
    }
+
    /* End Navbar Style */
    
    /*-- Header Search --*/
@@ -1141,6 +1224,13 @@ This files contents are outlined below>>>>>
        padding: 20px;
        text-align: right;
    }
+    .post-content img{
+        width: 100%;
+    }
+    .line-opacity{
+        border-right: 1px solid #e5e5e5;
+    }
+
    .main-blog {
        padding: 70px 0 90px;
    }
@@ -1283,7 +1373,7 @@ This files contents are outlined below>>>>>
        margin-bottom: 20px;
        line-height: 26px;
        /*new*/
-       /*height: 9rem;*/
+       height: 9rem;
    }
 .post-content p {
 
@@ -1681,8 +1771,8 @@ This files contents are outlined below>>>>>
        font-size: 50px;
    }
    .client-profile {
-       width: 100px;
-       height: 100px;
+       width: 200px;
+       height: 200px;
        margin: 0 auto;
        overflow: hidden;
    }
@@ -2490,5 +2580,5 @@ This files contents are outlined below>>>>>
        -webkit-transform: translateX(-50%) translateY(-50%);
        transform: translateX(-50%) translateY(-50%);
      }
-     .owl-carousel,.bx-wrapper { direction: ltr; }
-     .owl-carousel .owl-item { direction: rtl; }
+     /*.owl-carousel,.bx-wrapper { direction: ltr; }*/
+     /*.owl-carousel .owl-item { direction: rtl; }*/

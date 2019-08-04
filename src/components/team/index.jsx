@@ -30,8 +30,10 @@ export default class Team extends PureComponent {
                         <ul className="icon">
                             {/*<li><Link to={team.facebookLink}><Icofont icon="icofont-facebook" /></Link></li>*/}
                             <li><a href={this.props.teamsData[index].facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                            <li><Link to={team.linkedinLink}><Icofont icon="icofont-linkedin" /></Link></li>
-                            <li><Link to={team.twitterLink}><Icofont icon="icofont-twitter" /></Link></li>
+                            <li><Link to={team.linkedinLink}><Icofont icon="icofont-skype" /></Link></li>
+                            <li><Link to={team.twitterLink}><Icofont icon="icofont-youtube" /></Link></li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -47,7 +49,7 @@ export default class Team extends PureComponent {
                                 <ScrollAnimation animateIn="fadeInUp">
                                     <div className="section-title">
                                         <h2>{this.props.sectionTitle}</h2>
-                                        <p>{this.props.sectionDescription}</p>
+                                        <h3>{this.props.sectionDescription}</h3>
                                         <span className="section-title-bg">{this.props.SectionbgTitle}</span>
                                     </div>
                                 </ScrollAnimation>
@@ -108,7 +110,7 @@ Team.defaultProps = {
     teamsData: [
         {
             Image: require("../../images/thaytien-avatar01.jpg"),
-            Name: "Thầy Tiền",
+            Name: "Thầy Long",
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "//facebook.com/tiencanh.chonphieubong",
             linkedinLink: "/#0",

@@ -59,7 +59,7 @@ Review.defaultProps = {
     testimonialsData: [
         {
             clientImage: require("../../images/thaytien1.jpg"),
-            Content: ".Chất lượng giảng dạy rất tốt",
+            Content: "Chất lượng giảng dạy rất tốt . Giảng viên nhiệt tình giúp đỡ , sau khi hoàn thành khó học 2D tại trung tâm tôi đã có thể kiếm được công việc và có thu nhập ổn định.",
             Name: "Thanh Bo",
             Profession: "Học Viên Khóa 2019",
         },

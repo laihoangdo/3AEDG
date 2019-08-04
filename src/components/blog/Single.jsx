@@ -65,7 +65,7 @@ export default class Single extends PureComponent {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8">
-                                <div className="row">
+                                <div className="row line-opacity">
                                     <div className="col-lg-12">
                                         <div className="blog-details">
                                             <div className="post-img">

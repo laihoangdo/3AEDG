@@ -1,3 +1,24 @@
-.post-content p{
-    height: 100% !important;
+#course-detail p{
+    height: 100% ;
+}
+/*.logo img{*/
+/*    width: 124px;*/
+/*}*/
+.target-course{
+    box-sizing: border-box;
+    padding: 10px;
+    font-stretch: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+    text-align: justify;
+    overflow: hidden;
+    border: 2px dashed #1b3cff !important;
+    list-style: none !important;
+    background-color: rgba(0, 88, 140, 0.0392157);
+}
+.target-course ul li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }

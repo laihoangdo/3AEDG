@@ -6,9 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import './css/style.css';
 import './css/responsive.css';
 import './css/color-default.css';
-import HomeOne from './components/HomeOne';
 import ScrollUpBtn from './components/scroll';
-import Single from './components/blog/Single';
 import routes from './router';
 
 class App extends Component {

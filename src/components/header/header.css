@@ -10,3 +10,22 @@
     font: bold;
     font-size: 2rem;
 }
+.header-padding{
+    padding: 28px;
+    text-align: center;
+    font: bold;
+    font-weight: bold;
+    color: #1075BB;
+}
+.header-padding .h2-header{
+    color: #3333FF;
+    font-weight: bold;
+    font: bold;
+}
+.header-padding-social {
+    padding: 43px 0px 43px 7px;
+    font-size: large;
+}
+header-padding-social .list-inline {
+    font-size: large;
+}

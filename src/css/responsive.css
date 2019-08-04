@@ -57,9 +57,21 @@
         top: 0 !important;
         left: 15px;
     }
-    .logo img {
-        width: 50px;
+
+    /*new*/
+    /*.logo img {*/
+    /*    width: 50px;*/
+    /*}*/
+    .logo-mobile{
+        display: block;
     }
+    .post-content img{
+        width: 100%;
+    }
+    /*.logo-mobile img {*/
+    /*     width: 50px;*/
+    /* }*/
+    /*end new*/
     .address-bar {
         margin-left: auto;
         text-align: right;
@@ -316,6 +328,12 @@
     .logo > img {
         width: 70px;
     }
+    .logo-mobile > img {
+        width: 70px;
+    }
+    /*.menu-shrink .navbar-brand.logo-2{*/
+    /*    width: 124px;*/
+    /*}*/
     .main-nav .navbar-brand {
         left: 15px;
     }
@@ -464,6 +482,9 @@
     }
     .single-feature h3 {
         font-size: 17px;
+    }
+    .logo img{
+        width: 124px;
     }
 }
 

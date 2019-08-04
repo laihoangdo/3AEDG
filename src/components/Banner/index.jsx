@@ -4,6 +4,7 @@ import Icofont from "react-icofont";
 import PropTypes from "prop-types";
 import VisibilitySensor from "react-visibility-sensor";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import  './banner.css';
 
 export default class  Banner extends PureComponent {
 
@@ -48,7 +49,7 @@ export default class  Banner extends PureComponent {
                                                     {bannerone.Content}
                                                 </p>
                                                 <div className="center-wrap">
-                                                    <AnchorLink href="#services" className="btn btn-primary">Get Started</AnchorLink>
+                                                    <AnchorLink href="#services" className="btn btn-primary">Khóa Học <Icofont icon="icofont-long-arrow-right" /></AnchorLink>
                                                     {/*<Link to={bannerone.BtnLink} className="btn-a">*/}
                                                         {/*<div className="button">*/}
 

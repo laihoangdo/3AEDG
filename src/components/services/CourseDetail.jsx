@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 // import html from 'react-inner-html';
-// import axios from 'axios';
 import  './service.css';
 
 //Import Component
@@ -63,7 +62,7 @@ export default class CourseDetail extends PureComponent {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8">
-                                <div className="row">
+                                <div className="row line-opacity">
                                     <div className="col-lg-12">
                                         <div className="blog-details">
                                             <div className="post-img">
@@ -77,19 +76,57 @@ export default class CourseDetail extends PureComponent {
                                                 <div className="title-meta">
                                                     <h2>{this.state.courseDetail.heading}</h2>
                                                     <div className="post-meta">
-                                                        <ul>
-                                                            <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>
-                                                            <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>
-                                                            <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>
-                                                        </ul>
+                                                        {/*<ul>*/}
+                                                        {/*    <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>*/}
+                                                        {/*    <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>*/}
+                                                        {/*    <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>*/}
+                                                        {/*</ul>*/}
+                                                        <p>Tag: Lớp học illustrator tại Sài Gòn, học illustrator tại Sài Gòn, Khóa học illustrator tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc illustrator tai Hồ Chí Minh, khoa hoc illustrator tại Sai Gon.</p>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="post-content">
+                                            <div className="post-content" id="course-detail">
                                                 {/*<textarea value={Content__c} ></textarea>*/}
                                                 <p>{this.state.courseDetail.PostContent}</p>
+                                                <h2>{this.state.courseDetail.courseStep}</h2>
+                                                <img src={this.state.courseDetail.ImageStep} alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
+                                                <div className="target-course">
+                                                    <div className="target-one">
+                                                        <ul>
+                                                            <li>
+                                                               <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
+                                                                <ul>
+                                                                    <li>li do 1</li>
+                                                                    <li>lí do 2</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <h3>Kết thúc khóa học {this.state.courseDetail.Id} làm được gì? </h3>
+                                                <div className="target-course">
+                                                    <div className="target-one">
+                                                        <ul>
+                                                            <li>
+                                                                <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
+                                                                <ul>
+                                                                    <li>li do 1</li>
+                                                                    <li>lí do 2</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div className="product-student">
+                                                    <h3>Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.Id}</h3>
+                                                    {this.state.courseDetail.imageWork.map((product , index) => (
+                                                        <img src={product.link} alt=""/>
+                                                    ))}
+                                                </div>
+                                                {/*<h3>Tại sao nên lựa chọn học thiết kế đồ họa adobe illustrator?</h3>*/}
+                                                {/*<h3>Tại sao nên lựa chọn học thiết kế đồ họa adobe illustrator?</h3>*/}
 
                                                 <div className="sharing-link">
                                                     <ul>
@@ -130,7 +167,7 @@ export default class CourseDetail extends PureComponent {
                             </div>
 
                             {/* Sidebar: src/components*/}
-                            <Sidebar />
+                            <Sidebar tagsData={this.state.courseDetail.tagsData} />
 
                         </div>
                     </div>
@@ -158,7 +195,7 @@ CourseDetail.propTypes = {
     TwitterLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
-    servicesData: PropTypes.array
+    servicesData: PropTypes.array,
 
 };
 
@@ -189,6 +226,8 @@ CourseDetail.defaultProps = {
             description:
                 "PHOTOSHOP",
             Image: require("../../images/pts-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-photoshop.png"),
+            courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -206,6 +245,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Photoshop tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Photoshop tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc photoshop tai sai gon",
+                },
+                {
+                    tagName: "hoc Photoshop tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Photoshop tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "illustrator",
@@ -214,6 +278,8 @@ CourseDetail.defaultProps = {
             description:
                 "ILLUSTRATOR",
             Image: require("../../images/ai-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-ai.png"),
+            courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -231,6 +297,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Illustrator tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Illustrator tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Illustrator tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc illutrator tai sai gon",
+                },
+                {
+                    tagName: "hoc Illustrator tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Illustrator tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "corel",
@@ -239,6 +330,8 @@ CourseDetail.defaultProps = {
             description:
                 "Corel",
             Image: require("../../images/corel.jpg"),
+            ImageStep: require("../../images/courses/khoa-corel.png"),
+            courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -256,6 +349,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Corel tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Corel tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Corel tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc corel tai sai gon",
+                },
+                {
+                    tagName: "hoc Corel tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Corel tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "indesign",
@@ -264,6 +382,8 @@ CourseDetail.defaultProps = {
             description:
                 "IN DESIGN",
             Image: require("../../images/indesign-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-indesign.png"),
+            courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -281,6 +401,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Indesign tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Indesign tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Indesign tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc indesign tai sai gon",
+                },
+                {
+                    tagName: "hoc Indesign tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Indesign tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "autocad",
@@ -289,6 +434,8 @@ CourseDetail.defaultProps = {
             description:
                 "AUTOCAD",
             Image: require("../../images/autocad-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-indesign.png"),
+            courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -306,6 +453,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Autocad tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Autocad tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Autocad tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc autocad tai sai gon",
+                },
+                {
+                    tagName: "hoc Autocad tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Autocad tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "3ds-max",
@@ -314,6 +486,8 @@ CourseDetail.defaultProps = {
             description:
                 "3Ds MAX",
             Image: require("../../images/3dsmax-bg.jpeg"),
+            ImageStep: require("../../images/courses/khoa-photoshop.png"),
+            courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -331,6 +505,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học 3Ds Max tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học 3Ds Max tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học 3Ds Max tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc 3ds max tai sai gon",
+                },
+                {
+                    tagName: "hoc 3Ds Max tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc 3Ds Max tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
         {
             Id: "sketchup",
@@ -339,6 +538,8 @@ CourseDetail.defaultProps = {
             description:
                 "SKETCHUP",
             Image: require("../../images/sketchup-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-photoshop.png"),
+            courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             CourseDetailImage: require("../../images/design-01.jpg"),
@@ -356,6 +557,31 @@ CourseDetail.defaultProps = {
             TwitterLink: "/#0",
             InstagramLink: "/#0",
             linkedinLink: "/#0",
+            tagsData: [
+                {
+                    tagName: "Lớp học Sketchup tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "học Sketchup tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Khóa học Sketchup tại Tp Hồ Chí Minh",
+                },
+                {
+                    tagName: "Lop hoc sketchup tai sai gon",
+                },
+                {
+                    tagName: "hoc Sketchup tai Hồ Chí Minh",
+                },
+                {
+                    tagName: "khoa hoc Sketchup tại Sai Gon",
+                }
+            ],
+            imageWork: [
+                {
+                    link: require("../../images/post-01.jpg")
+                }
+            ]
         },
     ]
 
