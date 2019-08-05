@@ -8,6 +8,7 @@ import './css/responsive.css';
 import './css/color-default.css';
 import ScrollUpBtn from './components/scroll';
 import routes from './router';
+import CallButton from "./components/callButton";
 
 class App extends Component {
   render() {
@@ -63,6 +64,7 @@ class App extends Component {
                             )}
                         />
                         {/* ScrollUpBtn: src/components/ScrollUp.jsx */}
+                        <CallButton/>
                         <ScrollUpBtn />
                     </div>
           </Page>
