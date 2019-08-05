@@ -738,7 +738,7 @@ html[xmlns] .clearfix {
        color: #fff;
    }
    .main-banner-text {
-    text-align: right;
+    /*text-align: right;*/
     }
    
    /* =========================
@@ -815,7 +815,7 @@ html[xmlns] .clearfix {
    }
    .cta-info {
        margin-top: 42px;
-       text-align: right;
+       /*text-align: right;*/
    }
    .cta-info h2 {
        font-weight: 600;
@@ -960,7 +960,7 @@ html[xmlns] .clearfix {
        padding: 100px 0 60px;
    }
    .about-info {
-       text-align: right;
+       /*text-align: right;*/
        background-color: #fff;
        padding: 25px;
        margin-top: 30px;
@@ -1218,11 +1218,11 @@ html[xmlns] .clearfix {
    }
    .title-meta {
      vertical-align: bottom;
-     text-align: right;
+     /*text-align: right;*/
    }
    .post-content {
        padding: 20px;
-       text-align: right;
+       /*text-align: right;*/
    }
     .post-content img{
         width: 100%;
@@ -1273,7 +1273,7 @@ html[xmlns] .clearfix {
    }
    .side-widget {
        margin-top: 30px;
-       text-align: right;
+       /*text-align: right;*/
    }
    .side-widget h3 {
        margin: 0 0 20px;
@@ -1408,7 +1408,7 @@ html[xmlns] .clearfix {
    }
    .comments-title {
        margin: 0;
-       text-align: right;
+       /*text-align: right;*/
        border-bottom: 1px solid #ddd;
        padding-bottom: 15px;
        position: relative;
@@ -1425,7 +1425,7 @@ html[xmlns] .clearfix {
        position: relative;
        padding: 0 100px 0 0;
        margin-top: 30px;
-       text-align: right;
+       /*text-align: right;*/
    }
    .single-comment img {
        position: absolute;
@@ -1819,7 +1819,7 @@ html[xmlns] .clearfix {
    }
    .faq-content {
        margin-top: 40px;
-       text-align: right;
+       /*text-align: right;*/
    }
    .content-box {
        padding: 70px 28px;
@@ -2070,7 +2070,7 @@ html[xmlns] .clearfix {
    .address-area div {
        position: relative;
        padding-right: 45px;
-       text-align: right;
+       /*text-align: right;*/
    }
    .address-area h4 {
        font-size: 22px;
@@ -2109,7 +2109,7 @@ html[xmlns] .clearfix {
        padding: 35px 0;
    }
    .footer .copyright {
-       text-align: right;
+       /*text-align: right;*/
        margin: 6px 0 0;
    }
    .social-icons.bottom ul li a {
@@ -2131,7 +2131,7 @@ html[xmlns] .clearfix {
       ========================= */
    .bread-cumbs-area {
        height: 400px;
-       text-align: right;
+       /*text-align: right;*/
        width: 100%;
        background-color: #ddd;
        color: #fff;

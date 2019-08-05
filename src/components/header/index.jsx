@@ -57,8 +57,8 @@ export default class  Header extends PureComponent {
                         <div className="col-md-3 header-padding-social">
                             {/*<div className="address-bar">*/}
                                 <ul className="list-inline">
-                                    <li><a href={this.props.mailLink}><Icofont icon="icofont-email"/> {this.props.mail}</a></li>
-                                    <li><a href={this.props.numberLink}><Icofont icon="icofont-ui-call" /> {this.props.Number}</a></li>
+                                    <li><a href={this.props.mailLink}><Icofont icon="icofont-email icofont-1x"/> {this.props.mail}</a></li>
+                                    <li><a href={this.props.numberLink}><Icofont icon="icofont-ui-call icofont-1x" /> {this.props.Number}</a></li>
                                 </ul>
                             {/*</div>*/}
                         </div>
@@ -66,9 +66,9 @@ export default class  Header extends PureComponent {
                         <div className="col-md-2 header-padding-social">
                             <div className="social-icons">
                                 <ul className="list-inline">
-                                    <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger" /></a></li>
-                                    <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>
+                                    <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-1x" /></a></li>
+                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger icofont-1x" /></a></li>
+                                    <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram icofont-1x" /></a></li>
                                 </ul>
                             </div>
                         </div>
