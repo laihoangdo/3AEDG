@@ -71,6 +71,13 @@
     /*.logo-mobile img {*/
     /*     width: 50px;*/
     /* }*/
+
+    /*.link-text{*/
+        /*right: 28px !important;*/
+    /*}*/
+    /*.AnyClassForTransition{*/
+        /*right: 28px !important;*/
+    /*}*/
     /*end new*/
     .address-bar {
         margin-left: auto;

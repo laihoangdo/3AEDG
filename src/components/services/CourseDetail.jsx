@@ -98,8 +98,9 @@ export default class CourseDetail extends PureComponent {
                                                             <li>
                                                                <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
                                                                 <ul>
-                                                                    <li>li do 1</li>
-                                                                    <li>lí do 2</li>
+                                                                    {this.state.courseDetail.reason.map((reason , index) => (
+                                                                        <li>{reason}</li>
+                                                                    ))}
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -119,6 +120,36 @@ export default class CourseDetail extends PureComponent {
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                <h3>Khai giảng liên tục [ lớp: Sáng / Chiều / Tối ]</h3>
+                                                <div className="target-course">
+                                                    <div className="course-price">
+                                                        <h3>Học phí gốc khóa học: 1.700.000(vnđ)</h3>
+                                                        <p>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</p>
+                                                        <p>Học phí cho mỗi phần học chỉ còn 1.200.000 (Hà nội) – 1.500.000 (TPHCM) </p>
+                                                        <p> (Cam kết không phát sinh chi phí nào khác đến lúc học)</p>
+                                                        <p>(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>
+                                                        <p>Cam kết: Không học được trả lại 100% học phí + thêm 100k đền bù cho mỗi buổi bạn đầu tư đi học</p>
+                                                        <p>(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
+                                                    </div>
+                                                </div>
+                                                <h3>THỜI GIAN DÀNH CHO KHÓA HỌC ĐỒ HỌA ADOBE ILLUSTRATOR</h3>
+                                                <table className="table-course">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Thời Gian</th>
+                                                            <th>Thời Gian</th>
+                                                            <th>Thời Gian</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Thời Gian</td>
+                                                            <td>Thực Hành</td>
+                                                            <td>Thực Hành</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                                 <div className="product-student">
                                                     <h3>Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.Id}</h3>
                                                     {this.state.courseDetail.imageWork.map((product , index) => (
@@ -269,6 +300,10 @@ CourseDetail.defaultProps = {
                 {
                     link: require("../../images/post-01.jpg")
                 }
+            ],
+            reason: [
+                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
+                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
             ]
         },
         {
@@ -321,6 +356,10 @@ CourseDetail.defaultProps = {
                 {
                     link: require("../../images/post-01.jpg")
                 }
+            ],
+            reason: [
+                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
+                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
             ]
         },
         {
@@ -373,6 +412,10 @@ CourseDetail.defaultProps = {
                 {
                     link: require("../../images/post-01.jpg")
                 }
+            ],
+            reason: [
+                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
+                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
             ]
         },
         {

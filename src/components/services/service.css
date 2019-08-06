@@ -22,3 +22,12 @@
     display: list-item;
     text-align: -webkit-match-parent;
 }
+/*.table-course{*/
+    /*border: 1px solid black;*/
+/*}*/
+/*.table-course tbody{*/
+    /*border: 1px solid black;*/
+/*}*/
+table, th, td {
+    border: 1px solid black;
+}
