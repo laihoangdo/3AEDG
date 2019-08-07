@@ -5,8 +5,6 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import GoogleMapReact from 'google-map-react';
-import ReactGoogleMapLoader from "react-google-maps-loader"
-import ReactGoogleMap from "react-google-map"
 const CustomComponent = ({ text }) => <div><img src="http://ruralshores.com/assets/marker-icon.png" alt="map" /></div>;
 
 export default class Contact extends PureComponent {

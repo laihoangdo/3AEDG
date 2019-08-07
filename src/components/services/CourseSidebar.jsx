@@ -76,12 +76,12 @@ export default class CourseSidebar extends PureComponent {
 
                     </div>
 
-                    <div className="side-widget">
-                        <h3>{this.props.widgetTitle3}</h3>
-                        <ul className="list-group">
-                            {categoriedata}
-                        </ul>
-                    </div>
+                    {/*<div className="side-widget">*/}
+                    {/*    <h3>{this.props.widgetTitle3}</h3>*/}
+                    {/*    <ul className="list-group">*/}
+                    {/*        {categoriedata}*/}
+                    {/*    </ul>*/}
+                    {/*</div>*/}
 
                     <div className="side-widget">
                         <h3>{this.props.widgetTitle4}</h3>

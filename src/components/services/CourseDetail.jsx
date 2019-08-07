@@ -70,11 +70,12 @@ export default class CourseDetail extends PureComponent {
                                             </div>
 
                                             <div className="blog-info">
-                                                <div className="date-box">
-                                                    {this.props.CourseDetailDate} <span className="month">{this.props.CourseDetailMonth}</span>
-                                                </div>
+                                                {/*<div className="date-box">*/}
+                                                {/*    {this.props.CourseDetailDate} <span className="month">{this.props.CourseDetailMonth}</span>*/}
+                                                {/*</div>*/}
                                                 <div className="title-meta">
                                                     <h2>{this.state.courseDetail.heading}</h2>
+
                                                     <div className="post-meta">
                                                         {/*<ul>*/}
                                                         {/*    <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>*/}
@@ -88,71 +89,92 @@ export default class CourseDetail extends PureComponent {
 
                                             <div className="post-content" id="course-detail">
                                                 {/*<textarea value={Content__c} ></textarea>*/}
-                                                <p>{this.state.courseDetail.PostContent}</p>
+                                                {this.state.courseDetail.PostContent.map((post , index) => (
+                                                    <div className="post-detail" key={index}>
+                                                        <Icofont icon="icofont-tags icofont-2x" /> &nbsp;
+                                                        <span key={index}>{post}</span>
+                                                    </div>
+
+                                                ))}
                                                 <p>{this.state.courseDetail.PostContent1 ? this.state.courseDetail.PostContent1: ''}</p>
-                                                <h2>{this.state.courseDetail.courseStep}</h2>
+                                                <h3>{this.state.courseDetail.courseStep}</h3>
                                                 <img src={this.state.courseDetail.ImageStep} alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
                                                         <ul>
                                                             <li>
-                                                               <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
-                                                                <ul>
+                                                                <div className="target-li">
                                                                     {this.state.courseDetail.reason.map((reason , index) => (
-                                                                        <li key={index}>{reason}</li>
+                                                                        <div key={index}>
+                                                                            <p><Icofont icon="icofont-hand-right icofont-1x" /> &nbsp; {reason}</p>
+                                                                        </div>
+
                                                                     ))}
-                                                                </ul>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <h3>Kết thúc khóa học {this.state.courseDetail.Id} làm được gì? </h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Kết thúc khóa học {this.state.courseDetail.Id} làm được gì? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
-                                                        <ul>
-                                                            <li>
-                                                                <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
-                                                                <ul>
-                                                                    <li>li do 1</li>
-                                                                    <li>lí do 2</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
+                                                        <div className="target-li">
+                                                            {this.state.courseDetail.whatMake.map((make , index) => (
+                                                                <div key={index}>
+                                                                    <p><Icofont icon="icofont-hand-right icofont-1x" /> &nbsp; {make}</p>
+                                                                </div>
+
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <h3>Khai giảng liên tục [ lớp: Sáng / Chiều / Tối ]</h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-money icofont-2x" /> &nbsp; Khai giảng liên tục [ lớp: Sáng / Chiều / Tối ]</h3>
                                                 <div className="target-course">
                                                     <div className="course-price">
-                                                        <h3>Học phí gốc khóa học: 1.700.000(vnđ)</h3>
-                                                        <p>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</p>
-                                                        <p>Học phí cho mỗi phần học chỉ còn 1.200.000 (Hà nội) – 1.500.000 (TPHCM) </p>
-                                                        <p> (Cam kết không phát sinh chi phí nào khác đến lúc học)</p>
-                                                        <p>(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>
-                                                        <p>Cam kết: Không học được trả lại 100% học phí + thêm 100k đền bù cho mỗi buổi bạn đầu tư đi học</p>
-                                                        <p>(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
+                                                        <h3 className='course-fee'>Học phí gốc khóa học: <span>1.500.000(vnđ)</span></h3>
+                                                        <p className="course-date"><span>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</span></p>
+                                                        <p className="course-date">Học phí cho <span>mỗi phần học</span> chỉ còn <span>1.300.000</span>(TPHCM) </p>
+                                                        <p className="course-trust"> (Cam kết không phát sinh chi phí nào khác)</p>
+                                                        <p className="course-trust">(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>
+                                                        <p className="course-author">(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
                                                     </div>
                                                 </div>
-                                                <h3>THỜI GIAN DÀNH CHO KHÓA HỌC ĐỒ HỌA ADOBE ILLUSTRATOR</h3>
+                                                <h3 className="title-reason"> <Icofont icon="icofont-ui-calendar icofont-2x" /> &nbsp; Thời Gian Giành Cho Khóa Học Đồ Họa {this.state.courseDetail.description}</h3>
                                                 <table className="table-course">
                                                     <thead>
                                                         <tr>
-                                                            <th>Thời Gian</th>
-                                                            <th>Thời Gian</th>
-                                                            <th>Thời Gian</th>
+                                                            <th><p>Thời Gian</p><p>Bạn chọn lớp ca phù hợp</p> </th>
+                                                            <th><p>Thực Hành</p></th>
+                                                            <th><p>Địa Điểm</p></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Thời Gian</td>
-                                                            <td>Thực Hành</td>
-                                                            <td>Thực Hành</td>
+                                                            <td>Ca Sáng: 8h30 đến 11h<br/>
+
+                                                                Ca Chiều: 14h đến 17h<br/>
+
+                                                                Ca Tối: 18h30 đến 21h<br/>
+
+                                                                Lớp: sáng, chiều tối (2,4,6 hoặc 3,5,7)<br/>
+
+                                                                Lớp: Học liền (thứ 2->thứ 6)<br/>
+
+                                                                Lớp: Thứ 7 & CN cho người bận rộn</td>
+                                                            <td>15 Buổi<br/>
+
+                                                                Chỉ thực hành<br/>
+
+                                                                sản phẩm thực tế ngay trong khóa học</td>
+                                                            <td>P504, Tòa C4, Chung Cư Khang Gia, Đường 38, Phường 14, Quận Gò Vấp, TPHCM</td>
 
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                                 <div className="product-student">
-                                                    <h3>Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.Id}</h3>
+                                                    <h3 className="title-reason"><Icofont icon="icofont-graduate-alt icofont-2x" /> &nbsp; Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.description}</h3>
                                                     {this.state.courseDetail.imageWork.map((product , index) => (
                                                         <img key={index} src={product.link} alt=""/>
                                                     ))}
@@ -259,28 +281,18 @@ CourseDetail.defaultProps = {
             icon: "icofont-automation",
             heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
             description:
-                "PHOTOSHOP",
+                "Photoshop",
             Image: require("../../images/pts-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-photoshop.png"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
-            PostContent: "Thành thạo hoàn toàn những công cụ trong Photoshop từ cơ bản đến nâng cao.\n" +
-                "\n" +
-                "Thấu hiểu hình ảnh kỹ thuật số, định hình không gian, bố cục màu cho một bức ảnh\n" +
-                "\n" +
-                "Chỉnh sửa, tách ảnh, cắt ảnh, lồng ảnh,tạo layer thông minh... tất cả những kỹ năng xử lý hình ảnh.\n" +
-                "\n" +
-                "Tạo kỹ xảo hình ảnh, kiến thức hòa trộn, hướng dẫn blend màu, xử lý màu ảnh có bố cục.\n" +
-                "\n" +
-                "Chỉnh sửa ảnh chân dung: Chỉnh sáng, màu cho mắt; loại bỏ mụn, nếp nhăn, làm mịn, căng da; chỉnh màu son môi, makeup khuôn mặt,...\n" +
-                "\n" +
-                "\n" +
-                "Thiết kế 1 giao diện website hoàn chỉnh trong 7 bước\n" +
-                "\n" +
-                "\n" +
-                "Thiết kế banner quảng cáo trong 6 bước\n" +
-                "\n" +
-                "\n" +
-                "Sử dụng tự động hóa trên photoshop",
+            PostContent: [
+                "Thiết kế ấn phẩm truyền thông thương hiệu của bạn bằng chính ý tưởng của bạn",
+                "Thiết kế các banner truyền thông bán hàng trên Website, Facebook, Zalo ",
+                "Chỉnh sửa cắt ghép hình ảnh sản phẩm Chỉnh sửa phục chế những bức hình chưa ưng ý",
+              "Thành thạo hoàn toàn những công cụ trong Photoshop từ cơ bản đến nâng cao. Thấu hiểu hình ảnh kỹ thuật số, định hình không gian, bố cục màu cho một bức ảnh Chỉnh sửa, tách ảnh, cắt ảnh, lồng ảnh,tạo layer thông minh... tất cả những kỹ năng xử lý hình ảnh.",
+              "Tạo kỹ xảo hình ảnh, kiến thức hòa trộn, hướng dẫn blend màu, xử lý màu ảnh có bố cục. Chỉnh sửa ảnh chân dung: Chỉnh sáng, màu cho mắt; loại bỏ mụn, nếp nhăn, làm mịn, căng da; chỉnh màu son môi, makeup khuôn mặt,... ",
+                "Thiết kế 1 giao diện website hoàn chỉnh trong 7 bước Thiết kế banner quảng cáo trong 6 bước Sử dụng tự động hóa trên photoshop"
+            ],
             tagsData: [
                 {
                     tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
@@ -303,12 +315,19 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
+                    link: require("../../images/product/pts/pts-hocvien-1.png")
+                },
+                {
+                    link: require("../../images/product/pts/pts-hocvien-3.jpg")
                 }
             ],
             reason: [
                 "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
                 "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+            ],
+            whatMake:[
+                "thành thạo Adobe Photoshop, làm được tốt những công việc sau: Cắt, ghép, chỉnh sửa phục chế xử lý hình ảnh các kiểu từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như thiết kế: Website, banner sản phẩm truyền thông, kiến trúc, báo chí, in ấn, nội thất, ảnh viện…",
+                "Học viên ứng dụng phần mềm Photoshop ở nhiều môi trường làm việc khác nhau theo nhu cầu riêng"
             ]
         },
         {
@@ -316,21 +335,21 @@ CourseDetail.defaultProps = {
             icon: "icofont-bullseye",
             heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
-                "ILLUSTRATOR",
+                "Illustrator",
             Image: require("../../images/ai-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-ai.png"),
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "Thiết kế các ấn phẩm: Logo, banner, poster, brochure, profile... sáng tạo bùng nổ với thiết kế logo, thiết kế bộ nhận diện thương hiệu.\n" +
-                "\n" +
-                "Sáng tạo mọi nhân vật hoạt hình bạn yêu thích hay những nhân vật ngộ nghĩnh trong phim.\n" +
-                "\n" +
-                "Phát triển tư duy màu sắc, hình ảnh cần có trong thiết kế.\n" +
-                "\n" +
-                "Tự tin thiết kế minh họa báo chí, in ấn, thiết kế hình họa, tích hợp chuyển động flash...\n" +
-                "\n" +
+            PostContent:[
+                "Thiết kế các ấn phẩm: Logo, banner, poster, brochure, profile... sáng tạo bùng nổ với thiết kế logo, thiết kế bộ nhận diện thương hiệu.",
+                "Sáng tạo mọi nhân vật hoạt hình bạn yêu thích hay những nhân vật ngộ nghĩnh trong phim.",
+                "Phát triển tư duy màu sắc, hình ảnh cần có trong thiết kế.",
+                "Tự tin thiết kế minh họa báo chí, in ấn, thiết kế hình họa, tích hợp chuyển động flash..." ,
                 "Vẽ cả thế giới tưởng tượng của bạn qua cây bút thần kì Adobe Illustrator. ",
+            ] ,
+
+
             PostContent1: "Thiết kế Đồ họa vẫn là một nghề hot trong những năm gần đây, nhu cầu của thị trường luôn ở mức cao vì thế cơ hội nghề nghiệp là rất rộng mở với tất cả mọi người. Để trở thành một nhà thiết kế Đồ họa bạn cần có đam mê và sự nỗ lực, ngoài những kiến thức về chuyên ngành thiết kế như bố cục màu sắc, tư duy sáng tạo, thị giác và truyền thông... người làm thiết kế luôn phải trang bị cho mình những công cụ thiết kế cần thiết để có thể giải phóng những ý tưởng thành các bản vẽ thiết kế, biến thế giới trừu tượng trong trí não thành những hình ảnh cụ thể. Một trong những công cụ hữu hiệu để giúp bạn làm được điều đó chính là Illustrator.",
             tagsData: [
                 {
@@ -354,12 +373,19 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
+                    link: require("../../images/product/ai/ai-hv-1.png")
+                },
+                {
+                    link: require("../../images/product/ai/ai-hv-2.jpg")
                 }
             ],
             reason: [
                 "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
                 "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+            ],
+            whatMake:[
+                "bạn thành thạo Adobe Illustrator, làm được tốt những công việc sau: Thiết kế các ấn phẩm, Thiết kế logo, thiết kế tờ rơi, catalogue từ đơn giản đến phức tạp, tự thiết kế các bộ nhận dạng thương hiệu theo cầu của khách hàng",
+                "Học viên ứng dụng phần mềm Illustrator  ở nhiều môi trường làm việc khác nhau theo nhu cầu riêng"
             ]
         },
         {
@@ -373,7 +399,10 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "- Sử dụng thành thạo phần mềm thiết kế đồ họa in ấn, quảng cáo Corel DrawTư duy thiết kế, kỹ năng sáng tạo và kỹ thuật thiết kế hoàn thiện sản phẩm sẽ được trình bày trong khóa họcBiên tập, minh họa các ấn phẩm quảng cáoThiết kế, sáng tạo các dạng sản phẩm đồ họa phổ biến như: Logo, Poster, Brochure, Profile, Card Visit, tờ rơi ...Thiết kế hoàn thiện bộ nhận diện thương hiệu, ấn phẩm văn phòng ...Kỹ thuật thiết kế Banner và thiết kế các sản phẩm quảng cáo cho Maketting Online, Facebook Online ...Hoàn thành khóa học cùng kiến thức và kỹ năng chuyên sâu, học viên hoàn toàn có thể làm việc trong các công ty thiết kế in ấn, quảng cáo ...",
+            PostContent: [
+                "Sử dụng thành thạo phần mềm thiết kế đồ họa in ấn, quảng cáo Corel DrawTư duy thiết kế, kỹ năng sáng tạo và kỹ thuật thiết kế hoàn thiện sản phẩm sẽ được trình bày trong khóa họcBiên tập, minh họa các ấn phẩm quảng cáoThiết kế, sáng tạo các dạng sản phẩm đồ họa phổ biến như: Logo, Poster, Brochure, Profile, Card Visit, tờ rơi ...",
+                "Thiết kế hoàn thiện bộ nhận diện thương hiệu, ấn phẩm văn phòng ...Kỹ thuật thiết kế Banner và thiết kế các sản phẩm quảng cáo cho Maketting Online, Facebook Online ...Hoàn thành khóa học cùng kiến thức và kỹ năng chuyên sâu, học viên hoàn toàn có thể làm việc trong các công ty thiết kế in ấn, quảng cáo ..."
+            ] ,
             tagsData: [
                 {
                     tagName: "Lớp học Corel tại Tp Hồ Chí Minh",
@@ -396,12 +425,21 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
+                    link: require("../../images/product/corel/corel-hv1.jpg")
+                },
+                {
+                    link: require("../../images/product/corel/corel-hv2.jpg")
                 }
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+            ],
+            whatMake:[
+                "cam kết, bạn có thể thành thạo CorelDraw,   bạn cũng có thể thành thạo các công việc sau: Thiết kế logo, tờ rơi, banner, thiết kế tạp chí báo chí từ cơ bản đến nâng cao .Ứng dụng được trong mọi công việc như dàn trang báo chí như: thiết kế bìa tạp chí, sách,",
+                "Học viên ứng dụng phần mềm CorelDraw   ở nhiều môi trường làm việc khác nhau theo nhu cầu riêng",
+
             ]
         },
         {
@@ -409,21 +447,23 @@ CourseDetail.defaultProps = {
             icon: "icofont-chart-growth",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA IN DESIGN",
             description:
-                "IN DESIGN",
+                "Indesign",
             Image: require("../../images/indesign-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-indesign.png"),
             courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "Giúp bạn làm chủ Indesign - công cụ hữu hiệu để tạo ra các sản phẩm như Sách, báo, Tạp chí, catalogues… mà với khả năng kiểm soát, tương tác hiệu quả với các đối tượng đồ họa tĩnh, động. \n" +
-                "Làm chủ giao diện làm việc và các công cụ\n" +
-                "Quản lý trang tài liệu\n" +
-                "Tìm hiểu các lệnh biên tập văn bản Character\n" +
-                "Biên tập cấu trúc văn bản đoạn Paragraph\n" +
-                "Làm việc với đối tượng đồ họa Graphics link\n" +
-                "Quản lý màu sắc & đối tượng trên indesign\n" +
-                "Biến đổi đối tượng - Transforming Objects\n" +
-                "Đóng gói để xuất khẩu và in ấn",
+            PostContent: [
+                    "Giúp bạn làm chủ Indesign - công cụ hữu hiệu để tạo ra các sản phẩm như Sách, báo, Tạp chí, catalogues… mà với khả năng kiểm soát, tương tác hiệu quả với các đối tượng đồ họa tĩnh, động.",
+                    "Làm chủ giao diện làm việc và các công cụ",
+                    "Quản lý trang tài liệu",
+                    "Tìm hiểu các lệnh biên tập văn bản Character",
+                    "Biên tập cấu trúc văn bản đoạn Paragraph",
+                    "Làm việc với đối tượng đồ họa Graphics link",
+                    "Quản lý màu sắc & đối tượng trên indesign",
+                    "Biến đổi đối tượng - Transforming Objects",
+                    "Đóng gói để xuất khẩu và in ấn"
+            ],
             tagsData: [
                 {
                     tagName: "Lớp học Indesign tại Tp Hồ Chí Minh",
@@ -446,12 +486,24 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
+                    link: require("../../images/product/indesign/indesign-hv1.jpg")
+                },
+                {
+                    link: require("../../images/product/indesign/indesign-hv3.jpg")
+                },
+                {
+                    link: require("../../images/product/indesign/indesign-hv2.jpg")
                 }
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+            ],
+            whatMake:[
+                "bạn thành thạo Adobe Indesign, làm được tốt những công việc sau:  thiết kế các tạp chí báo chí  từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như dàn trang báo chí, bìa tạp chí, sách, các ấn phẩm theo nhu cầu của bạn",
+                "Học viên ứng dụng phần mềm Adobe Indesign   ở nhiều môi trường làm việc khác nhau theo nhu cầu riêng",
+
             ]
         },
         {
@@ -459,13 +511,15 @@ CourseDetail.defaultProps = {
             icon: "icofont-network-tower",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA AUTOCAD",
             description:
-                "AUTOCAD",
+                "Autocad",
             Image: require("../../images/autocad-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-autocad.jpg"),
             courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
+            PostContent:[
+
+            ] ,
             tagsData: [
                 {
                     tagName: "Lớp học Autocad tại Tp Hồ Chí Minh",
@@ -488,12 +542,25 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
-                }
+                    link: require("../../images/product/autocad/auto-cad-hv1.png")
+                },
+                {
+                    link: require("../../images/product/autocad/auto-cad-hv2.jpg")
+                },
+
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+            ],
+            whatMake:[
+                "Cài đặt và sử dụng thành thạo các công cụ trong Autocad",
+                "Thành thạo các lệnh trong Autocad để hoàn thiện một bản vẽ kỹ thuật",
+                "Thành thạo việc tạo lập tỷ lệ cho bản vẽ",
+                "Đọc, hiểu và thiết kế ra các bản vẽ nhà ở, cơ khí, nộị thất",
+                "Thực hiện được mọi ý tưởng của mình và khách hàng yêu cầu"
+
             ]
         },
         {
@@ -507,7 +574,7 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
+            PostContent: [],
             tagsData: [
                 {
                     tagName: "Lớp học 3Ds Max tại Tp Hồ Chí Minh",
@@ -530,12 +597,26 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
-                }
+                    link: require("../../images/product/3ds-max/3ds-max-hv2.jpg")
+                },
+                {
+                    link: require("../../images/product/3ds-max/3ds-max-hv3.jpg")
+                },
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Học theo hình thức “Cầm tay chỉ việc” nên các bạn học đến đâu thì các bạn hiểu ra và thành thạo đến đó.",
+                "Giáo trình thực hành được lấy ra từ các dự án thực tế – học thật, tay nghề thật.",
+                "Cam kết các bạn thành nghề thì mới xong khóa học chứ không đào tạo theo hình thức quảng cáo vớ vẩn."
+            ],
+            whatMake:[
+                "Hiểu rõ và sử dụng thành thạo 3Ds Max.",
+                "Thành thạo các công cụ và cách cài đặt phần mềm.",
+                "Nắm được tư duy thiết kế mô hình 3D nội thất, xây dựng.",
+                "Thực hiện các dự án phối cảnh công trình nhà phố, biệt thự.",
+                "Thực hành thiết kế nội, ngoại thất căn hộ chung cư, biệt thự.",
+                "Kỹ thuật xuất file qua các phần mềm 3D khác."
+
             ]
         },
         {
@@ -543,32 +624,38 @@ CourseDetail.defaultProps = {
             icon: "icofont-laptop-alt",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
             description:
-                "SKETCHUP",
+                "Sketchup",
             Image: require("../../images/sketchup-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-Sketchup-Vray.jpg"),
             courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: "Đối tượng tham gia Học Sketchup vray tại Tây Thạnh, Tân Phú – TPHCM.\n" +
-                "\n" +
-                "Doanh nghiệp có nhu cầu nâng cao năng lực diễn họa, thiết kế của cán bộ, nhân viên bằng phần mềm Sketchup Vray.\n" +
-                "Sinh viên các trường Đại học chuyên ngành kiến trúc, quy hoạch, nội thất, xây dựng, cầu đường,… đang cần công cụ để thể hiện ý tưởng đồ án, bổ sung, hoàn thiện kiến trúc và tiếp cận với công việc thực tế.\n" +
-                "Kỹ sư, kiến trúc sư, họa viên cần củng cố kỹ năng, chuẩn hóa kiến thức sử dụng Sketchup Vray, tăng khả năng thăng tiến trong nghề nghiệp.\n" +
-                "Cán bộ, chủ xưởng thiết kế thi công nội, ngoại thất, quảng cáo,…\n" +
-                "Những bạn đã tham gia khóa học tại nhiều đơn vị khác nhưng không đạt được kết quả như kỳ vọng, chưa thể ứng dụng trong công việc.\n" +
-                "Thời gian Học Sketchup vray tại Tây Thạnh, Tân Phú – TPHCM.\n" +
-                "\n" +
-                "1 ngày có các ca : Sáng 8h30′ – 11h00′, Chiều 14h00′ – 17h00′ , Tối 18h00′ – 20h30′. Lớp học 2-4-6 và 3-5-7.\n" +
-                "Mỗi lớp ViTaDu chỉ đào tạo từ 8 – 10/hv.\n" +
-                "Lịch học linh động phù hợp cho tất cả các đối tượng từ sinh viên đến người đi làm.\n" +
-                "Sau khi kết thúc lớp học Sketchup tại Vitadu học viên có được những gì?\n" +
-                "\n" +
-                "Làm chủ Sketchup Vray.\n" +
-                "Nắm vững các khái niệm về môi trường đồ họa 3 chiều, các công cụ tạo mô hình 3 chiều.\n" +
-                "Các kỹ năng thiết kế bản vẽ xây dựng, kiến trúc, nội ngoại thất theo mô hình 3 chiều.\n" +
-                "Củng cố các kỹ năng thiết kế chuyên ngành.\n" +
-                "Cung cấp cho học viên kiến thức và kĩ năng sáng tạo mô hình và các sản phẩm 3D\n" +
-                "Sáng tạo ý tưởng trong môi trường 3D hoặc nhập thông tin từ các chương trình 2D để hoàn thiện bản thiết kế với sự dễ dàng thử nghiệm, tìm tòi, thay đổi để tìm ra phương án tốt nhất, sử dụng Vray để thiết lập chiếu sáng, đưa vật liệu vào bản thiết kế giúp công trình thiết kế sinh động hơn.",
+            PostContent:[
+                "Doanh nghiệp có nhu cầu nâng cao năng lực diễn họa, thiết kế của cán bộ, nhân viên bằng phần mềm Sketchup Vray.",
+                "Nắm vững các khái niệm về môi trường đồ họa 3 chiều, các công cụ tạo mô hình 3 chiều.",
+                "Các kỹ năng thiết kế bản vẽ xây dựng, kiến trúc, nội ngoại thất theo mô hình 3 chiều.",
+                "Củng cố các kỹ năng thiết kế chuyên ngành",
+                "Cung cấp cho học viên kiến thức và kĩ năng sáng tạo mô hình và các sản phẩm 3D",
+                "Sáng tạo ý tưởng trong môi trường 3D hoặc nhập thông tin từ các chương trình 2D để hoàn thiện bản thiết kế với sự dễ dàng thử nghiệm, tìm tòi, thay đổi để tìm ra phương án tốt nhất, sử dụng Vray để thiết lập chiếu sáng, đưa vật liệu vào bản thiết kế giúp công trình thiết kế sinh động hơn."
+
+            ],
+            PostContent1: "Khi dùng sketchup bạn có thể dựng hình với kích thước chính xác như Autocad, với mức độ chi tiết rất cao. Mức độ chính xác có thể đảm bảo 100% LayOut trong sketchup. Sketchup không phải chỉ để dành cho thiết kế 3d đơn thuần mà nó còn chức năng xuất hồ sơ với mặt bằng, mặt đứng, mặt cắt tương tự như autocad khi bạn dùng LayOut trong sketchup. Khi chuyển qua layout thì bạn có thể scale tỷ lệ của mặt bằng, mặt đứng, mặt cắt,… Khi bạn sửa model ở sketchup thì phần trình bày ở Layout cũng sẽ tự động cập nhật. Một chức năng rất tiện lợi đúng không.",
+
+            // "
+            // Đối tượng tham gia Học Sketchup vray tại Tây Thạnh, Tân Phú – TPHCM.\n" +
+            //     "\n" +
+            //      +
+            //     "Sinh viên các trường Đại học chuyên ngành kiến trúc, quy hoạch, nội thất, xây dựng, cầu đường,… đang cần công cụ để thể hiện ý tưởng đồ án, bổ sung, hoàn thiện kiến trúc và tiếp cận với công việc thực tế.\n" +
+            //     "Kỹ sư, kiến trúc sư, họa viên cần củng cố kỹ năng, chuẩn hóa kiến thức sử dụng Sketchup Vray, tăng khả năng thăng tiến trong nghề nghiệp.\n" +
+            //     "Cán bộ, chủ xưởng thiết kế thi công nội, ngoại thất, quảng cáo,…\n" +
+            //     "Những bạn đã tham gia khóa học tại nhiều đơn vị khác nhưng không đạt được kết quả như kỳ vọng, chưa thể ứng dụng trong công việc.\n" +
+            //     "Thời gian Học Sketchup vray tại Tây Thạnh, Tân Phú – TPHCM.\n" +
+            //     "\n" +
+            //     "1 ngày có các ca : Sáng 8h30′ – 11h00′, Chiều 14h00′ – 17h00′ , Tối 18h00′ – 20h30′. Lớp học 2-4-6 và 3-5-7.\n" +
+            //     "Mỗi lớp ViTaDu chỉ đào tạo từ 8 – 10/hv.\n" +
+            //     "Lịch học linh động phù hợp cho tất cả các đối tượng từ sinh viên đến người đi làm.\n" +
+            //     "Sau khi kết thúc lớp học Sketchup tại Vitadu học viên có được những gì?\n" +
+            //     "\n" +
             tagsData: [
                 {
                     tagName: "Lớp học Sketchup tại Tp Hồ Chí Minh",
@@ -591,12 +678,29 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/post-01.jpg")
-                }
+                    link: require("../../images/product/sketchup/sketchup-hv1.jpg")
+                },
+                {
+                    link: require("../../images/product/sketchup/sketchup-hv2.png")
+                },
+                {
+                    link: require("../../images/product/sketchup/sketchup-hv3.jpg")
+                },
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Học theo hình thức “Cầm tay chỉ việc” nên các bạn học đến đâu thì các bạn hiểu ra và thành thạo đến đó.",
+                "Giáo trình thực hành được lấy ra từ các dự án thực tế – học thật, tay nghề thật.",
+                "Cam kết các bạn thành nghề thì mới xong khóa học chứ không đào tạo theo hình thức quảng cáo vớ vẩn."
+            ],
+            whatMake:[
+                "Hiểu rõ và sử dụng thành thạo Sketchup.",
+                "Thành thạo các công cụ và cách cài đặt phần mềm.",
+                "Nắm được tư duy thiết kế mô hình 3D nội thất, xây dựng.",
+                "Thực hiện các dự án phối cảnh công trình nhà phố, biệt thự.",
+                "Thực hành thiết kế nội, ngoại thất căn hộ chung cư, biệt thự.",
+                "Kỹ thuật xuất file qua các phần mềm 3D khác."
+
             ]
         },
     ]

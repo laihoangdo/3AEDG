@@ -6,21 +6,21 @@ import { MDBContainer, MDBRow } from "mdbreact";
 import Lightbox from "react-image-lightbox";
 
 const images = [
-    require("../../images/post-01.jpg"),
-    require("../../images/post-02.jpg"),
-    require("../../images/post-03.jpg"),
-    require("../../images/post-04.jpg"),
-    require("../../images/post-05.jpg"),
-    require("../../images/post-06.jpg"),
+    require("../../images/product/pts/pts-hocvien-1.png"),
+    require("../../images/product/pts/pts-hocvien-3.jpg"),
+    require("../../images/product/ai/ai-hv-2.jpg"),
+    require("../../images/product/ai/ai-hv-1.png"),
+    require("../../images/post-14.jpg"),
+    require("../../images/post-15.jpg"),
 ];
 
 const smallImages = [
-    require("../../images/post-01.jpg"),
-    require("../../images/post-02.jpg"),
-    require("../../images/post-03.jpg"),
-    require("../../images/post-04.jpg"),
-    require("../../images/post-05.jpg"),
-    require("../../images/post-06.jpg"),
+    require("../../images/product/pts/pts-hocvien-1.png"),
+    require("../../images/product/pts/pts-hocvien-3.jpg"),
+    require("../../images/product/ai/ai-hv-2.jpg"),
+    require("../../images/product/ai/ai-hv-1.png"),
+    require("../../images/post-14.jpg"),
+    require("../../images/post-15.jpg"),
 ];
 export default class Work extends PureComponent {
     constructor(props) {

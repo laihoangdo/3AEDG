@@ -1,5 +1,5 @@
 ﻿import React, { Component , Suspense } from 'react';
-import {Route, Switch , Redirect} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import Page from "react-page-loading";
 import { CSSTransition } from "react-transition-group";
 // import './App.css';
