@@ -42,12 +42,23 @@ export default class CourseSidebar extends PureComponent {
         return (
             <React.Fragment>
                 <div className="col-lg-4">
+                    {/*<div className="side-widget">*/}
+                    {/*    <div className="search-form">*/}
+                    {/*        <form>*/}
+                    {/*            <input type="text" className="form-control" id="" placeholder="Search" />*/}
+                    {/*            <button type="submit" className="btn btn-default"><Icofont icon="icofont-search-2" /></button>*/}
+                    {/*        </form>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <div className="side-widget">
-                        <div className="search-form">
-                            <form>
-                                <input type="text" className="form-control" id="" placeholder="Search" />
-                                <button type="submit" className="btn btn-default"><Icofont icon="icofont-search-2" /></button>
-                            </form>
+                        <div >
+                        <div className="pane-content">
+                            <aside id="text-4" >
+                                <p className="widget-title">Tư vấn</p>
+
+                                <div className="textwidget">0938636843</div>
+                            </aside>
+                        </div>
                         </div>
                     </div>
 
@@ -61,7 +72,7 @@ export default class CourseSidebar extends PureComponent {
                     <div className="side-widget">
                         <h3>{this.props.widgetTitle2}</h3>
 
-                        {sidebardata}
+                        {sidebardata[0]}{sidebardata[1]}
 
                     </div>
 
@@ -124,6 +135,42 @@ CourseSidebar.defaultProps = {
             Image: require("../../images/corel.jpg"),
             PostTitle: "Khóa Học Corel",
             postContent: "Khóa Học Corel",
+            postDate: "10 Mar",
+            teacher: "Thầy Long",
+            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+        },
+        {
+            postsLink: "/khoa-hoc/autocad",
+            Image: require("../../images/autocad-bg.jpg"),
+            PostTitle: "Khóa Học Autocad",
+            postContent: "Khóa Học Autocad",
+            postDate: "10 Mar",
+            teacher: "Thầy Long",
+            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+        },
+        {
+            postsLink: "/khoa-hoc/indesign",
+            Image: require("../../images/indesign-bg.jpg"),
+            PostTitle: "Khóa Học Indesign",
+            postContent: "Khóa Học Indesign",
+            postDate: "10 Mar",
+            teacher: "Thầy Long",
+            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+        },
+        {
+            postsLink: "/khoa-hoc/3ds-max",
+            Image: require("../../images/3dsmax-bg.jpeg"),
+            PostTitle: "Khóa Học 3Ds Max",
+            postContent: "Khóa Học 3Ds Max",
+            postDate: "10 Mar",
+            teacher: "Thầy Long",
+            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+        },
+        {
+            postsLink: "/khoa-hoc/sketchup",
+            Image: require("../../images/sketchup-bg.jpg"),
+            PostTitle: "Khóa Học SketChup",
+            postContent: "Khóa Học SketChup",
             postDate: "10 Mar",
             teacher: "Thầy Long",
             facebookLink : "//facebook.com/tiencanh.chonphieubong"

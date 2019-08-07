@@ -67,8 +67,8 @@ export default class  Header extends PureComponent {
                             <div className="social-icons">
                                 <ul className="list-inline">
                                     <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-1x" /></a></li>
-                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger icofont-1x" /></a></li>
-                                    <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram icofont-1x" /></a></li>
+                                    <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger icofont-1x" /></a></li>
+                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati icofont-1x" /></a></li>
                                 </ul>
                             </div>
                         </div>

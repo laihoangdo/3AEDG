@@ -4,7 +4,7 @@
     line-height: 1;
     margin-top: 5px;
     right: 20px;
-    bottom: 110px;
+    bottom: 82px;
     position: fixed;
     background-color: #03A84E;
     width: 60px !important;
@@ -19,13 +19,13 @@
     color: white;
     margin-top: 5px;
 }
-.phone-number{
-    position: absolute;
-    width: 7.7rem;
-    color: white;
-    background:#03A84E;
-    font-size: medium;
-    border: 1px solid;
-    margin-top: -9px;
-    right: -19px;
-}
+/*.phone-number{*/
+/*    position: absolute;*/
+/*    width: 7.7rem;*/
+/*    color: white;*/
+/*    background:#03A84E;*/
+/*    font-size: medium;*/
+/*    border: 1px solid;*/
+/*    margin-top: -9px;*/
+/*    right: -19px;*/
+/*}*/

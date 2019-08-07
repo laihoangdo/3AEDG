@@ -1145,6 +1145,9 @@ html[xmlns] .clearfix {
    .our-blog {
        background-color: #f5f8f9;
    }
+   .our-blog .row{
+       background-color: white;
+   }
    .blog-item {
        margin-top: 30px;
        transition: .4s;
