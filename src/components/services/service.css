@@ -68,3 +68,11 @@ table, th, td {
     font-size: 30px;
     font-weight: bold;
     color: #fff;}
+
+.fb-video-link{
+    background: #fff;
+    text-align: center;
+}
+.post-meta p {
+    color: #848484;
+}

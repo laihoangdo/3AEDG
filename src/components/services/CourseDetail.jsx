@@ -81,7 +81,7 @@ export default class CourseDetail extends PureComponent {
                                                         {/*    <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>*/}
                                                         {/*    <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>*/}
                                                         {/*</ul>*/}
-                                                        <p>Tag: Lớp học illustrator tại Sài Gòn, học illustrator tại Sài Gòn, Khóa học illustrator tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc illustrator tai Hồ Chí Minh, khoa hoc illustrator tại Sai Gon.</p>
+                                                        <p>Tag: Lớp học {this.state.courseDetail.Id} tại Sài Gòn, học {this.state.courseDetail.Id} tại Sài Gòn, Khóa học {this.state.courseDetail.Id} tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc {this.state.courseDetail.Id} tai Hồ Chí Minh, khoa hoc {this.state.courseDetail.Id} tại Sai Gon.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -100,7 +100,7 @@ export default class CourseDetail extends PureComponent {
                                                                <h4> Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}?</h4>
                                                                 <ul>
                                                                     {this.state.courseDetail.reason.map((reason , index) => (
-                                                                        <li>{reason}</li>
+                                                                        <li key={index}>{reason}</li>
                                                                     ))}
                                                                 </ul>
                                                             </li>
@@ -154,7 +154,7 @@ export default class CourseDetail extends PureComponent {
                                                 <div className="product-student">
                                                     <h3>Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.Id}</h3>
                                                     {this.state.courseDetail.imageWork.map((product , index) => (
-                                                        <img src={product.link} alt=""/>
+                                                        <img key={index} src={product.link} alt=""/>
                                                     ))}
                                                 </div>
                                                 {/*<h3>Tại sao nên lựa chọn học thiết kế đồ họa adobe illustrator?</h3>*/}
@@ -173,26 +173,51 @@ export default class CourseDetail extends PureComponent {
 
                                             {/* <Comments /> */}
 
-                                            <div className="comments-form">
-                                                <h3 className="comments-title">Leave a Comments</h3>
-                                                <form>
-                                                    <div className="form-group">
-                                                        <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                                                    </div>
-                                                    <div className="form-group">
-                                                        <input type="email" className="form-control" id="email_address" placeholder="Your Email" />
-                                                    </div>
-                                                    <div className="form-group">
-                                                        <textarea className="form-control" rows="5" placeholder="Type here..." />
-                                                    </div>
-                                                    <div className="text-center">
-                                                        <div className="button">
-                                                            <Link to="/#0">Submit Comment</Link>
-                                                            <div className="mask"></div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                            {/*<div className="comments-form">*/}
+                                                {/*<h3 className="comments-title">Leave a Comments</h3>*/}
+                                                {/*<form>*/}
+                                                    {/*<div className="form-group">*/}
+                                                        {/*<input type="text" className="form-control" id="name" placeholder="Your Name" />*/}
+                                                    {/*</div>*/}
+                                                    {/*<div className="form-group">*/}
+                                                        {/*<input type="email" className="form-control" id="email_address" placeholder="Your Email" />*/}
+                                                    {/*</div>*/}
+                                                    {/*<div className="form-group">*/}
+                                                        {/*<textarea className="form-control" rows="5" placeholder="Type here..." />*/}
+                                                    {/*</div>*/}
+                                                    {/*<div className="text-center">*/}
+                                                        {/*<div className="button">*/}
+                                                            {/*<Link to="/#0">Submit Comment</Link>*/}
+                                                            {/*<div className="mask"></div>*/}
+                                                        {/*</div>*/}
+                                                    {/*</div>*/}
+                                                {/*</form>*/}
+                                            {/*</div>*/}
+                                            <div className="fb-video-link">
+                                            <div className="fb-video"
+                                                 data-href="https://www.facebook.com/2604857046301739/videos/2324921554282334/"
+                                                 data-width="500" data-show-text="true">
+                                                <blockquote
+                                                    cite="https://developers.facebook.com/2604857046301739/videos/2324921554282334/"
+                                                    className="fb-xfbml-parse-ignore"><a
+                                                    href="https://developers.facebook.com/2604857046301739/videos/2324921554282334/">KHÓA
+                                                    HỌC THIẾT KẾ ĐỒ HỌA CÙNG CHUYÊN GIA</a>
+                                                    <p>#HỌC_THIẾT_KẾ_ĐỒ_HỌA_CÙNG_CHUYÊN_GIA, KHÓA CẦM TAY CHỈ VIỆC.
+                                                        Cam kết học xong trở thành chuyên gia. Với GIảng viên cao cấp
+                                                        với nhiều năm kinh nghiệm trong ngành thiết kế Đồ Họa.
+                                                        Để biết thêm thông tin về khóa học này xin liên hệ theo số
+                                                        hotline để được tư vẫn. Hotline: 0938.636.843
+                                                        Với thời đại công nghệ 4.0 Ngành đồ họa đang phát triển như vũ
+                                                        bão và nhu cầu rất cần lao động về thiết kế đồ họa rất cao.Hãy
+                                                        đăng ký ngay để đươc nhận ưu đãi từ khóa học.</p>Người đăng: <a
+                                                        href="https://www.facebook.com/Thi&#x1ebf;t-K&#x1ebf;-&#x110;&#x1ed3;-Ho&#x1ea1;-2604857046301739/">Thiết
+                                                        Kế Đồ Hoạ</a> vào Thứ Năm, 1 tháng 8, 2019
+                                                </blockquote>
                                             </div>
+                                            </div>
+                                            <div className="fb-comments"
+                                                 data-href="https://www.facebook.com/2604857046301739/videos/2324921554282334/"
+                                                 data-width="" data-numposts="5"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -210,19 +235,8 @@ export default class CourseDetail extends PureComponent {
     }
 }
 CourseDetail.propTypes = {
-    Title: PropTypes.string,
-    Content: PropTypes.string,
-    CourseDetailImage:PropTypes.string,
-    CourseDetailTitle: PropTypes.string,
     CourseDetailDate: PropTypes.string,
     CourseDetailMonth: PropTypes.string,
-    authorLink: PropTypes.string,
-    authorName: PropTypes.string,
-    CommentsLink: PropTypes.string,
-    TotalComments: PropTypes.string,
-    TagLink: PropTypes.string,
-    TagName: PropTypes.string,
-    PostContent: PropTypes.string,
     FacebookLink: PropTypes.string,
     TwitterLink: PropTypes.string,
     InstagramLink: PropTypes.string,
@@ -233,19 +247,8 @@ CourseDetail.propTypes = {
 
 //Default Props
 CourseDetail.defaultProps = {
-    Title: "Blog Details",
-    Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-    CourseDetailImage: require("../../images/design-01.jpg"),
-    CourseDetailTitle: "Risus commodo viverra mae.",
     CourseDetailDate: "10",
     CourseDetailMonth: "Mar",
-    authorLink: "/#0",
-    authorName: "Jone",
-    CommentsLink: "/#0",
-    TotalComments: "545",
-    TagLink: "/#0",
-    TagName: "Business",
-    PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
     FacebookLink: "/#0",
     TwitterLink: "/#0",
     InstagramLink: "/#0",
@@ -260,18 +263,6 @@ CourseDetail.defaultProps = {
             Image: require("../../images/pts-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-photoshop.png"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
-            Title: "Blog Details",
-            Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "Thành thạo hoàn toàn những công cụ trong Photoshop từ cơ bản đến nâng cao.\n" +
                 "\n" +
                 "Thấu hiểu hình ảnh kỹ thuật số, định hình không gian, bố cục màu cho một bức ảnh\n" +
@@ -290,10 +281,6 @@ CourseDetail.defaultProps = {
                 "\n" +
                 "\n" +
                 "Sử dụng tự động hóa trên photoshop",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
@@ -335,16 +322,6 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "Thiết kế các ấn phẩm: Logo, banner, poster, brochure, profile... sáng tạo bùng nổ với thiết kế logo, thiết kế bộ nhận diện thương hiệu.\n" +
                 "\n" +
                 "Sáng tạo mọi nhân vật hoạt hình bạn yêu thích hay những nhân vật ngộ nghĩnh trong phim.\n" +
@@ -355,10 +332,6 @@ CourseDetail.defaultProps = {
                 "\n" +
                 "Vẽ cả thế giới tưởng tượng của bạn qua cây bút thần kì Adobe Illustrator. ",
             PostContent1: "Thiết kế Đồ họa vẫn là một nghề hot trong những năm gần đây, nhu cầu của thị trường luôn ở mức cao vì thế cơ hội nghề nghiệp là rất rộng mở với tất cả mọi người. Để trở thành một nhà thiết kế Đồ họa bạn cần có đam mê và sự nỗ lực, ngoài những kiến thức về chuyên ngành thiết kế như bố cục màu sắc, tư duy sáng tạo, thị giác và truyền thông... người làm thiết kế luôn phải trang bị cho mình những công cụ thiết kế cần thiết để có thể giải phóng những ý tưởng thành các bản vẽ thiết kế, biến thế giới trừu tượng trong trí não thành những hình ảnh cụ thể. Một trong những công cụ hữu hiệu để giúp bạn làm được điều đó chính là Illustrator.",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học Illustrator tại Tp Hồ Chí Minh",
@@ -400,21 +373,7 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "- Sử dụng thành thạo phần mềm thiết kế đồ họa in ấn, quảng cáo Corel DrawTư duy thiết kế, kỹ năng sáng tạo và kỹ thuật thiết kế hoàn thiện sản phẩm sẽ được trình bày trong khóa họcBiên tập, minh họa các ấn phẩm quảng cáoThiết kế, sáng tạo các dạng sản phẩm đồ họa phổ biến như: Logo, Poster, Brochure, Profile, Card Visit, tờ rơi ...Thiết kế hoàn thiện bộ nhận diện thương hiệu, ấn phẩm văn phòng ...Kỹ thuật thiết kế Banner và thiết kế các sản phẩm quảng cáo cho Maketting Online, Facebook Online ...Hoàn thành khóa học cùng kiến thức và kỹ năng chuyên sâu, học viên hoàn toàn có thể làm việc trong các công ty thiết kế in ấn, quảng cáo ...",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học Corel tại Tp Hồ Chí Minh",
@@ -456,21 +415,15 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
-            PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
+            PostContent: "Giúp bạn làm chủ Indesign - công cụ hữu hiệu để tạo ra các sản phẩm như Sách, báo, Tạp chí, catalogues… mà với khả năng kiểm soát, tương tác hiệu quả với các đối tượng đồ họa tĩnh, động. \n" +
+                "Làm chủ giao diện làm việc và các công cụ\n" +
+                "Quản lý trang tài liệu\n" +
+                "Tìm hiểu các lệnh biên tập văn bản Character\n" +
+                "Biên tập cấu trúc văn bản đoạn Paragraph\n" +
+                "Làm việc với đối tượng đồ họa Graphics link\n" +
+                "Quản lý màu sắc & đối tượng trên indesign\n" +
+                "Biến đổi đối tượng - Transforming Objects\n" +
+                "Đóng gói để xuất khẩu và in ấn",
             tagsData: [
                 {
                     tagName: "Lớp học Indesign tại Tp Hồ Chí Minh",
@@ -512,21 +465,7 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học Autocad tại Tp Hồ Chí Minh",
@@ -568,21 +507,7 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học 3Ds Max tại Tp Hồ Chí Minh",
@@ -624,16 +549,6 @@ CourseDetail.defaultProps = {
             courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            CourseDetailImage: require("../../images/design-01.jpg"),
-            CourseDetailTitle: "Risus commodo viverra mae.",
-            CourseDetailDate: "10",
-            CourseDetailMonth: "Mar",
-            authorLink: "/#0",
-            authorName: "Jone",
-            CommentsLink: "/#0",
-            TotalComments: "545",
-            TagLink: "/#0",
-            TagName: "Business",
             PostContent: "Đối tượng tham gia Học Sketchup vray tại Tây Thạnh, Tân Phú – TPHCM.\n" +
                 "\n" +
                 "Doanh nghiệp có nhu cầu nâng cao năng lực diễn họa, thiết kế của cán bộ, nhân viên bằng phần mềm Sketchup Vray.\n" +
@@ -654,10 +569,6 @@ CourseDetail.defaultProps = {
                 "Củng cố các kỹ năng thiết kế chuyên ngành.\n" +
                 "Cung cấp cho học viên kiến thức và kĩ năng sáng tạo mô hình và các sản phẩm 3D\n" +
                 "Sáng tạo ý tưởng trong môi trường 3D hoặc nhập thông tin từ các chương trình 2D để hoàn thiện bản thiết kế với sự dễ dàng thử nghiệm, tìm tòi, thay đổi để tìm ra phương án tốt nhất, sử dụng Vray để thiết lập chiếu sáng, đưa vật liệu vào bản thiết kế giúp công trình thiết kế sinh động hơn.",
-            FacebookLink: "/#0",
-            TwitterLink: "/#0",
-            InstagramLink: "/#0",
-            linkedinLink: "/#0",
             tagsData: [
                 {
                     tagName: "Lớp học Sketchup tại Tp Hồ Chí Minh",

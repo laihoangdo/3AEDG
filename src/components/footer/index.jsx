@@ -15,6 +15,10 @@ export default class  Footer extends PureComponent {
         <React.Fragment>
                 <footer className="footer">
                     <div className="container">
+                        <div className="fb-like"
+                             data-href="https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/"
+                             data-width="300" data-layout="standard" data-action="like" data-size="small"
+                             data-show-faces="true" data-share="true"></div>
                         <div className="row">
                             <div className="col-md-5">
                                 <p className="copyright">{this.props.copyrightText}</p>
@@ -25,7 +29,7 @@ export default class  Footer extends PureComponent {
                                         <li>{this.props.socialTitle} </li>
                                         <li><a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
                                         {/* <li><Link to={this.props.FacebookLink}><Icofont icon="icofont-facebook"/></Link></li> */}
-                                        <li><Link to={this.props.TwitterLink}><Icofont icon="icofont-twitter"/></Link></li>
+                                        <li><Link to={this.props.ZaloLink}><Icofont icon="icofont-technorati"/></Link></li>
                                         <li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>
                                         <li><Link to={this.props.linkedinLink}><Icofont icon="icofont-linkedin"/></Link></li>
                                     </ul>
@@ -115,7 +119,7 @@ export default class  Footer extends PureComponent {
 Footer.propTypes = {
     copyrightText: PropTypes.string,
     FacebookLink: PropTypes.string,
-    TwitterLink: PropTypes.string,
+    ZaloLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
 };
@@ -125,7 +129,7 @@ Footer.defaultProps = {
     copyrightText: "2019 © All Rights Reserved.",
     socialTitle: "Follow Us On:",
     FacebookLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
-    TwitterLink: "/#0",
+    ZaloLink: "https://zalo.me/0337590737",
     InstagramLink: "/#0",
     linkedinLink: "/#0",
 };

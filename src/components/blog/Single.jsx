@@ -3,9 +3,6 @@ import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 // import html from 'react-inner-html';
-// import axios from 'axios';
-
-//Import Component
 import Sidebar from "./Sidebar"; 
 import Header from '../header';
 import Footer from '../footer';

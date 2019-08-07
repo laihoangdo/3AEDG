@@ -11,6 +11,7 @@ import Contact from '../contact';
 import AboutUs from '../aboutus';
 
 export default class HomeOne extends PureComponent {
+// <div className="ca-pic set-bg" style={ { backgroundImage: `url(${teacher})` } }></div>
     render() {
         return (
             <React.Fragment>

@@ -65,7 +65,10 @@ Review.defaultProps = {
         },
         {
             clientImage: require("../../images/thaytien1.jpg"),
-            Content: "Chất lượng giảng dạy rất tốt",
+            Content: "\n" +
+                "​\n" +
+                "\n" +
+                "Mình xuất thân là dân tay ngang, học ĐH Ngoại ngữ ra nhưng có niềm đam mê với Marketing và Thiết kế. Với mình, trọn bộ khóa học này rất thú vị và cần thiết, đặc biệt với các marketer và designer tay ngang hay mới vào nghề. Khóa học giúp mình có nền tảng về thiết kế và có thể học về thiết kế đồ họa một cách bài bản nhất, được các thầy hỗ trợ nhiệt tình mà chi phí hợp lý.",
             Name: "Hoang Do",
             Profession: "Học Viên Khóa 2019",
         },

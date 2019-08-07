@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+﻿import React, { Component , Suspense } from 'react';
 import {Route, Switch , Redirect} from "react-router-dom";
 import Page from "react-page-loading";
 import { CSSTransition } from "react-transition-group";
@@ -9,6 +9,7 @@ import './css/color-default.css';
 import ScrollUpBtn from './components/scroll';
 import routes from './router';
 import CallButton from "./components/callButton";
+import Loading from "./modules/loading";
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
             </div> */}
 
             <div>
+                <Suspense fallback={<Loading/>}>
                         <Route
                             render={({ location }) => (
                                 <CSSTransition
@@ -39,7 +41,7 @@ class App extends Component {
                                 >
                                     <section className="route-section">
                                         {/* <Switch location={location}>
-                                            
+
                                             <Route
                                                 path="/"
                                                 component={HomeOne}
@@ -54,7 +56,7 @@ class App extends Component {
                                             {
                                               routes.map(({...restRouter}) => {
                                                 return (
-                                                    <Route {...restRouter}/>
+                                                    <Route key={restRouter.path} {...restRouter}/>
                                                 )
                                               })
                                             }
@@ -63,6 +65,7 @@ class App extends Component {
                                 </CSSTransition>
                             )}
                         />
+                </Suspense>
                         {/* ScrollUpBtn: src/components/ScrollUp.jsx */}
                         <CallButton/>
                         <ScrollUpBtn />

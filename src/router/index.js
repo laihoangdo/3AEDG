@@ -1,10 +1,9 @@
-import Home from "../components/home";
-import NotFound from "../modules/notFound";
-import AboutUs from "../components/aboutus";
-import Single from "../components/blog/Single";
-import HomeOne from "../components/HomeOne";
-import SingleBlog from "../components/blog/SingleBlog";
-import CourseDetail from "../components/services/CourseDetail";
+import React from 'react';
+const HomeOne = React.lazy(() => import("../components/HomeOne"));
+const Single = React.lazy(() => import("../components/blog/Single"));
+const CourseDetail = React.lazy(() => import("../components/services/CourseDetail"));
+const AboutUs = React.lazy(() => import("../components/aboutus"));
+const NotFound = React.lazy(() => import("../modules/notFound"));
 
 
 
