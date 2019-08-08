@@ -2,84 +2,15 @@
 /* ========================= 
     Default CSS
    ========================= */
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet');
-   @import url('https://fonts.googleapis.com/css?family=Monoton');
+   /*@import url('https://fonts.googleapis.com/css?family=Monoton');*/
     @import "~animate.css/animate.css";
-/*Reset*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-body {
-    line-height: 1;
-    /*color:#555;*/
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-:focus {
-    outline: 0;
-}
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-a {
-    text-decoration:  none;
-}
 
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.clearfix {
-    clear: both;
-    display: block;
-}
-
-html[xmlns] .clearfix {
-    display: block;
-}
-
-* html .clearfix {
-    height: 1%;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-/*Add your css into here*/
-.fl_left{ float: left;}
-.fl_right{ float: right;}
-
-/*End Reset*/
-
+    @font-face {
+        font-family: 'MyFont';
+        src: local('MyFont'), url("../fonts/roboto/Roboto-BoldItalic.ttf") format('truetype');
+    }
    html, body {
-       font-family: 'Roboto', sans-serif;
+       font-family: 'MyFont', sans-serif;
        font-size: 14px;
        font-weight: 400;
        /*color: #848484;*/
@@ -87,7 +18,6 @@ html[xmlns] .clearfix {
        letter-spacing: .5;
        overflow-x: hidden;
        -webkit-font-smoothing: antialiased;
-       /* direction: rtl; */
    }
    #map {
 	width: 100%;
@@ -349,7 +279,7 @@ html[xmlns] .clearfix {
        color: #848484;
        padding: 0px 0 10px;
        /*new*/
-       height:  10rem;
+       height:  7rem;
    }
    .glyph i {
        font-size: 60px;
@@ -433,7 +363,7 @@ html[xmlns] .clearfix {
        display: none;
    }
    .logo img, .logo-mobile img , .logo-2 img {
-       width: 124px;
+       width: 91px;
    }
    .navbar-brand.logo-2, .menu-shrink .navbar-brand.logo ,.menu-shrink .navbar-brand.logo-mobile {
      display: none;
@@ -540,7 +470,7 @@ html[xmlns] .clearfix {
      background-size: cover;
      background-position: center center;
      background-color: #dddddd;
-     height: 700px;
+     height: 400px;
      font-size: 15px;
      color: #fff;
    }
@@ -575,9 +505,9 @@ html[xmlns] .clearfix {
        margin-top: 40px;
    }
    /*style for banner*/
-    .opacityOne , .opacityZero{
-        color: #274abb;
-    }
+   /* .opacityOne , .opacityZero{*/
+   /*     color: #274abb;*/
+   /* }*/
    /* VIDEO-AREA */
    .home-video-area {
        height:700px;
@@ -636,15 +566,11 @@ html[xmlns] .clearfix {
        max-width: 360px;
        margin: 0 15px;
        cursor: pointer;
-       background-color: #fdfdfd;
+       background-color: #f5f8f9;
        /*padding: 18px;*/
        border-radius: 10px;
        position: relative;
        color: #848484;
-       transform: translateX(0%) rotateZ(-11deg) scale(.95);
-       -webkit-transform: translateX(0%) rotateZ(-11deg) scale(.95);
-       -ms-transform: translateX(0%) rotateZ(-11deg) scale(.95);
-       transition: transform .4s ease-out;
    }
    .owl-thumb-item i {
        font-size: 60px;
@@ -654,7 +580,7 @@ html[xmlns] .clearfix {
        color: #ffffff;
    }
    .owl-thumb-item.active, .owl-thumb-item:hover {
-       transform: translateX(0) rotateZ(0) scale(.90);
+       /*transform: translateX(0) rotateZ(0) scale(.90);*/
    }
    .owl-thumb-item::before {
        display: block;
@@ -672,16 +598,9 @@ html[xmlns] .clearfix {
        transform-origin: 30% 50%;
        pointer-events: none;
        z-index: 1;
-       transform: translateX(0) rotateZ(0) scale(.87);
-       -webkit-transform: translateX(0) rotateZ(0) scale(.87);
-       -ms-transform: translateX(0) rotateZ(0) scale(.87);
-       transform: translateX(0) rotateZ(0) scale(.87);
    }
    .owl-thumb-item:hover::before, .owl-thumb-item.active::before {
        opacity: 0;
-       transform: scaleX(0);
-       -webkit-transform: scaleX(0);
-       -ms-transform: scaleX(0);
    }
    .owl-thumb-item.active, .owl-thumb-item:hover {
        /*padding: 18px;*/
@@ -1192,7 +1111,7 @@ html[xmlns] .clearfix {
        /*text-align: right;*/
    }
     .post-content img{
-        width: 100%;
+        width: 100% !important;
     }
     .line-opacity{
         border-right: 1px solid #e5e5e5;
@@ -1343,7 +1262,7 @@ html[xmlns] .clearfix {
        /*new*/
        height: 9rem;
    }
-.post-content p {
+.post-content p , .post-content .p-hint {
 
     height: 9rem;
 }
@@ -2048,9 +1967,9 @@ html[xmlns] .clearfix {
    .address-area i {
        color: #fe5619;
        font-size: 35px;
-       position: absolute;
+       position: relative;
        right: 0;
-       top: 0;
+       top: 2px;
    }
    .email {
        margin: 50px 0;
@@ -2126,7 +2045,7 @@ html[xmlns] .clearfix {
     margin-bottom: 81px;
     transition: right 0.5s;
     cursor: pointer;
-    background: #03A84E !important;
+    background: #3333FF !important;
     border: none !important;
     border-radius: 50%;
     font-size: 20px;

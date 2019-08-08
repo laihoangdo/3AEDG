@@ -32,7 +32,7 @@ export default class CourseSidebar extends PureComponent {
         //Sidebar Tags loop start
         const tagdata = this.props.tagsData.map((tag, index) => (
             <li key={index}>
-                <h4>{tag.tagName}</h4>
+                <p><Icofont icon="icofont-tags icofont-1x" /> &nbsp;{tag.tagName}</p>
                 {/*<Link to={tag.tagLink}>{tag.tagName}</Link>*/}
             </li>
         ));

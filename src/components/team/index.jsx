@@ -104,7 +104,7 @@ Team.defaultProps = {
     SectionbgTitle: "Giảng Viên",
     sectionTitle: "Đội Ngũ Giảng Viên",
     sectionDescription:
-        ".Giảng Viên Được Đào Tạo Bài Bản, Tận Tâm Trong Công Việc",
+        "Giảng Viên Được Đào Tạo Bài Bản, Tận Tâm Trong Công Việc.",
     teamsData: [
         {
             Image: require("../../images/thaytien-avatar01.jpg"),

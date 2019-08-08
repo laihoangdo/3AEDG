@@ -28,18 +28,18 @@ export default class Contact extends PureComponent {
                             <div className="col-lg-4 col-md-4">
                                 <div className="address-area">
                                     <div className="addess">
-                                        <Icofont icon="icofont-google-map"/>
-                                        <h4>{this.props.AddTitle}</h4>
+
+                                        <h4>{this.props.AddTitle}  &nbsp;  <Icofont icon="icofont-google-map"/></h4>
                                         <p>{this.props.Address}</p>
                                     </div>
                                     <div className="email">
-                                        <Icofont icon="icofont-email"/>
-                                        <h4>{this.props.EmailTitle}</h4>
+
+                                        <h4>{this.props.EmailTitle}  &nbsp; <Icofont icon="icofont-email"/></h4>
                                         <p>{this.props.Email}</p>
                                     </div>
                                     <div className="phone">
-                                        <Icofont icon="icofont-phone"/>
-                                        <h4>{this.props.PhoneTitle}</h4>
+
+                                        <h4>{this.props.PhoneTitle} &nbsp; <Icofont icon="icofont-phone"/></h4>
                                         <p>{this.props.Phone}</p>
                                     </div>
                                 </div>

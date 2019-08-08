@@ -71,7 +71,7 @@ export default class CourseDetail extends PureComponent {
                                                         {/*    <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>*/}
                                                         {/*    <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>*/}
                                                         {/*</ul>*/}
-                                                        <p>Tag: Lớp học {this.state.courseDetail.Id} tại Sài Gòn, học {this.state.courseDetail.Id} tại Sài Gòn, Khóa học {this.state.courseDetail.Id} tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc {this.state.courseDetail.Id} tai Hồ Chí Minh, khoa hoc {this.state.courseDetail.Id} tại Sai Gon.</p>
+                                                        <p><Icofont icon="icofont-tags icofont-1x" /> &nbsp;Tags: Lớp học {this.state.courseDetail.Id} tại Sài Gòn, học {this.state.courseDetail.Id} tại Sài Gòn, Khóa học {this.state.courseDetail.Id} tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc {this.state.courseDetail.Id} tai Hồ Chí Minh, khoa hoc {this.state.courseDetail.Id} tại Sai Gon , Học đồ họa cần những gì.</p>
                                                     </div>
                                                 </div>
                                             </div>

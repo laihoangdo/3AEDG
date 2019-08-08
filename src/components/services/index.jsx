@@ -13,13 +13,13 @@ export default class Services extends PureComponent {
                     <div className="glyph">
                         <Icofont icon={service.icon} />
                     </div>
-                    <h3>{service.heading}</h3>
-                    <p>{service.description}</p>
+                    <Link to={{pathname: `khoa-hoc/${service.Id}`}} className="btn-a"><h3>{service.heading}</h3>
+                    <h4>{service.description}</h4>
                     <img
                         src={service.Image}
                         alt="Gallery"
                         className="img-fluid"
-                    />
+                    /></Link>
                     {/*<div className="center-wrap">*/}
                         {/*<Link to={{pathname: `khoa-hoc/${service.Id}`}} title="Read More" className="link-btn"><i className="fa fa-arrow-right"></i>Xem Chi Tiết</Link>*/}
                     {/*</div>*/}

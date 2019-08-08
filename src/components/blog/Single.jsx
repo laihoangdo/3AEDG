@@ -88,7 +88,7 @@ export default class Single extends PureComponent {
                                             <div className="post-content">
                                                 {/*<textarea value={Content__c} ></textarea>*/}
                                                 {/*<body>{Content__c}</body>*/}
-                                                return <div dangerouslySetInnerHTML={{ __html: Content__c }} />;
+                                                <div dangerouslySetInnerHTML={{ __html: Content__c }} />
                                                 
                                                 <div className="sharing-link">
                                                     <ul>
@@ -103,32 +103,30 @@ export default class Single extends PureComponent {
                                             
                                             {/* <Comments /> */}
                                             
-                                            <div className="comments-form">
-                                                <h3 className="comments-title">Leave a Comments</h3>
-                                                <form>
-                                                    <div className="form-group">
-                                                        <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                                                    </div>
-                                                    <div className="form-group">
-                                                        <input type="email" className="form-control" id="email_address" placeholder="Your Email" />
-                                                    </div>
-                                                    <div className="form-group">
-                                                        <textarea className="form-control" rows="5" placeholder="Type here..." />
-                                                    </div>
-                                                    <div className="text-center">
-                                                        <div className="button">
-                                                            <Link to="/#0">Submit Comment</Link>
-                                                            <div className="mask"></div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            {/*<div className="comments-form">*/}
+                                            {/*    <h3 className="comments-title">Leave a Comments</h3>*/}
+                                            {/*    <form>*/}
+                                            {/*        <div className="form-group">*/}
+                                            {/*            <input type="text" className="form-control" id="name" placeholder="Your Name" />*/}
+                                            {/*        </div>*/}
+                                            {/*        <div className="form-group">*/}
+                                            {/*            <input type="email" className="form-control" id="email_address" placeholder="Your Email" />*/}
+                                            {/*        </div>*/}
+                                            {/*        <div className="form-group">*/}
+                                            {/*            <textarea className="form-control" rows="5" placeholder="Type here..." />*/}
+                                            {/*        </div>*/}
+                                            {/*        <div className="text-center">*/}
+                                            {/*            <div className="button">*/}
+                                            {/*                <Link to="/#0">Submit Comment</Link>*/}
+                                            {/*                <div className="mask"></div>*/}
+                                            {/*            </div>*/}
+                                            {/*        </div>*/}
+                                            {/*    </form>*/}
+                                            {/*</div>*/}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Sidebar: src/components*/}
                             <Sidebar />
 
                         </div>
@@ -138,62 +136,6 @@ export default class Single extends PureComponent {
             </React.Fragment>
         );
     }
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //       fname: '',
-    //       lname: '',
-    //       email: '',
-    //     };
-    //   }
-
-    //   onChange = (e) => {
-    //     /*
-    //       Because we named the inputs to match their
-    //       corresponding values in state, it's
-    //       super easy to update the state
-    //     */
-    //     this.setState({ [e.target.name]: e.target.value });
-    //   }
-
-    //   onSubmit = (e) => {
-    //     e.preventDefault();
-    //     // get our form data out of state
-    //     const { fname, lname, email } = this.state;
-
-    //     axios.post('/', { fname, lname, email })
-    //       .then((result) => {
-    //         //access the results here....
-    //       });
-    //   }
-
-    //   render() {
-    //     const { fname, lname, email } = this.state;
-    //     return (
-    //       <form onSubmit={this.onSubmit}>
-    //         <input
-    //           type="text"
-    //           name="fname"
-    //           value={fname}
-    //           onChange={this.onChange}
-    //         />
-    //         <input
-    //           type="text"
-    //           name="lname"
-    //           value={lname}
-    //           onChange={this.onChange}
-    //         />
-    //         <input
-    //           type="text"
-    //           name="email"
-    //           value={email}
-    //           onChange={this.onChange}
-    //         />
-    //         <button type="submit">Submit</button>
-    //       </form>
-    //     );
-    //   }
-    
 }
 Single.propTypes = {
     Title: PropTypes.string,

@@ -3,7 +3,6 @@ import OwlCarousel from "react-owl-carousel3";
 import Icofont from "react-icofont";
 import PropTypes from "prop-types";
 import VisibilitySensor from "react-visibility-sensor";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default class  Banner extends PureComponent {
 
@@ -48,13 +47,7 @@ export default class  Banner extends PureComponent {
                                                     {bannerone.Content}
                                                 </p>
                                                 <div className="center-wrap">
-                                                    <AnchorLink href="#services" className="btn btn-primary">Khóa Học <Icofont icon="icofont-long-arrow-right" /></AnchorLink>
-                                                    {/*<Link to={bannerone.BtnLink} className="btn-a">*/}
-                                                        {/*<div className="button">*/}
-
-                                                        {/*{bannerone.BtnName} <Icofont icon="icofont-long-arrow-right" />*/}
-                                                        {/*<div className="mask" /></div>*/}
-                                                    {/*</Link>*/}
+                                                    {/*<AnchorLink href="#services" className="btn btn-primary">Khóa Học <Icofont icon="icofont-long-arrow-right" /></AnchorLink>*/}
                                                 </div>
                                             </div>
                                         </div>
@@ -84,7 +77,7 @@ export default class  Banner extends PureComponent {
                 <OwlCarousel
                     className="owl-theme homepage-slides"
                     items={1}
-                    autoplay={true}
+                    // autoplay={true}
                     touchDrag={false}
                     margin={0}
                     loop={true}
@@ -119,39 +112,33 @@ Banner.defaultProps = {
             TopTitle: "Sáng Tạo & Đam Mê",
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "services",
-            BtnName: "Hành Động Thôi"
+                "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         },
         {
             BgClass: "single-slider-item slide-bg-2",
             TopTitle: "Sáng Tạo & Đam Mê",
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "services",
-            BtnName: "Hành Động Thôi"
+                "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         },
         {
             BgClass: "single-slider-item slide-bg-3",
             TopTitle: "Sáng Tạo & Đam Mê",
             Title: "Thiết Kế Đồ Họa  Anh Em",
             Content:
-                ".Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn",
-            BtnLink:  "services",
-            BtnName: "Hành Động Thôi"
+                "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         }
     ],
     thumbsData: [
         {
             ThumbIcon: "icofont-rocket-alt-1",
             ThumbTitle: "Cam Kết",
-            ThumbContent: "Bạn Sẽ được đào tạo bởi những người thầy giỏi có chuyên môm cao và tận tâm trong công việc.",
+            ThumbContent: "Được đào tạo bởi những người thầy giỏi có chuyên môm cao, tận tâm trong công việc.",
         },
         {
             ThumbIcon: "icofont-box",
             ThumbTitle: "Thực Hành",
-            ThumbContent: "Được thực hành 90% trong quá trình học với sự chỉ bảo của giảng viên.",
+            ThumbContent: "Được thực hành 100% trong quá trình học với sự chỉ bảo của giảng viên.",
         },
         {
             ThumbIcon: "icofont-live-support",

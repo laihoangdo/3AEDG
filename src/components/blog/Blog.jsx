@@ -6,7 +6,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {fetchBlogsAction} from "../../store/blog/action";
-import fetchBlogs from "../../store/blog";
 
 // const mapStateToProps = state => ({
 //     // blogs: fetchBlogs(state),
@@ -116,13 +115,13 @@ class Blog extends PureComponent {
         const blogdata = blogList.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
-                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" />
                     <div className="blog-info">
                         <div className="date-box">
                             4<span className="month">5</span>
                         </div>
                         <div className="title-meta">
-                            <h2><Link to={blog.Author_Link_Social__c}>{blog.Tittle__c}</Link></h2>
+                            <h2><Link to={{pathname: `blog-posts/${blog.Id}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
                                 <ul>
                                     <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
@@ -132,8 +131,10 @@ class Blog extends PureComponent {
                             </div>
                         </div>
                     </div>
+                    </Link>
                     <div className="post-content">
-                        <p>{blog.Content__c}</p>
+                        <div className="p-hint" dangerouslySetInnerHTML={{ __html: blog.Content__c }} />
+                        {/*<p>{blog.Content__c}</p>*/}
                     </div>
                 </div>
             </div>

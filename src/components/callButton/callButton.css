@@ -6,7 +6,7 @@
     right: 20px;
     bottom: 82px;
     position: fixed;
-    background-color: #03A84E;
+    background-color: #3333FF;
     width: 60px !important;
     height: 60px !important;
     z-index: 9999;
@@ -17,5 +17,5 @@
     height: 60px;
     text-align: center;
     color: white;
-    margin-top: 5px;
+    margin-top: 10px;
 }

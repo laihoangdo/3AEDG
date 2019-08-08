@@ -48,6 +48,9 @@
     color: #2ba847;
     font-size: 20px;
 }
+.center-wrap .button{
+    margin-top: 1rem;
+}
 table, th, td {
     border: 1px solid #d3cece;
     padding: 1rem;

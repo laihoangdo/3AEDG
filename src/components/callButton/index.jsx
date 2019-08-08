@@ -9,8 +9,7 @@ export default class CallButton extends PureComponent {
                 <div className="link-text">
                     <a href="tel: 0938636843" title="Liên hệ : 0938.6368.43">
                     <div className="yourPhone">
-                        <p><Icofont icon="icofont-phone icofont-3x"/></p>
-                        <span>Call</span>
+                        <p><Icofont icon="icofont-ui-dial-phone icofont-3x"/></p>
                     </div>
                     </a>
                 </div>
