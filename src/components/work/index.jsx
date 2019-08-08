@@ -6,21 +6,21 @@ import { MDBContainer, MDBRow } from "mdbreact";
 import Lightbox from "react-image-lightbox";
 
 const images = [
-    require("../../images/product/pts/pts-hocvien-1.png"),
-    require("../../images/product/pts/pts-hocvien-3.jpg"),
-    require("../../images/product/ai/ai-hv-2.jpg"),
-    require("../../images/product/ai/ai-hv-1.png"),
-    require("../../images/post-14.jpg"),
-    require("../../images/post-15.jpg"),
+    require("../../images/product/pts/pts-hv4.webp"),
+    require("../../images/product/pts/pts-hocvien-3.webp"),
+    require("../../images/product/ai/ai-hv-2.webp"),
+    require("../../images/product/ai/ai-hv-1.webp"),
+    require("../../images/product/3ds-max/3ds-max-hv3.webp"),
+    require("../../images/product/sketchup/sketchup-hv1.webp"),
 ];
 
 const smallImages = [
-    require("../../images/product/pts/pts-hocvien-1.png"),
-    require("../../images/product/pts/pts-hocvien-3.jpg"),
-    require("../../images/product/ai/ai-hv-2.jpg"),
-    require("../../images/product/ai/ai-hv-1.png"),
-    require("../../images/post-14.jpg"),
-    require("../../images/post-15.jpg"),
+    require("../../images/product/pts/pts-hv4.webp"),
+    require("../../images/product/pts/pts-hocvien-3.webp"),
+    require("../../images/product/ai/ai-hv-2.webp"),
+    require("../../images/product/ai/ai-hv-1.webp"),
+    require("../../images/product/3ds-max/3ds-max-hv3.webp"),
+    require("../../images/product/sketchup/sketchup-hv1.webp"),
 ];
 export default class Work extends PureComponent {
     constructor(props) {

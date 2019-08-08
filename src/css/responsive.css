@@ -59,25 +59,19 @@
     }
 
     /*new*/
-    /*.logo img {*/
-    /*    width: 50px;*/
-    /*}*/
     .logo-mobile{
         display: block;
     }
     .post-content img{
         width: 100%;
     }
-    /*.logo-mobile img {*/
-    /*     width: 50px;*/
-    /* }*/
 
-    /*.link-text{*/
-        /*right: 28px !important;*/
-    /*}*/
-    /*.AnyClassForTransition{*/
-        /*right: 28px !important;*/
-    /*}*/
+    .link-text{
+        right: 28px !important;
+    }
+    .AnyClassForTransition{
+        right: 28px !important;
+    }
     /*end new*/
     .address-bar {
         margin-left: auto;
@@ -322,6 +316,9 @@
     .modal-dialog {
         width: 90%;
         margin-top: -60px;
+    }
+    .row-tab{
+        width: 120%;
     }
     .address-bar {
         margin-left: 0;

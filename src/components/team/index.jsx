@@ -6,7 +6,6 @@ import OwlCarousel from 'react-owl-carousel3';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ScrollAnimation from 'react-animate-on-scroll';
-import './team.css';
 
 export default class Team extends PureComponent {
     constructor(props) {
@@ -30,8 +29,8 @@ export default class Team extends PureComponent {
                         <ul className="icon">
                             {/*<li><Link to={team.facebookLink}><Icofont icon="icofont-facebook" /></Link></li>*/}
                             <li><a href={this.props.teamsData[index].facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                            <li><Link to={team.linkedinLink}><Icofont icon="icofont-skype" /></Link></li>
-                            <li><Link to={team.twitterLink}><Icofont icon="icofont-youtube" /></Link></li>
+                            <li><Link to={team.skypeLink}><Icofont icon="icofont-skype" /></Link></li>
+                            <li><Link to={team.youtubeLink}><Icofont icon="icofont-youtube" /></Link></li>
 
 
                         </ul>
@@ -93,7 +92,6 @@ export default class Team extends PureComponent {
     }
 }
 //Props Types
-//Props Types
 Team.propTypes = {
     SectionbgTitle: PropTypes.string,
     sectionTitle: PropTypes.string,
@@ -113,16 +111,16 @@ Team.defaultProps = {
             Name: "Thầy Long",
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "//facebook.com/tiencanh.chonphieubong",
-            linkedinLink: "/#0",
-            twitterLink: "/#0",
+            skypeLink: "//facebook.com/tiencanh.chonphieubong",
+            youtubeLink: "//facebook.com/tiencanh.chonphieubong",
         },
         {
             Image: require("../../images/thaychau-avatar01.jpg"),
             Name: "Thầy Châu",
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "//facebook.com/profile.php?id=100026725434352",
-            linkedinLink: "/#0",
-            twitterLink: "/#0",
+            skypeLink: "//facebook.com/profile.php?id=100026725434352",
+            youtubeLink: "//facebook.com/profile.php?id=100026725434352",
         }
 
     ]

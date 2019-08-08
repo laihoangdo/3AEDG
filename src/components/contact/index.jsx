@@ -5,18 +5,9 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import GoogleMapReact from 'google-map-react';
-const CustomComponent = ({ text }) => <div><img src="http://ruralshores.com/assets/marker-icon.png" alt="map" /></div>;
-
+import icon from '../../images/icons/marker-icon.png';
+const CustomComponent = ({ text }) => <div><img src={icon} alt="map" /></div>;
 export default class Contact extends PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            photoIndex: 0,
-            isOpen: false
-        };
-    }
-
     render() {
         return (
             <React.Fragment>
@@ -33,7 +24,6 @@ export default class Contact extends PureComponent {
                                 </ScrollAnimation>
                         </div>
                         </div>
-
                         <div className="row">
                             <div className="col-lg-4 col-md-4">
                                 <div className="address-area">
@@ -64,8 +54,6 @@ export default class Contact extends PureComponent {
                                         defaultZoom={this.props.zoom}
                                     >
                                         <CustomComponent
-                                            // lat={10.836330}
-                                            // lng={106.677550}
                                             lat={10.843641}
                                             lng={106.636033}
                                             text="Marker"
@@ -73,22 +61,6 @@ export default class Contact extends PureComponent {
                                     </GoogleMapReact>
                                     </div>
                                 </div>
-                                {/* <ReactGoogleMapLoader
-                                    params={{
-                                        key: "AIzaSyCI3cDduwloUnVSfREo-6wuRYTMjOHcQjc",
-                                        libraries: "places,geometry",
-                                    }}
-                                    render={googleMaps =>
-                                        googleMaps && (
-                                        <div style={{height: "300px"}}>
-                                            <ReactGoogleMap
-                                            googleMaps={googleMaps}
-                                            center={{lat: 10.836330, lng: 106.677550}}
-                                            zoom={8}
-                                            />
-                                        </div>
-                                        )}
-                                /> */}
                             </div>
 
                         </div>
@@ -127,5 +99,4 @@ Contact.defaultProps = {
         lng: 106.636033
     },
     zoom: 14
-
 };

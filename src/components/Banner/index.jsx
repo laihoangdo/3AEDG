@@ -4,7 +4,6 @@ import Icofont from "react-icofont";
 import PropTypes from "prop-types";
 import VisibilitySensor from "react-visibility-sensor";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import  './banner.css';
 
 export default class  Banner extends PureComponent {
 

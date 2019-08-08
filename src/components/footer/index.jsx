@@ -7,11 +7,6 @@ import './footer.css';
 export default class  Footer extends PureComponent {
     render(){
         return(
-        //     <div>
-        //         <footer className="footer-section spad pb-0">
-
-        //   </footer>
-        //     </div>
         <React.Fragment>
                 <footer className="footer">
                     <div className="container">
@@ -28,7 +23,6 @@ export default class  Footer extends PureComponent {
                                     <ul className="list-inline">
                                         <li>{this.props.socialTitle} </li>
                                         <li><a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                                        {/* <li><Link to={this.props.FacebookLink}><Icofont icon="icofont-facebook"/></Link></li> */}
                                         <li><Link to={this.props.ZaloLink}><Icofont icon="icofont-technorati"/></Link></li>
                                         <li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>
                                         <li><Link to={this.props.linkedinLink}><Icofont icon="icofont-linkedin"/></Link></li>
@@ -130,6 +124,6 @@ Footer.defaultProps = {
     socialTitle: "Follow Us On:",
     FacebookLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     ZaloLink: "https://zalo.me/0337590737",
-    InstagramLink: "/#0",
-    linkedinLink: "/#0",
+    InstagramLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
+    linkedinLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
 };

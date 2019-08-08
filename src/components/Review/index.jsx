@@ -58,19 +58,22 @@ Review.propTypes = {
 Review.defaultProps = {
     testimonialsData: [
         {
-            clientImage: require("../../images/thaytien1.jpg"),
+            clientImage: require("../../images/student/hocvien-1.jpg"),
             Content: "Chất lượng giảng dạy rất tốt . Giảng viên nhiệt tình giúp đỡ , sau khi hoàn thành khó học 2D tại trung tâm tôi đã có thể kiếm được công việc và có thu nhập ổn định.",
-            Name: "Thanh Bo",
+            Name: "Minh Trí",
             Profession: "Học Viên Khóa 2019",
         },
         {
-            clientImage: require("../../images/thaytien1.jpg"),
-            Content: "\n" +
-                "​\n" +
-                "\n" +
-                "Mình xuất thân là dân tay ngang, học ĐH Ngoại ngữ ra nhưng có niềm đam mê với Marketing và Thiết kế. Với mình, trọn bộ khóa học này rất thú vị và cần thiết, đặc biệt với các marketer và designer tay ngang hay mới vào nghề. Khóa học giúp mình có nền tảng về thiết kế và có thể học về thiết kế đồ họa một cách bài bản nhất, được các thầy hỗ trợ nhiệt tình mà chi phí hợp lý.",
-            Name: "Hoang Do",
+            clientImage: require("../../images/student/hocvien-4.jpg"),
+            Content: "Mình xuất thân là dân tay ngang, học ĐH Ngoại ngữ ra nhưng có niềm đam mê với Marketing và Thiết kế. Với mình Khóa học giúp mình có nền tảng về thiết kế và có thể học về thiết kế đồ họa một cách bài bản nhất, được các thầy hỗ trợ nhiệt tình mà chi phí hợp lý.",
+            Name: "Bảo Ngân",
             Profession: "Học Viên Khóa 2019",
         },
+        {
+            clientImage: require("../../images/student/hocvien-2.webp"),
+            Content: "Từng học nhiều trung tâm đào tạo đồ họa nhưng khi đến với trung tâm Đồ Họa Anh Em của thầy Long thì mình mới bứt phá và tự tin khi đi làm , nhờ sự chỉ bảo tận tình của thầy . Em cảm ơn.",
+            Name: "Ngọc Thy",
+            Profession: "Học Viên Khóa 2019",
+        }
     ]
 };

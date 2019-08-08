@@ -38,7 +38,7 @@ export default class  Header extends PureComponent {
             {/* Start Top Header */}
             <div className="top-header">
                 <div className="container">
-                    <div className="row">
+                    <div className="row row-tab">
                         <Navbar.Brand className="navbar-brand logo">
                             <React.Fragment>
                                 <LinkContainer exact to="/">
@@ -68,7 +68,7 @@ export default class  Header extends PureComponent {
                                 <ul className="list-inline">
                                     <li><a href={this.props.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-1x" /></a></li>
                                     <li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook-messenger icofont-1x" /></a></li>
-                                    <li><a href={this.props.twitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati icofont-1x" /></a></li>
+                                    <li><a href={this.props.zaloLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati icofont-1x" /></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -355,7 +355,7 @@ Header.propTypes = {
   numberLink: PropTypes.string,
   Number: PropTypes.string,
   facebookLink: PropTypes.string,
-  twitterLink: PropTypes.string,
+  zaloLink: PropTypes.string,
   instagramLink: PropTypes.string,
   linkedinLink: PropTypes.string,
   MainLogo: PropTypes.string,
@@ -364,13 +364,13 @@ Header.propTypes = {
 };
 Header.defaultProps = {
     LogoMobile: require('../../images/logo-mobile.png'),
-  MainLogo: require('../../images/logo-bigsize.png'),
+  MainLogo: require('../../images/logo-bigsize.webp'),
   Logo2: require('../../images/logo-anhem.png'),
   mailLink: "mailto:laiquoclong90@gmail.com",
   mail: "laiquoclong90@gmail.com",
   numberLink: "callto:+84938636843",
   Number: "0938636843",
   facebookLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
-  twitterLink: "https://zalo.me/0337590737",
+  zaloLink: "https://zalo.me/0337590737",
   instagramLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
 };

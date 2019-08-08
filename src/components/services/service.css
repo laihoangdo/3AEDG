@@ -1,16 +1,12 @@
 #course-detail p{
     height: 100% ;
 }
-/*.logo img{*/
-/*    width: 124px;*/
-/*}*/
 .target-course{
     box-sizing: border-box;
     padding: 10px;
     font-stretch: inherit;
     font-size: 14px;
     line-height: 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #333333;
     text-align: justify;
     overflow: hidden;
@@ -52,16 +48,12 @@
     color: #2ba847;
     font-size: 20px;
 }
-
-/*.table-course{*/
-    /*border: 1px solid black;*/
-/*}*/
-/*.table-course tbody{*/
-    /*border: 1px solid black;*/
-/*}*/
 table, th, td {
-    border: 1px solid #8e8b8b;
+    border: 1px solid #d3cece;
     padding: 1rem;
+}
+table thead tr th:first-child{
+    width: 45%;
 }
 
  #text-4{

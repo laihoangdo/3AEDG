@@ -125,7 +125,7 @@ Services.defaultProps = {
             heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
             description:
                 "PHOTOSHOP",
-            Image: require("../../images/pts-bg.jpg"),
+            Image: require("../../images/bg/pts-bg.jpg"),
         },
         {
             Id: "illustrator",
@@ -133,7 +133,7 @@ Services.defaultProps = {
             heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
                 "ILLUSTRATOR",
-            Image: require("../../images/ai-bg.jpg"),
+            Image: require("../../images/bg/ai-bg.jpg"),
         },
         {
             Id: "corel",
@@ -149,7 +149,7 @@ Services.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA IN DESIGN",
             description:
                 "IN DESIGN",
-            Image: require("../../images/indesign-bg.jpg"),
+            Image: require("../../images/bg/indesign-bg.jpg"),
         },
         {
             Id: "autocad",
@@ -157,7 +157,7 @@ Services.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA AUTOCAD",
             description:
                 "AUTOCAD",
-            Image: require("../../images/autocad-bg.jpg"),
+            Image: require("../../images/bg/autocad-bg.jpg"),
         },
         {
             Id: "3ds-max",
@@ -165,7 +165,7 @@ Services.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
             description:
                 "3Ds MAX",
-            Image: require("../../images/3dsmax-bg.jpeg"),
+            Image: require("../../images/bg/3dsmax-bg.jpeg"),
         },
         {
             Id: "sketchup",

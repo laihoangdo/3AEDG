@@ -15,7 +15,6 @@ export default class CourseSidebar extends PureComponent {
                     <p>{sidebar.postContent}</p>
                     <ul>
                         <li><a href={sidebar.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" />Giảng Viên: {sidebar.teacher} </a></li>
-                        {/*<li><a href={this.props.instagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>*/}
                     </ul>
                 </div>
             </div>
@@ -114,7 +113,7 @@ CourseSidebar.defaultProps = {
     sideData: [
         {
             postsLink: "/khoa-hoc/illustrator",
-            Image: require("../../images/ai-bg.jpg"),
+            Image: require("../../images/bg/ai-bg.jpg"),
             PostTitle: "Khóa Học Illustrator",
             postContent: "Khóa Học Illustrator",
             postDate: "10 Mar",
@@ -123,7 +122,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/photoshop",
-            Image: require("../../images/pts-bg.jpg"),
+            Image: require("../../images/bg/pts-bg.jpg"),
             PostTitle: "Khóa Học Photoshop",
             postContent: "Khóa Học Photoshop",
             postDate: "10 Mar",
@@ -141,7 +140,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/autocad",
-            Image: require("../../images/autocad-bg.jpg"),
+            Image: require("../../images/bg/autocad-bg.jpg"),
             PostTitle: "Khóa Học Autocad",
             postContent: "Khóa Học Autocad",
             postDate: "10 Mar",
@@ -150,7 +149,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/indesign",
-            Image: require("../../images/indesign-bg.jpg"),
+            Image: require("../../images/bg/indesign-bg.jpg"),
             PostTitle: "Khóa Học Indesign",
             postContent: "Khóa Học Indesign",
             postDate: "10 Mar",
@@ -159,7 +158,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/3ds-max",
-            Image: require("../../images/3dsmax-bg.jpeg"),
+            Image: require("../../images/bg/3dsmax-bg.jpeg"),
             PostTitle: "Khóa Học 3Ds Max",
             postContent: "Khóa Học 3Ds Max",
             postDate: "10 Mar",

@@ -1,10 +1,8 @@
 import React, {PureComponent} from 'react';
 import ScrollUpButton from "react-scroll-up-button";
-import './scroll.css';
 import CallButton from "../callButton";
 
 export default class ScrollUpBtn extends PureComponent {
-    state = {};
     render() {
         return (
             <React.Fragment>

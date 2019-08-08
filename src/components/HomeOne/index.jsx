@@ -17,9 +17,7 @@ export default class HomeOne extends PureComponent {
             <React.Fragment>
             {/* NavBar: src/components/NavBar.jsx */}
             <Header pageName="home" />
-            {/* BannerOne: src/components/banner/BannerOne */}
             <Banner />
-            {/* Services: src/components/Services.jsx */}
             <Services/>
             <Work/>
             <Team/>
@@ -31,5 +29,4 @@ export default class HomeOne extends PureComponent {
         </React.Fragment>
         )
     }
-
 }

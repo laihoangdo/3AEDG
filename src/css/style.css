@@ -1,49 +1,7 @@
-/*
-@File: Rosy Template Styles
-
-* This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
-
-This files contents are outlined below>>>>>
-.search-form .form-control
-*******************************************
-*******************************************
-
-==== INDEX PAGE CSS
-
-** - Default CSS
-** - Preloaders CSS
-** - Top Header area CSS
-** - Main Menu CSS
-** - Slider area CSS
-** - Feature Area CSS
-** - Services Area CSS
-** - CTA Area CSS
-** - Our Works Area CSS
-** - About Us Area CSS
-** - About Us area CSS
-** - Our Team Area CSS
-** - Blog & News Area CSS
-** - Video Area CSS
-** - Projects area CSS
-** - Pricing Table Area CSS
-** - Fun Facts Area CSS
-** - Testimonials Area CSS
-** - FAQ Area CSS
-** - Partners Area CSSowl-thumb-item
-** - Contact Area CSS
-** - Footer Area CSS
-** - Scroll Top link CSS
-** - Breadcumbs CSS
-
-*/
-
 
 /* ========================= 
     Default CSS
    ========================= */
-   /*@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');*/
     @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet');
    @import url('https://fonts.googleapis.com/css?family=Monoton');
     @import "~animate.css/animate.css";
@@ -121,7 +79,6 @@ html[xmlns] .clearfix {
 /*End Reset*/
 
    html, body {
-       /*font-family: 'Poppins', sans-serif;*/
        font-family: 'Roboto', sans-serif;
        font-size: 14px;
        font-weight: 400;
@@ -567,14 +524,14 @@ html[xmlns] .clearfix {
        Slider Area CSS 
       ========================= */
    .slide-bg-1 {
-       background-image: url(../images/anhbia01.jpg);
+       background-image: url(../images/bg/anhbia01.webp);
    }
    .slide-bg-2 {
-       background-image: url(../images/bg-2.jpg);
+       background-image: url(../images/bg/bg-2.jpg);
    }
    .slide-bg-3 {
        /*slide-bg-03.jpg*/
-       background-image: url(../images/bg-3.jpg);
+       background-image: url(../images/bg/bg-3.jpg);
    }
    .hompage-slides-wrapper {
        position: relative;
@@ -602,7 +559,7 @@ html[xmlns] .clearfix {
        display: inline-block;
    }
    .home-banner-area {
-       background-image: url(../images/anhbia01.jpg);
+       background-image: url(../images/bg/anhbia01.webp);
        background-size: cover;
        background-position: center center;
        background-color: #dddddd;
@@ -617,6 +574,10 @@ html[xmlns] .clearfix {
    .banner-text .center-wrap {
        margin-top: 40px;
    }
+   /*style for banner*/
+    .opacityOne , .opacityZero{
+        color: #274abb;
+    }
    /* VIDEO-AREA */
    .home-video-area {
        height:700px;
@@ -2156,7 +2117,25 @@ html[xmlns] .clearfix {
    /* =========================
        End Breadcumbs CSS 
       ========================= */
-   
+
+/*Scroll button   css*/
+.AnyClassForContainer {
+    position: fixed;
+    right: -100px;
+    bottom:64px !important;
+    margin-bottom: 81px;
+    transition: right 0.5s;
+    cursor: pointer;
+    background: #03A84E !important;
+    border: none !important;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 10px;
+
+}
+/*end scroll css*/
       aside.ScrollUpButton__Container.ScrollUpButton__Toggled {
         right: auto !important;
         left: 20px;
