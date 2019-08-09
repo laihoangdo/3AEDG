@@ -158,7 +158,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/3ds-max",
-            Image: require("../../images/bg/3dsmax-bg.jpeg"),
+            Image: require("../../images/bg/3dsmax-bg.jpg"),
             PostTitle: "Khóa Học 3Ds Max",
             postContent: "Khóa Học 3Ds Max",
             postDate: "10 Mar",
@@ -167,7 +167,7 @@ CourseSidebar.defaultProps = {
         },
         {
             postsLink: "/khoa-hoc/sketchup",
-            Image: require("../../images/sketchup-bg.jpg"),
+            Image: require("../../images/bg/sketchup-bg.jpg"),
             PostTitle: "Khóa Học SketChup",
             postContent: "Khóa Học SketChup",
             postDate: "10 Mar",

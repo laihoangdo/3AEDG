@@ -35,7 +35,7 @@ export default class AboutUs extends PureComponent {
                         <div className="col-lg-4 col-md-4">
                             <div className="count-box text-center">
                                 <div className="glyph">
-                                    <Icofont icon="icofont-handshake-deal" />
+                                    <Icofont icon="icofont-group-students" />
                                 </div>
                                 <p>HỌC VIÊN</p>
                                 <h2 className="counter">
@@ -50,7 +50,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 150
+                                                ? 250
                                                 : 0
                                         }
                                         duration={3}
@@ -63,7 +63,7 @@ export default class AboutUs extends PureComponent {
                         <div className="col-lg-4 col-md-4">
                             <div className="count-box text-center">
                                 <div className="glyph">
-                                    <Icofont icon="icofont-checked" />
+                                    <Icofont icon="icofont-graduate-alt" />
                                 </div>
                                 <p>ĐÃ HOÀN THÀNH KHÓA HỌC</p>
                                 <h2 className="counter">
@@ -78,7 +78,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 80
+                                                ? 150
                                                 : 0
                                         }
                                         duration={3}
@@ -106,7 +106,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 10
+                                                ? 20
                                                 : 0
                                         }
                                         duration={3}
@@ -135,6 +135,6 @@ AboutUs.defaultProps = {
     SectionbgTitle: "ĐỒ HỌA ANH EM",
     sectionTitle: "ĐỒ HỌA ANH EM GIÚP BẠN GẦN HƠN VỚI THÀNH CÔNG",
     sectionDescription:
-        "CHÚNG TÔI ĐÃ LÀM ĐƯỢC.",
+        "CHÚNG TÔI ĐÃ VÀ ĐANG ĐÀO TẠO",
 };
     

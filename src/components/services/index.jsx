@@ -165,7 +165,7 @@ Services.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
             description:
                 "3Ds MAX",
-            Image: require("../../images/bg/3dsmax-bg.jpeg"),
+            Image: require("../../images/bg/3dsmax-bg.jpg"),
         },
         {
             Id: "sketchup",
@@ -173,7 +173,7 @@ Services.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
             description:
                 "SKETCHUP",
-            Image: require("../../images/sketchup-bg.jpg"),
+            Image: require("../../images/bg/sketchup-bg.jpg"),
         },
     ]
 };

@@ -2,9 +2,7 @@
 import {Route, Switch} from "react-router-dom";
 import Page from "react-page-loading";
 import { CSSTransition } from "react-transition-group";
-import './css/style.css';
-import './css/responsive.css';
-import './css/color-default.css';
+import './App.css';
 import ScrollUpBtn from './components/scroll';
 import routes from './router';
 import CallButton from "./components/callButton";

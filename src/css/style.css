@@ -4,13 +4,9 @@
    ========================= */
    /*@import url('https://fonts.googleapis.com/css?family=Monoton');*/
     @import "~animate.css/animate.css";
-
-    @font-face {
-        font-family: 'MyFont';
-        src: local('MyFont'), url("../fonts/roboto/Roboto-BoldItalic.ttf") format('truetype');
-    }
    html, body {
-       font-family: 'MyFont', sans-serif;
+       font-family: 'Open Sans', sans-serif;
+       -moz-osx-font-smoothing: grayscale;
        font-size: 14px;
        font-weight: 400;
        /*color: #848484;*/
@@ -93,8 +89,10 @@
    .button, .center-wrap button button {
        position: relative;
        display: block;
+       margin-top: 1rem;
        background: none center center no-repeat;
        background-size: cover;
+       background-color: #3333ff;
        text-transform: uppercase;
        letter-spacing: .5px;
        padding: 10px 4px;
@@ -454,14 +452,14 @@
        Slider Area CSS 
       ========================= */
    .slide-bg-1 {
-       background-image: url(../images/bg/anhbia01.webp);
+       background-image: url(../images/bg/anhbia-001.jpg);
    }
    .slide-bg-2 {
-       background-image: url(../images/bg/bg-2.jpg);
+       background-image: url(../images/bg/bgn-2.jpg);
    }
    .slide-bg-3 {
        /*slide-bg-03.jpg*/
-       background-image: url(../images/bg/bg-3.jpg);
+       background-image: url(../images/bg/bgn-3.jpg);
    }
    .hompage-slides-wrapper {
        position: relative;
@@ -489,7 +487,7 @@
        display: inline-block;
    }
    .home-banner-area {
-       background-image: url(../images/bg/anhbia01.webp);
+       background-image: url(../images/bg/anhbia-001.jpg);
        background-size: cover;
        background-position: center center;
        background-color: #dddddd;
@@ -834,7 +832,123 @@
    /* =========================
        End Our Works Area CSS 
       ========================= */
-   
+/* =========================
+   start work new Area CSS
+  ========================= */
+.content-product{
+    margin-top: 2rem;
+}
+.shorting-menu .programs-filter-btn-active{
+    background-color: #3333ff !important;
+}
+.shorting-menu {
+    display: inline-block;
+    box-shadow: 0 0 30px 0 rgba(67, 67, 67, 0.15);
+    padding: 18px 20px;
+    border-radius: 50px;
+}
+.shorting-menu .filter {
+    border: none;
+    background: #f4f4f4;
+    padding: 9px 24px;
+    text-transform: capitalize;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 30px;
+    color: #000;
+    margin: 0 4px;
+}
+.shorting-menu .filter.active, .shorting-menu .filter:hover {
+    background: #3333ff;
+    color: #fff;
+}
+.shorting {
+    margin: 40px 100px 40px 100px;
+}
+.single-work {
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+}
+.single-work::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 95%;
+    height: 93%;
+    background: #000;
+    left: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.single-work:hover::before {
+    top: 21px;
+    width: 93%;
+    height: 91%;
+    left: 21px;
+    opacity: 0.66;
+    visibility: visible;
+}
+.single-work .work-content {
+    position: absolute;
+    bottom: 20px;
+    width: 86%;
+    background: #fff;
+    left: 40px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.single-work .work-content h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.single-work .work-content ul li {
+    display: inline-block;
+    font-size: 14px;
+}
+.single-work:hover .work-content {
+    /*bottom: 35px;*/
+    opacity: 1;
+    visibility: visible;
+}
+.single-work .popup-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 45px;
+    text-align: center;
+    height: 45px;
+    line-height: 46px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid #fff;
+    transition: 0.4s;
+}
+.single-work .popup-btn:hover {
+    background: #3333ff;
+    border-color: #3333ff;
+}
+.single-work:hover .popup-btn {
+    top: 36px;
+    opacity: 1;
+    visibility: visible;
+}
+.shorting .m-0 .p-0 .single-work img{
+    width: 100%;
+    height: 18rem;
+}
+/* =========================
+   End work new Area CSS
+  ========================= */
    /* =========================
        About Us Area CSS 
       ========================= */

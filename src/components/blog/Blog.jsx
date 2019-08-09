@@ -57,8 +57,6 @@ class Blog extends PureComponent {
         return body;
     };
     componentWillMount() {
-        // const {fetchBlogs} = this.props;
-        // this.fetchBlogs();
         this.callApi();
     }
     componentDidMount() {
@@ -87,39 +85,14 @@ class Blog extends PureComponent {
             )
         }
         console.log('blogs' , blogList);
-        // const blogdata = this.props.blogsData.map((blog, index) => (
-        //     <div className="col-md-6 col-lg-6" key={index}>
-        //         <div className="blog-item">
-        //             <Link to={blog.postLink} className="blog-img"><img src={blog.postImage} alt="blog-one" /></Link>
-        //             <div className="blog-info">
-        //                 <div className="date-box">
-        //                     {blog.date} <span className="month">{blog.month}</span>
-        //                 </div>
-        //                 <div className="title-meta">
-        //                     <h2><Link to={blog.postLink}>{blog.posttitle}</Link></h2>
-        //                     <div className="post-meta">
-        //                         <ul>
-        //                             <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.authorLink}>{blog.authorName}</Link></li>
-        //                             <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.CommentsLink}>{blog.TotalComments}</Link></li>
-        //                             <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.TagLink}>{blog.TagName}</Link></li>
-        //                         </ul>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //             <div className="post-content">
-        //                 <p>{blog.postContent}</p>
-        //             </div>
-        //         </div>
-        //     </div>
-        // ));
         const blogdata = blogList.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
-                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" />
+                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
                     <div className="blog-info">
-                        <div className="date-box">
-                            4<span className="month">5</span>
-                        </div>
+                        {/*<div className="date-box">*/}
+                            {/*4<span className="month">5</span>*/}
+                        {/*</div>*/}
                         <div className="title-meta">
                             <h2><Link to={{pathname: `blog-posts/${blog.Id}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
@@ -131,7 +104,7 @@ class Blog extends PureComponent {
                             </div>
                         </div>
                     </div>
-                    </Link>
+
                     <div className="post-content">
                         <div className="p-hint" dangerouslySetInnerHTML={{ __html: blog.Content__c }} />
                         {/*<p>{blog.Content__c}</p>*/}
@@ -182,74 +155,14 @@ Blog.propTypes = {
     sectionDescription: PropTypes.string,
     btnLink: PropTypes.string,
     BlogBtn: PropTypes.string,
-    blogsData: PropTypes.array
 };
 
 //Default Props
 Blog.defaultProps = {
-    SectionbgTitle: "Blog",
-    sectionTitle: "Blog Của Chúng tôi",
+    SectionbgTitle: "Tin Tức",
+    sectionTitle: "Tin Tức Từ Đồ Họa Anh Em",
     sectionDescription:
         "Góc chia sẻ kinh nghiệm học tập và những bài thực hành hay.",
     btnLink: "/blog-one",
-    BlogBtn: "Tất cả",
-    blogsData: [
-        {
-            postImage: require("../../images/design-01.jpg"),
-            postLink: "/blog-details",
-            date: "25",
-            month: "Feb",
-            posttitle: "14 ridiculously cool websites you never know.",
-            postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non consequat dolor. Cras in odio augue.",
-            authorName: "Jone",
-            authorLink: "/#0",
-            TotalComments: "06",
-            CommentsLink: "/#0",
-            TagName: "lifestyle",
-            TagLink: "/#0",
-        },
-        {
-            postImage: require("../../images/design-01.jpg"),
-            postLink: "/blog-details",
-            date: "10",
-            month: "Feb",
-            posttitle: "10 hot marketing trends you need.",
-            postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non consequat dolor. Cras in odio augue.",
-            authorName: "Jone",
-            authorLink: "/#0",
-            TotalComments: "06",
-            CommentsLink: "/#0",
-            TagName: "lifestyle",
-            TagLink: "/#0",
-        },
-        {
-            postImage: require("../../images/design-01.jpg"),
-            postLink: "/blog-details",
-            date: "30",
-            month: "Jan",
-            posttitle: "10 reasons you need a digital marketing strategy in 2019",
-            postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non consequat dolor. Cras in odio augue.",
-            authorName: "Jone",
-            authorLink: "/#0",
-            TotalComments: "06",
-            CommentsLink: "/#0",
-            TagName: "lifestyle",
-            TagLink: "/#0",
-        },
-        {
-            postImage: require("../../images/design-01.jpg"),
-            postLink: "/blog-details",
-            date: "20",
-            month: "Jan",
-            posttitle: "How to build a programming career.",
-            postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sagittis nulla, non vehicula mauris rutrum vitae. Sed non consequat dolor. Cras in odio augue.",
-            authorName: "Jone",
-            authorLink: "/#0",
-            TotalComments: "06",
-            CommentsLink: "/#0",
-            TagName: "lifestyle",
-            TagLink: "/#0",
-        },
-
-    ]
+    BlogBtn: "Tất cả"
 };

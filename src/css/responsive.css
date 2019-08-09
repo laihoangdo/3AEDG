@@ -50,6 +50,14 @@
     .work-details {
         margin-top: 0;
     }
+    /*work2*/
+    .shorting {
+        margin: 40px 10px 40px 10px !important;
+    }
+    .shorting-menu .filter{
+        font-size: 11px !important;
+    }
+    /*end*/
     .list-inline li {
         padding-left: 3px;
     }

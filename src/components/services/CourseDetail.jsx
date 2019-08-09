@@ -272,7 +272,7 @@ CourseDetail.defaultProps = {
             description:
                 "Photoshop",
             Image: require("../../images/bg/pts-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-photoshop.webp"),
+            ImageStep: require("../../images/courses/khoa-photoshop.jpg"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
             PostContent: [
                 "Thiết kế ấn phẩm truyền thông thương hiệu của bạn bằng chính ý tưởng của bạn",
@@ -304,10 +304,13 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/product/pts/pts-hv4.webp")
+                    link: require("../../images/product/pts/pts-hv1.jpg")
                 },
                 {
-                    link: require("../../images/product/pts/pts-hocvien-3.webp")
+                    link: require("../../images/product/pts/pts-hv4.jpg")
+                },
+                {
+                    link: require("../../images/product/pts/pts-hv5.jpg")
                 }
             ],
             reason: [
@@ -326,7 +329,7 @@ CourseDetail.defaultProps = {
             description:
                 "Illustrator",
             Image: require("../../images/bg/ai-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-ai.webp"),
+            ImageStep: require("../../images/courses/khoa-ai.jpg"),
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -362,10 +365,10 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/product/ai/ai-hv-1.webp")
+                    link: require("../../images/product/ai/ai-hv1.jpg")
                 },
                 {
-                    link: require("../../images/product/ai/ai-hv-2.webp")
+                    link: require("../../images/product/ai/ai-hv2.jpg")
                 }
             ],
             reason: [
@@ -384,7 +387,7 @@ CourseDetail.defaultProps = {
             description:
                 "Corel",
             Image: require("../../images/corel.jpg"),
-            ImageStep: require("../../images/courses/khoa-corel.webp"),
+            ImageStep: require("../../images/courses/khoa-corel.jpg"),
             courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -438,7 +441,7 @@ CourseDetail.defaultProps = {
             description:
                 "Indesign",
             Image: require("../../images/bg/indesign-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-indesign.webp"),
+            ImageStep: require("../../images/courses/khoa-indesign.jpg"),
             courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -499,7 +502,7 @@ CourseDetail.defaultProps = {
             description:
                 "Autocad",
             Image: require("../../images/bg/autocad-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-autocad.webp"),
+            ImageStep: require("../../images/courses/khoa-autocad.jpg"),
             courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -555,8 +558,8 @@ CourseDetail.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
             description:
                 "3Ds MAX",
-            Image: require("../../images/bg/3dsmax-bg.jpeg"),
-            ImageStep: require("../../images/courses/khoa-3D-max.webp"),
+            Image: require("../../images/bg/3dsmax-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-3dsmax.jpg"),
             courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -583,10 +586,10 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/product/3ds-max/3ds-max-hv2.webp")
+                    link: require("../../images/product/3ds-max/3ds-max-hv2.jpg")
                 },
                 {
-                    link: require("../../images/product/3ds-max/3ds-max-hv3.webp")
+                    link: require("../../images/product/3ds-max/3ds-max-hv1.jpg")
                 },
             ],
             reason: [
@@ -611,8 +614,8 @@ CourseDetail.defaultProps = {
             heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
             description:
                 "Sketchup",
-            Image: require("../../images/sketchup-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-Sketchup-Vray.webp"),
+            Image: require("../../images/bg/sketchup-bg.jpg"),
+            ImageStep: require("../../images/courses/khoa-sketchup-vray.jpg"),
             courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -664,13 +667,13 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/product/sketchup/sketchup-hv1.webp")
+                    link: require("../../images/product/sketchup/sketchup-hv1.jpg")
                 },
                 {
-                    link: require("../../images/product/sketchup/sketchup-hv2.webp")
+                    link: require("../../images/product/sketchup/sketchup-hv2.jpg")
                 },
                 {
-                    link: require("../../images/product/sketchup/sketchup-hv3.webp")
+                    link: require("../../images/product/sketchup/sketchup-hv3.jpg")
                 },
             ],
             reason: [

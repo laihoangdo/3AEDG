@@ -205,7 +205,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         onClick={this.closeNavbar}
                                     >
-                                        Blog
+                                        Tin Tức
                                     </Link>
                                 </Nav.Item>
                                 <Nav.Item>
@@ -301,7 +301,7 @@ export default class  Header extends PureComponent {
                                         className="nav-link"
                                         activeClassName=""
                                     >
-                                        Blog
+                                        Tin Tức
                                     </NavLink>
                                 </Nav.Item>
 
@@ -364,7 +364,7 @@ Header.propTypes = {
 };
 Header.defaultProps = {
     LogoMobile: require('../../images/logo-mobile.png'),
-  MainLogo: require('../../images/logo-bigsize.webp'),
+  MainLogo: require('../../images/logo-bigsize.png'),
   Logo2: require('../../images/logo-anhem.png'),
   mailLink: "mailto:laiquoclong90@gmail.com",
   mail: "laiquoclong90@gmail.com",

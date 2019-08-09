@@ -133,7 +133,7 @@ Banner.defaultProps = {
         {
             ThumbIcon: "icofont-rocket-alt-1",
             ThumbTitle: "Cam Kết",
-            ThumbContent: "Được đào tạo bởi những người thầy giỏi có chuyên môm cao, tận tâm trong công việc.",
+            ThumbContent: "Được đào tạo bởi những người thầy giỏi , tận tâm trong công việc.",
         },
         {
             ThumbIcon: "icofont-box",
