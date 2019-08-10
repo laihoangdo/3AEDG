@@ -1,14 +1,14 @@
 .header-padding{
     /*padding: 28px;*/
     text-align: center;
-    font: bold;
     font-weight: bold;
     color: #1075BB;
 }
 .header-padding .h2-header{
     color: #3333FF;
-    font-weight: bold;
-    font: bold;
+    font-weight: 800;
+    font-family: 'Monoton', cursive;
+
 }
 .header-padding-social {
     padding: 17px 0px 43px 7px;

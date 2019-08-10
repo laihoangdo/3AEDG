@@ -23,6 +23,11 @@
 }
 .title-reason{
     margin-bottom: 1rem;
+    color: red;
+    font-size: 1.4rem;
+}
+.title-reason i{
+    color: #3333ff;
 }
 .course-price{
     text-align: center;
@@ -103,4 +108,13 @@ table thead tr th:first-child{
 }
 .post-meta p {
     color: #848484;
+}
+.post-detail{
+    margin-left: 1.3rem;
+}
+.course-detail{
+    margin-top: 1.5rem;
+}
+.title-heading-course{
+    color: #3333FF;
 }

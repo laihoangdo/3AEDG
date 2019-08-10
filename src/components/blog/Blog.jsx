@@ -34,25 +34,11 @@ class Blog extends PureComponent {
             blogList : null
         }
     }
-    fetchBlog(){
-    // ,{ method: 'get', mode: 'no-cors',headers: {
-    //         'Access-Control-Allow-Origin':'*'
-    //     } }
-        fetch(`https://nodejssalesforce.herokuapp.com/blogs` , {method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }} ).then(res => res.json())
-            .then(data => {
-                console.log('data' , data);
-                this.setState({blogList:data})
-            })
-    }
     callApi = async () => {
-        const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs');
+    // { method: 'get', mode: 'no-cors',headers: { 'Access-Control-Allow-Origin':'*',  'Content-Type': 'application/json'} }
+        const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs' , { method: 'GET' ,mode: 'cors' ,Headers: {'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json'} });
         const body = await response.json();
         if (response.status !== 200) throw Error(body.message);
-        console.log('res' , body);
-        console.log(body.records);
         this.setState({blogList:body.records});
         return body;
     };

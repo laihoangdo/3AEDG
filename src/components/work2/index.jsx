@@ -16,7 +16,7 @@ export default class Work2 extends PureComponent {
         mixitup("#mix-wrapper", {
             animation: {
                 effects: "fade rotateZ(0deg)",
-                duration: 700
+                duration: 1400
             },
             classNames: {
                 block: "programs",

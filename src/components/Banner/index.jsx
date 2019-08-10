@@ -77,7 +77,7 @@ export default class  Banner extends PureComponent {
                 <OwlCarousel
                     className="owl-theme homepage-slides"
                     items={1}
-                    // autoplay={true}
+                    autoplay={true}
                     touchDrag={false}
                     margin={0}
                     loop={true}

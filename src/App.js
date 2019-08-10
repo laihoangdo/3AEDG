@@ -7,6 +7,7 @@ import ScrollUpBtn from './components/scroll';
 import routes from './router';
 import CallButton from "./components/callButton";
 import Loading from "./modules/loading";
+import Footer from "./components/footer";
 
 class App extends Component {
   render() {

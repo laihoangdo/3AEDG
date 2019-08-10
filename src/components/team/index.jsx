@@ -110,17 +110,17 @@ Team.defaultProps = {
             Image: require("../../images/thaytien-avatar01.jpg"),
             Name: "Thầy Long",
             Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "//facebook.com/tiencanh.chonphieubong",
-            skypeLink: "//facebook.com/tiencanh.chonphieubong",
-            youtubeLink: "//facebook.com/tiencanh.chonphieubong",
+            facebookLink: "https://facebook.com/tiencanh.chonphieubong",
+            skypeLink: "https://facebook.com/tiencanh.chonphieubong",
+            youtubeLink: "https://facebook.com/tiencanh.chonphieubong",
         },
         {
             Image: require("../../images/thaychau-avatar01.jpg"),
             Name: "Thầy Châu",
             Profession: "Giảng Viên 2D ,3D",
-            facebookLink: "//facebook.com/profile.php?id=100026725434352",
-            skypeLink: "//facebook.com/profile.php?id=100026725434352",
-            youtubeLink: "//facebook.com/profile.php?id=100026725434352",
+            facebookLink: "https://facebook.com/profile.php?id=100026725434352",
+            skypeLink: "https://facebook.com/profile.php?id=100026725434352",
+            youtubeLink: "https://facebook.com/profile.php?id=100026725434352",
         }
 
     ]

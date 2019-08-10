@@ -2,14 +2,12 @@ import React, {PureComponent} from 'react';
 import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
-// import html from 'react-inner-html';
 import  './service.css';
 
 //Import Component
 import Sidebar from "./CourseSidebar";
 import Header from '../header';
 import Footer from '../footer';
-// import Comments from "./Comment";
 
 export default class CourseDetail extends PureComponent {
     constructor(props){
@@ -33,20 +31,6 @@ export default class CourseDetail extends PureComponent {
         return (
             <React.Fragment>
                 <Header/>
-                {/* <div className="bread-cumbs-area bread-cumbs-bg">
-                    <div className="diplay-table">
-                        <div className="display-table-cell">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-7">
-                                    <h1>{this.props.Title}</h1>
-                                    <p>{this.props.Content}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  */}
                 <section id="blog" className="our-blog main-blog">
                     <div className="container">
                         <div className="row">
@@ -75,21 +59,35 @@ export default class CourseDetail extends PureComponent {
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <h3 className="title-heading-course">{this.state.courseDetail.title ? this.state.courseDetail.title : '' }</h3>
+                                            <p className="course-detail">{this.state.courseDetail.courseDetail ? this.state.courseDetail.courseDetail : '' }</p>
                                             <div className="post-content" id="course-detail">
-                                                {/*<textarea value={Content__c} ></textarea>*/}
+                                                <h3 className="title-reason"><Icofont icon="icofont-tack-pin icofont-2x" /> &nbsp;{this.state.courseDetail.target}</h3>
+                                                <div className="post-detail">
                                                 {this.state.courseDetail.PostContent.map((post , index) => (
-                                                    <div className="post-detail" key={index}>
-                                                        <Icofont icon="icofont-tags icofont-2x" /> &nbsp;
-                                                        <span key={index}>{post}</span>
+                                                    <div  key={index}>
+                                                        <Icofont icon="icofont-hand-right icofont-1x" /> &nbsp;
+                                                        <span >{post}</span>
                                                     </div>
 
                                                 ))}
+                                                </div>
                                                 <p>{this.state.courseDetail.PostContent1 ? this.state.courseDetail.PostContent1: ''}</p>
-                                                <h3>{this.state.courseDetail.courseStep}</h3>
+                                                <h3  className="title-reason"><Icofont icon="icofont-student-alt icofont-2x" /> &nbsp;Đối tượng học {this.state.courseDetail.description}</h3>
+                                                <div className="post-detail">
+                                                    {this.props.targetWho.map((who , index) => (
+                                                        <div key={index}>
+                                                            <Icofont icon="icofont-hand-right icofont-1x" /> &nbsp;
+                                                            <span>{who}</span>
+                                                        </div>
+
+                                                    ))}
+                                                </div>
+
+                                                <h3 className="title-reason"><Icofont icon="icofont-education icofont-2x" /> &nbsp;{this.state.courseDetail.courseStep}</h3>
                                                 <img src={this.state.courseDetail.ImageStep} alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
-                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id}? </h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id} tại Đồ Họa Anh Em ? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
                                                         <ul>
@@ -173,37 +171,24 @@ export default class CourseDetail extends PureComponent {
 
                                                 <div className="sharing-link">
                                                     <ul>
-                                                        <li><strong>Shear : </strong></li>
+                                                        <li><strong>Đồ Họa Anh Em : </strong></li>
                                                         <li><Link to={this.props.FacebookLink}><Icofont icon="icofont-facebook" /></Link></li>
-                                                        <li><Link to={this.props.TwitterLink}><Icofont icon="icofont-twitter" /></Link></li>
-                                                        <li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>
-                                                        <li><Link to={this.props.linkedinLink}><Icofont icon="icofont-linkedin"/></Link></li>
                                                     </ul>
                                                 </div>
                                             </div>
 
-                                            {/* <Comments /> */}
+                                            {/*Google form*/}
+                                            <div>
+                                                <iframe
+                                                    src="https://docs.google.com/forms/d/e/1FAIpQLSdZxBCIHuVFpggUW5cpODUbpV9K4hjj6auOUJARblPPaV9jLQ/viewform?embedded=true"
+                                                    width="100%" height="875" frameBorder="0" marginHeight="0"
+                                                    marginWidth="0">Đang tải…
+                                                </iframe>
+                                            </div>
 
-                                            {/*<div className="comments-form">*/}
-                                                {/*<h3 className="comments-title">Leave a Comments</h3>*/}
-                                                {/*<form>*/}
-                                                    {/*<div className="form-group">*/}
-                                                        {/*<input type="text" className="form-control" id="name" placeholder="Your Name" />*/}
-                                                    {/*</div>*/}
-                                                    {/*<div className="form-group">*/}
-                                                        {/*<input type="email" className="form-control" id="email_address" placeholder="Your Email" />*/}
-                                                    {/*</div>*/}
-                                                    {/*<div className="form-group">*/}
-                                                        {/*<textarea className="form-control" rows="5" placeholder="Type here..." />*/}
-                                                    {/*</div>*/}
-                                                    {/*<div className="text-center">*/}
-                                                        {/*<div className="button">*/}
-                                                            {/*<Link to="/#0">Submit Comment</Link>*/}
-                                                            {/*<div className="mask"></div>*/}
-                                                        {/*</div>*/}
-                                                    {/*</div>*/}
-                                                {/*</form>*/}
-                                            {/*</div>*/}
+                                            <a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-2x" /> &nbsp; <span >Bài Viết Trên Đồ Họa Anh Em</span></a>
+
+                                            {/*Fanpage post*/}
                                             <div className="fb-video-link">
                                             <div className="fb-video"
                                                  data-href="https://www.facebook.com/2604857046301739/videos/2324921554282334/"
@@ -211,7 +196,7 @@ export default class CourseDetail extends PureComponent {
                                                 <blockquote
                                                     cite="https://developers.facebook.com/2604857046301739/videos/2324921554282334/"
                                                     className="fb-xfbml-parse-ignore"><a
-                                                    href="https://developers.facebook.com/2604857046301739/videos/2324921554282334/">KHÓA
+                                                    href="https://www.facebook.com/2604857046301739/videos/2324921554282334/">KHÓA
                                                     HỌC THIẾT KẾ ĐỒ HỌA CÙNG CHUYÊN GIA</a>
                                                     <p>#HỌC_THIẾT_KẾ_ĐỒ_HỌA_CÙNG_CHUYÊN_GIA, KHÓA CẦM TAY CHỈ VIỆC.
                                                         Cam kết học xong trở thành chuyên gia. Với GIảng viên cao cấp
@@ -233,8 +218,6 @@ export default class CourseDetail extends PureComponent {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Sidebar: src/components*/}
                             <Sidebar tagsData={this.state.courseDetail.tagsData} />
 
                         </div>
@@ -249,10 +232,12 @@ CourseDetail.propTypes = {
     CourseDetailDate: PropTypes.string,
     CourseDetailMonth: PropTypes.string,
     FacebookLink: PropTypes.string,
+    FacebookFanPage: PropTypes.string,
     TwitterLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
     servicesData: PropTypes.array,
+    targetWho: PropTypes.array
 
 };
 
@@ -260,20 +245,30 @@ CourseDetail.propTypes = {
 CourseDetail.defaultProps = {
     CourseDetailDate: "10",
     CourseDetailMonth: "Mar",
-    FacebookLink: "/#0",
+    FacebookLink: "https://www.facebook.com/2604857046301739/videos/2324921554282334/",
+    FacebookFanPage: "https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     TwitterLink: "/#0",
     InstagramLink: "/#0",
     linkedinLink: "/#0",
+    targetWho:[
+        "Tất cả những ai muốn trang bị kỹ năng Đồ Họa để phục vụ cho học tập và công việc.",
+        "Các bạn học sinh phổ thông, Trung học và Trung học chuyên nghiệp, sinh viên đại học chuyên về CNTT hoặc không chuyên.",
+        "Sinh viên các trường đại học, cao đẳng, ... cần trang bị thêm kiến thức đồ họa để hỗ trợ cho việc học hiện tại và chuẩn bị cho công việc sau khi tốt nghiệp.",
+        "Các cán bộ đang công tác tại cơ quan nhà nước, khu công nghiệp, doanh nghiệp và mọi thành phần đều có thể tham gia khóa học."
+    ],
     servicesData: [
         {
             Id: "photoshop",
             icon: "icofont-automation",
             heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
+            title:"Học Photoshop - Chỉnh sửa hình ảnh chuyên nghiệp với photoshop",
+            target: "Mục tiêu Khoá học Photoshop chỉnh sửa hình ảnh chuyên nghiệp:",
             description:
                 "Photoshop",
             Image: require("../../images/bg/pts-bg.jpg"),
             ImageStep: require("../../images/courses/khoa-photoshop.jpg"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
+            courseDetail: "",
             PostContent: [
                 "Thiết kế ấn phẩm truyền thông thương hiệu của bạn bằng chính ý tưởng của bạn",
                 "Thiết kế các banner truyền thông bán hàng trên Website, Facebook, Zalo ",
@@ -314,8 +309,9 @@ CourseDetail.defaultProps = {
                 }
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
             ],
             whatMake:[
                 "thành thạo Adobe Photoshop, làm được tốt những công việc sau: Cắt, ghép, chỉnh sửa phục chế xử lý hình ảnh các kiểu từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như thiết kế: Website, banner sản phẩm truyền thông, kiến trúc, báo chí, in ấn, nội thất, ảnh viện…",
@@ -328,7 +324,10 @@ CourseDetail.defaultProps = {
             heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
                 "Illustrator",
+            title:"Học Illustrator - Chỉnh sửa hình ảnh chuyên nghiệp với Illustrator",
+            target: "Mục tiêu Khoá học Illustrator (AI)",
             Image: require("../../images/bg/ai-bg.jpg"),
+            courseDetail: "Adobe Illustrator  là một chương trình vẽ vector, thường được sử dụng để vẽ hình minh hoạ, hoạt hình, biểu đồ, đồ thị.  Adobe Illustrator được dùng để thiết kế : Như thiết kế những sản phẩm trong ngành thiết kế quảng cáo, thiết kế in ấn, thiết kế logo, thiết kế bản hiệu, thiết kế thời trang, thiết kế thiệp mời, Tạo các sản phẩm tờ rơi, Cataloge, Card Visit, Broucher, Profile,vẽ hoạt hình, tích hợp chuyển động cho Flash...Adobe Illustrator ưu điểm là dễ dàng thay đổi và trao đổi dữ liệu ,kích thước file nhẹ, dễ dàng tương thích với Photoshop, Corel Draw, và hỗ trợ in ấn rất tốt.",
             ImageStep: require("../../images/courses/khoa-ai.jpg"),
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
@@ -373,6 +372,7 @@ CourseDetail.defaultProps = {
             ],
             reason: [
                 "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
+                "Visit, Broucher, Profile,vẽ hoạt hình, tích hợp chuyển động cho Flash...Adobe Illustrator ưu điểm là dễ dàng thay đổi và trao đổi dữ liệu ,kích thước file nhẹ, dễ dàng tương thích với Photoshop, Corel Draw, và hỗ trợ in ấn rất tốt.",
                 "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
             ],
             whatMake:[
@@ -387,6 +387,11 @@ CourseDetail.defaultProps = {
             description:
                 "Corel",
             Image: require("../../images/corel.jpg"),
+            title:"Học COREL DRAW - Chỉnh sửa hình ảnh chuyên nghiệp với COREL DRAW ",
+            target: "Mục tiêu Khoá học COREL DRAW",
+            courseDetail:"CorelDraw là một phần mềm thiết kế đồ họa sử dụng vector được phát triển bởi tập đoàn công nghệ Corel (Canada).\n" +
+                "Với chức năng vẽ chính xác, tốc độ vượt trội trong việc thực hiện những sản phẩm trực quan, CorelDraw ngày càng được ưa chuộng trong việc thiết kế tài liệu, ấn phẩm, báo cáo thuộc các lĩnh vực quảng cáo, kỹ thuật, in ấn, ...\n" +
+                "Vậy muốn đăng ký khoá học CorelDraw sẽ đăng ký như thế nào? Thông tin chi tiết về khoá học ra sao? Chúng ta cùng tìm hiểu nhé!",
             ImageStep: require("../../images/courses/khoa-corel.jpg"),
             courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
@@ -441,6 +446,10 @@ CourseDetail.defaultProps = {
             description:
                 "Indesign",
             Image: require("../../images/bg/indesign-bg.jpg"),
+            title:"Học IN DESIGN - Chỉnh sửa hình ảnh chuyên nghiệp với IN DESIGN ",
+            target: "Mục tiêu Khoá học IN DESIGN",
+            courseDetail: "Adobe InDesign là một phần mềm dùng để thiết kế in ấn và dàn trang điện tử rất chuyên nghiệp. Adobe InDesign là một trong các sản phẩm của tập đoàn Adobe chuyên về in ấn, dàn trang, tạo ra các sản phẩm như catalogue, brochure, tạp chí, báo,  sách, các biểu mẫu, nhãn CD, tờ rơi, tờ bướm... Hiện tại InDesign là giải pháp để tạo ra các văn bản chuyên sâu về đồ họa, đây là một công cụ thiết kế và trình bày nhiều khả năng với các điều khiển có độ chính xác cao và giao tiếp hoàn hảo với các ứng dụng đồ họa chuyên nghiệp khác, đặc biệt là các ứng dụng đồ họa của Adobe. Ưu điểm của InDesign là giao diện và các thao tác phím tắt quen thuộc với những người dùng đã biết về photoshop, illustrator. Ngoài ra, InDesign cũng dễ dàng nhúng (embed) hay liên kết (link) với các định dạng file hình bibmap của Photoshop (tiff, jpeg, psp..) và cả file vector của illustrator (ai, eps, pdf). Đặc biệt, indesign cho phép chèn các tập tin văn bản định dạng như .doc, pdf.\n" +
+                "\n",
             ImageStep: require("../../images/courses/khoa-indesign.jpg"),
             courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
@@ -502,12 +511,17 @@ CourseDetail.defaultProps = {
             description:
                 "Autocad",
             Image: require("../../images/bg/autocad-bg.jpg"),
+            title:"Học AUTOCAD - Cơ Bản Đến Nâng Cao ",
+            target: "Mục tiêu Khoá học AUTOCAD Cơ Bản Đến Nâng Cao",
             ImageStep: require("../../images/courses/khoa-autocad.jpg"),
             courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
             PostContent:[
-
+                    "Làm chủ được môi trường bản vẽ kỹ thuật",
+                "Thành thạo việc lập tỷ lệ cho bản vẽ kỹ thuật",
+                "Thiết kế được các dự án xây dựng, cơ khí, nội thất",
+                "Làm việc cho ngành thiết kế và xây dựng"
             ] ,
             tagsData: [
                 {
@@ -559,11 +573,22 @@ CourseDetail.defaultProps = {
             description:
                 "3Ds MAX",
             Image: require("../../images/bg/3dsmax-bg.jpg"),
+            title:"Học 3Ds MAX - Cơ Bản Đến Nâng Cao ",
+            target: "Mục tiêu Khoá học 3Ds MAX Cơ Bản Đến Nâng Cao",
+            courseDetail:"",
             ImageStep: require("../../images/courses/khoa-3dsmax.jpg"),
             courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-            PostContent: [],
+            PostContent: [
+                "Hiểu rõ và sử dụng thành thạo các công cụ trong 3Ds max",
+                "Thành thạo các công cụ và cách cài đặt phần mềm",
+                "Dựng hình 3D nội thất: Phòng ngủ, phòng khách, phòng học, ….",
+                "Dựng hình 3D ngoại thất: Biệt thư sân vườn, nhà phố, chung cư, ….",
+                "Thiết kế các nhân vật trong Game, dựng các mô hình đa chiều",
+                "Kỹ thuật thiết kế phối cảnh như: cây cỏ, đất, đồi núi, sông hồ…",
+                "Tóm lại sẽ thành thạo phần mềm và thiết kế được theo ý tưởng riêng của bạn"
+            ],
             tagsData: [
                 {
                     tagName: "Lớp học 3Ds Max tại Tp Hồ Chí Minh",
@@ -615,6 +640,9 @@ CourseDetail.defaultProps = {
             description:
                 "Sketchup",
             Image: require("../../images/bg/sketchup-bg.jpg"),
+            title:"Học SKETCHUP - Cơ Bản Đến Nâng Cao ",
+            target: "Mục tiêu Khoá học SKETCHUP Cơ Bản Đến Nâng Cao",
+            courseDetail:"",
             ImageStep: require("../../images/courses/khoa-sketchup-vray.jpg"),
             courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",

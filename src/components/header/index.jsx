@@ -223,20 +223,20 @@ export default class  Header extends PureComponent {
                                     </Link>
                                 </Nav.Item>
 
-                                <Nav.Item>
-                                    <Link
-                                        activeclass="active"
-                                        to="pricing"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-200}
-                                        duration={800}
-                                        className="nav-link"
-                                        onClick={this.closeNavbar}
-                                    >
-                                        Lịch Khai Giảng
-                                    </Link>
-                                </Nav.Item>
+                                {/*<Nav.Item>*/}
+                                {/*    <Link*/}
+                                {/*        activeclass="active"*/}
+                                {/*        to="pricing"*/}
+                                {/*        spy={true}*/}
+                                {/*        smooth={true}*/}
+                                {/*        offset={-200}*/}
+                                {/*        duration={800}*/}
+                                {/*        className="nav-link"*/}
+                                {/*        onClick={this.closeNavbar}*/}
+                                {/*    >*/}
+                                {/*        Lịch Khai Giảng*/}
+                                {/*    </Link>*/}
+                                {/*</Nav.Item>*/}
 
                                 <Nav.Item>
                                     <Link
@@ -315,15 +315,15 @@ export default class  Header extends PureComponent {
                                     </NavLink>
                                 </Nav.Item>
 
-                                <Nav.Item>
-                                    <NavLink
-                                        to="/"
-                                        className="nav-link"
-                                        activeClassName=""
-                                    >
-                                        Lịch Khai Giảng
-                                    </NavLink>
-                                </Nav.Item>
+                                {/*<Nav.Item>*/}
+                                {/*    <NavLink*/}
+                                {/*        to="/"*/}
+                                {/*        className="nav-link"*/}
+                                {/*        activeClassName=""*/}
+                                {/*    >*/}
+                                {/*        Lịch Khai Giảng*/}
+                                {/*    </NavLink>*/}
+                                {/*</Nav.Item>*/}
 
                                 <Nav.Item>
                                     <NavLink

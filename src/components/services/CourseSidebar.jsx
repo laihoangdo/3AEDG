@@ -118,7 +118,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học Illustrator",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/photoshop",
@@ -127,7 +127,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học Photoshop",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/corel",
@@ -136,7 +136,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học Corel",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/autocad",
@@ -145,7 +145,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học Autocad",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/indesign",
@@ -154,7 +154,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học Indesign",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/3ds-max",
@@ -163,7 +163,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học 3Ds Max",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
             postsLink: "/khoa-hoc/sketchup",
@@ -172,7 +172,7 @@ CourseSidebar.defaultProps = {
             postContent: "Khóa Học SketChup",
             postDate: "10 Mar",
             teacher: "Thầy Long",
-            facebookLink : "//facebook.com/tiencanh.chonphieubong"
+            facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
     ],
     categoriesData: [
