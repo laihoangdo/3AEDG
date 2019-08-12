@@ -53,7 +53,7 @@ export default class CourseSidebar extends PureComponent {
                         <div >
                         <div className="pane-content">
                             <aside id="text-4" >
-                                <p className="widget-title">Tư vấn</p>
+                                <p className="widget-title">Hotline</p>
 
                                 <div className="textwidget">0938636843</div>
                             </aside>

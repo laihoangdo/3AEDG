@@ -457,7 +457,7 @@
        Slider Area CSS 
       ========================= */
    .slide-bg-1 {
-       background-image: url(../images/bg/anhbia-001.jpg);
+       background-image: url(../images/bg/bg-image.jpg);
    }
    .slide-bg-2 {
        background-image: url(../images/bg/bgn-2.jpg);
@@ -493,7 +493,7 @@
        display: inline-block;
    }
    .home-banner-area {
-       background-image: url(../images/bg/anhbia-001.jpg);
+       background-image: url(../images/bg/bg-image.jpg);
        background-size: cover;
        background-position: center center;
        background-color: #dddddd;

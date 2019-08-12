@@ -85,7 +85,7 @@ export default class CourseDetail extends PureComponent {
                                                 </div>
 
                                                 <h3 className="title-reason"><Icofont icon="icofont-education icofont-2x" /> &nbsp;{this.state.courseDetail.courseStep}</h3>
-                                                <img src={this.state.courseDetail.ImageStep} alt="Photoshop"/>
+                                                <img src={this.state.courseDetail.ImageStep ? this.state.courseDetail.ImageStep : '' } alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
                                                 <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id} tại Đồ Họa Anh Em ? </h3>
                                                 <div className="target-course">
@@ -107,25 +107,27 @@ export default class CourseDetail extends PureComponent {
                                                 <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Kết thúc khóa học {this.state.courseDetail.Id} làm được gì? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
-                                                        <div className="target-li">
-                                                            {this.state.courseDetail.whatMake.map((make , index) => (
-                                                                <div key={index}>
-                                                                    <p><Icofont icon="icofont-hand-right icofont-1x" /> &nbsp; {make}</p>
-                                                                </div>
+                                                        {/*<div className="target-li">*/}
+                                                            {/*{this.state.courseDetail.whatMake.map((make , index) => (*/}
+                                                                {/*<div key={index}>*/}
+                                                                    {/*<p><Icofont icon="icofont-hand-right icofont-1x" /> &nbsp; {make}</p>*/}
+                                                                {/*</div>*/}
 
-                                                            ))}
-                                                        </div>
+                                                            {/*))}*/}
+                                                        {/*</div>*/}
+                                                        <p><Icofont icon="icofont-hand-right icofont-1x" /> &nbsp; {this.props.muctieu}</p>
                                                     </div>
                                                 </div>
-                                                <h3 className="title-reason"><Icofont icon="icofont-money icofont-2x" /> &nbsp; Khai giảng liên tục [ lớp: Sáng / Chiều / Tối ]</h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-money icofont-2x" /> &nbsp; Khai giảng liên tục lớp: Sáng / Chiều / Tối </h3>
                                                 <div className="target-course">
                                                     <div className="course-price">
                                                         <h3 className='course-fee'>Học phí gốc khóa học: <span>1.500.000(vnđ)</span></h3>
-                                                        <p className="course-date"><span>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</span></p>
-                                                        <p className="course-date">Học phí cho <span>mỗi phần học</span> chỉ còn <span>1.300.000</span>(TPHCM) </p>
-                                                        <p className="course-trust"> (Cam kết không phát sinh chi phí nào khác)</p>
-                                                        <p className="course-trust">(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>
-                                                        <p className="course-author">(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
+                                                        {/*<p className="course-date"><span>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</span></p>*/}
+                                                        <p className="course-date"><span>Nhân Dịp Lễ 2-9 và ngày khai giảng năm học mới giảm 200.000/Khóa</span></p>
+                                                        <p className="course-date">Học phí cho <span>mỗi phần học</span> chỉ còn <span>1.300.000</span></p>
+                                                        {/*<p className="course-trust"> (Cam kết không phát sinh chi phí nào khác)</p>*/}
+                                                        {/*<p className="course-trust">(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>*/}
+                                                        {/*<p className="course-author">(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>*/}
                                                     </div>
                                                 </div>
                                                 <h3 className="title-reason"> <Icofont icon="icofont-ui-calendar icofont-2x" /> &nbsp; Thời Gian Giành Cho Khóa Học Đồ Họa {this.state.courseDetail.description}</h3>
@@ -155,7 +157,7 @@ export default class CourseDetail extends PureComponent {
                                                                 Chỉ thực hành<br/>
 
                                                                 sản phẩm thực tế ngay trong khóa học</td>
-                                                            <td>P504, Tòa C4, Chung Cư Khang Gia, Đường 38, Phường 14, Quận Gò Vấp, TPHCM</td>
+                                                            <td>001 Lô F 468 Phan Văn Trị Khu Nhà Ở Quân Đội , Phường 7 Quận Gò Vấp</td>
 
                                                         </tr>
                                                     </tbody>
@@ -178,13 +180,13 @@ export default class CourseDetail extends PureComponent {
                                             </div>
 
                                             {/*Google form*/}
-                                            <div>
-                                                <iframe
-                                                    src="https://docs.google.com/forms/d/e/1FAIpQLSdZxBCIHuVFpggUW5cpODUbpV9K4hjj6auOUJARblPPaV9jLQ/viewform?embedded=true"
-                                                    width="100%" height="875" frameBorder="0" marginHeight="0"
-                                                    marginWidth="0">Đang tải…
-                                                </iframe>
-                                            </div>
+                                            {/*<div>*/}
+                                                {/*<iframe*/}
+                                                    {/*src="https://docs.google.com/forms/d/e/1FAIpQLSdZxBCIHuVFpggUW5cpODUbpV9K4hjj6auOUJARblPPaV9jLQ/viewform?embedded=true"*/}
+                                                    {/*width="100%" height="875" frameBorder="0" marginHeight="0"*/}
+                                                    {/*marginWidth="0">Đang tải…*/}
+                                                {/*</iframe>*/}
+                                            {/*</div>*/}
 
                                             <a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-2x" /> &nbsp; <span >Bài Viết Trên Đồ Họa Anh Em</span></a>
 
@@ -237,7 +239,8 @@ CourseDetail.propTypes = {
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
     servicesData: PropTypes.array,
-    targetWho: PropTypes.array
+    targetWho: PropTypes.array,
+    muctieu: PropTypes.string,
 
 };
 
@@ -256,6 +259,7 @@ CourseDetail.defaultProps = {
         "Sinh viên các trường đại học, cao đẳng, ... cần trang bị thêm kiến thức đồ họa để hỗ trợ cho việc học hiện tại và chuẩn bị cho công việc sau khi tốt nghiệp.",
         "Các cán bộ đang công tác tại cơ quan nhà nước, khu công nghiệp, doanh nghiệp và mọi thành phần đều có thể tham gia khóa học."
     ],
+    muctieu: "Tạo ra các ấn  nhận diện thương hiệu, chỉnh sửa ảnh, dàn trang, thiết kế tạp chí… bằng các phần mềm đồ họa như Adobe Photoshop, Adobe Illustrator, Adobe Indesign. Bên cạnh đó, sin viên cũng nắm được quy trình thiết kế và sản xuất các ấn phẩm từ bản thiết kế trên máy tính tới lúc thành phẩm.",
     servicesData: [
         {
             Id: "photoshop",
@@ -266,7 +270,7 @@ CourseDetail.defaultProps = {
             description:
                 "Photoshop",
             Image: require("../../images/bg/pts-bg.jpg"),
-            ImageStep: require("../../images/courses/khoa-photoshop.jpg"),
+            ImageStep: require("../../images/courses/pts-step.jpg"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
             courseDetail: "",
             PostContent: [
@@ -309,9 +313,10 @@ CourseDetail.defaultProps = {
                 }
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
-                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "thành thạo Adobe Photoshop, làm được tốt những công việc sau: Cắt, ghép, chỉnh sửa phục chế xử lý hình ảnh các kiểu từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như thiết kế: Website, banner sản phẩm truyền thông, kiến trúc, báo chí, in ấn, nội thất, ảnh viện…",
@@ -328,7 +333,7 @@ CourseDetail.defaultProps = {
             target: "Mục tiêu Khoá học Illustrator (AI)",
             Image: require("../../images/bg/ai-bg.jpg"),
             courseDetail: "Adobe Illustrator  là một chương trình vẽ vector, thường được sử dụng để vẽ hình minh hoạ, hoạt hình, biểu đồ, đồ thị.  Adobe Illustrator được dùng để thiết kế : Như thiết kế những sản phẩm trong ngành thiết kế quảng cáo, thiết kế in ấn, thiết kế logo, thiết kế bản hiệu, thiết kế thời trang, thiết kế thiệp mời, Tạo các sản phẩm tờ rơi, Cataloge, Card Visit, Broucher, Profile,vẽ hoạt hình, tích hợp chuyển động cho Flash...Adobe Illustrator ưu điểm là dễ dàng thay đổi và trao đổi dữ liệu ,kích thước file nhẹ, dễ dàng tương thích với Photoshop, Corel Draw, và hỗ trợ in ấn rất tốt.",
-            ImageStep: require("../../images/courses/khoa-ai.jpg"),
+            ImageStep: require("../../images/courses/ai-step.jpg"),
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -371,9 +376,10 @@ CourseDetail.defaultProps = {
                 }
             ],
             reason: [
-                "Phầm mềm Ilusstrator cung cấp cho người dùng các công cụ hỗ trợ để tạo lên các sản phẩm vector về hình khối 3D dùng trong thiết kế nội thất, bản đồ, Minh họa sách báo, Thiết kế logo, Tạo các sản phẩm tờ rơi, Card Visit, brochure, Profile,vẽ hoạt hình,… một cách nhanh chóng với màu sắc sát với sản phẩm thực tế giúp ta tạo ra các sản phẩm một cách nhanh chóng.",
-                "Visit, Broucher, Profile,vẽ hoạt hình, tích hợp chuyển động cho Flash...Adobe Illustrator ưu điểm là dễ dàng thay đổi và trao đổi dữ liệu ,kích thước file nhẹ, dễ dàng tương thích với Photoshop, Corel Draw, và hỗ trợ in ấn rất tốt.",
-                "Điểm mạnh: Màu sắc file thiết kế đẹp mắt, dễ dàng tương thích với Photoshop, Corel Draw, dễ dàng thay đổi và trao đổi dữ liệu, hỗ trợ in ấn rất tốt. Màu sắc rất mượt. "
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "bạn thành thạo Adobe Illustrator, làm được tốt những công việc sau: Thiết kế các ấn phẩm, Thiết kế logo, thiết kế tờ rơi, catalogue từ đơn giản đến phức tạp, tự thiết kế các bộ nhận dạng thương hiệu theo cầu của khách hàng",
@@ -392,7 +398,7 @@ CourseDetail.defaultProps = {
             courseDetail:"CorelDraw là một phần mềm thiết kế đồ họa sử dụng vector được phát triển bởi tập đoàn công nghệ Corel (Canada).\n" +
                 "Với chức năng vẽ chính xác, tốc độ vượt trội trong việc thực hiện những sản phẩm trực quan, CorelDraw ngày càng được ưa chuộng trong việc thiết kế tài liệu, ấn phẩm, báo cáo thuộc các lĩnh vực quảng cáo, kỹ thuật, in ấn, ...\n" +
                 "Vậy muốn đăng ký khoá học CorelDraw sẽ đăng ký như thế nào? Thông tin chi tiết về khoá học ra sao? Chúng ta cùng tìm hiểu nhé!",
-            ImageStep: require("../../images/courses/khoa-corel.jpg"),
+            ImageStep: require("../../images/courses/corel-step.png"),
             courseStep : "Nôi Dung Khóa Học Corel Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -429,9 +435,10 @@ CourseDetail.defaultProps = {
                 }
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
-                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "cam kết, bạn có thể thành thạo CorelDraw,   bạn cũng có thể thành thạo các công việc sau: Thiết kế logo, tờ rơi, banner, thiết kế tạp chí báo chí từ cơ bản đến nâng cao .Ứng dụng được trong mọi công việc như dàn trang báo chí như: thiết kế bìa tạp chí, sách,",
@@ -450,7 +457,7 @@ CourseDetail.defaultProps = {
             target: "Mục tiêu Khoá học IN DESIGN",
             courseDetail: "Adobe InDesign là một phần mềm dùng để thiết kế in ấn và dàn trang điện tử rất chuyên nghiệp. Adobe InDesign là một trong các sản phẩm của tập đoàn Adobe chuyên về in ấn, dàn trang, tạo ra các sản phẩm như catalogue, brochure, tạp chí, báo,  sách, các biểu mẫu, nhãn CD, tờ rơi, tờ bướm... Hiện tại InDesign là giải pháp để tạo ra các văn bản chuyên sâu về đồ họa, đây là một công cụ thiết kế và trình bày nhiều khả năng với các điều khiển có độ chính xác cao và giao tiếp hoàn hảo với các ứng dụng đồ họa chuyên nghiệp khác, đặc biệt là các ứng dụng đồ họa của Adobe. Ưu điểm của InDesign là giao diện và các thao tác phím tắt quen thuộc với những người dùng đã biết về photoshop, illustrator. Ngoài ra, InDesign cũng dễ dàng nhúng (embed) hay liên kết (link) với các định dạng file hình bibmap của Photoshop (tiff, jpeg, psp..) và cả file vector của illustrator (ai, eps, pdf). Đặc biệt, indesign cho phép chèn các tập tin văn bản định dạng như .doc, pdf.\n" +
                 "\n",
-            ImageStep: require("../../images/courses/khoa-indesign.jpg"),
+            ImageStep: require("../../images/courses/indesign-step.png"),
             courseStep : "Nôi Dung Khóa Học InDesign Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -494,9 +501,10 @@ CourseDetail.defaultProps = {
                 }
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
-                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "bạn thành thạo Adobe Indesign, làm được tốt những công việc sau:  thiết kế các tạp chí báo chí  từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như dàn trang báo chí, bìa tạp chí, sách, các ấn phẩm theo nhu cầu của bạn",
@@ -513,7 +521,7 @@ CourseDetail.defaultProps = {
             Image: require("../../images/bg/autocad-bg.jpg"),
             title:"Học AUTOCAD - Cơ Bản Đến Nâng Cao ",
             target: "Mục tiêu Khoá học AUTOCAD Cơ Bản Đến Nâng Cao",
-            ImageStep: require("../../images/courses/khoa-autocad.jpg"),
+            ImageStep: require("../../images/courses/autocad-step.jpg"),
             courseStep : "Nôi Dung Khóa Học Autocad Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -553,9 +561,10 @@ CourseDetail.defaultProps = {
 
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
-                "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "Cài đặt và sử dụng thành thạo các công cụ trong Autocad",
@@ -576,7 +585,7 @@ CourseDetail.defaultProps = {
             title:"Học 3Ds MAX - Cơ Bản Đến Nâng Cao ",
             target: "Mục tiêu Khoá học 3Ds MAX Cơ Bản Đến Nâng Cao",
             courseDetail:"",
-            ImageStep: require("../../images/courses/khoa-3dsmax.jpg"),
+            ImageStep: require("../../images/courses/3ds-max.png"),
             courseStep : "Nôi Dung Khóa Học 3Ds Max Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -618,10 +627,10 @@ CourseDetail.defaultProps = {
                 },
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Học theo hình thức “Cầm tay chỉ việc” nên các bạn học đến đâu thì các bạn hiểu ra và thành thạo đến đó.",
-                "Giáo trình thực hành được lấy ra từ các dự án thực tế – học thật, tay nghề thật.",
-                "Cam kết các bạn thành nghề thì mới xong khóa học chứ không đào tạo theo hình thức quảng cáo vớ vẩn."
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "Hiểu rõ và sử dụng thành thạo 3Ds Max.",
@@ -643,7 +652,7 @@ CourseDetail.defaultProps = {
             title:"Học SKETCHUP - Cơ Bản Đến Nâng Cao ",
             target: "Mục tiêu Khoá học SKETCHUP Cơ Bản Đến Nâng Cao",
             courseDetail:"",
-            ImageStep: require("../../images/courses/khoa-sketchup-vray.jpg"),
+            ImageStep: require("../../images/courses/sketchup-step.jpg"),
             courseStep : "Nôi Dung Khóa Học Sketchup Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -705,10 +714,10 @@ CourseDetail.defaultProps = {
                 },
             ],
             reason: [
-                "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
-                "Học theo hình thức “Cầm tay chỉ việc” nên các bạn học đến đâu thì các bạn hiểu ra và thành thạo đến đó.",
-                "Giáo trình thực hành được lấy ra từ các dự án thực tế – học thật, tay nghề thật.",
-                "Cam kết các bạn thành nghề thì mới xong khóa học chứ không đào tạo theo hình thức quảng cáo vớ vẩn."
+                // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
+                // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
+                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
             ],
             whatMake:[
                 "Hiểu rõ và sử dụng thành thạo Sketchup.",
