@@ -372,5 +372,5 @@ Header.defaultProps = {
   Number: "0938636843",
   facebookLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
   zaloLink: "https://zalo.me/0337590737",
-  instagramLink: "//facebook.com/Thiết-Kế-Đồ-Hoạ-2604857046301739/",
+  instagramLink: "//www.messenger.com/t/2604857046301739",
 };
