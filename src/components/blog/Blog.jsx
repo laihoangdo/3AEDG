@@ -4,26 +4,27 @@ import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
 import {fetchBlogsAction} from "../../store/blog/action";
 
 // const mapStateToProps = state => ({
 //     // blogs: fetchBlogs(state),
 // })
 function mapStateToProps(state) {
+    console.log('state.blogs.blogs', state.blog.blogs);
     return {
-        blogs: state.blogs.blogs,
+        blogs: state.blog.blogs.records,
     }
 }
 
 // const mapDispatchToProps = dispatch => bindActionCreators({
-//     fetchBlogs: fetchBlogs
+//     fetchBlogs: fetchBlogsAction
 // }, dispatch)
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({
-        fetchBlogsAction,
-    }, dispatch);
-}
+const mapDispatchToProps = {
+    fetchBlogs : fetchBlogsAction
+};
+// function mapDispatchToProps(dispatch) {
+//     return { actions: bindActionCreators(fetchBlogsAction, dispatch) }
+// }
 
 export default
 @connect(mapStateToProps, mapDispatchToProps)
@@ -34,19 +35,19 @@ class Blog extends PureComponent {
             blogList : null
         }
     }
-    callApi = async () => {
-    // { method: 'get', mode: 'no-cors',headers: { 'Access-Control-Allow-Origin':'*',  'Content-Type': 'application/json'} }
-        const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs' , { method: 'GET' ,mode: 'cors' ,Headers: {'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json'} });
-        const body = await response.json();
-        if (response.status !== 200) throw Error(body.message);
-        this.setState({blogList:body.records});
-        return body;
-    };
+    // callApi = async () => {
+    // // { method: 'get', mode: 'no-cors',headers: { 'Access-Control-Allow-Origin':'*',  'Content-Type': 'application/json'} }
+    //     const response = await fetch('https://nodejssalesforce.herokuapp.com/blogs' , { method: 'GET' ,mode: 'cors' ,Headers: {'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json'} });
+    //     const body = await response.json();
+    //     if (response.status !== 200) throw Error(body.message);
+    //     this.setState({blogList:body.records});
+    //     return body;
+    // };
     componentWillMount() {
-        this.callApi();
+        // this.callApi();
+        this.props.fetchBlogs();
     }
     componentDidMount() {
-        // this.callApi();
         let scrollWithOffset = (el, offset) => {
             const elementPosition = el.offsetTop - offset;
             window.scroll({
@@ -57,21 +58,15 @@ class Blog extends PureComponent {
         };
         this.setState({ scrollWithOffset });
     }
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //     if(prevProps.blogs !== this.props.blogs){
-    //         this.callApi();
-    //     }
-    // }
     render() {
         //Blog loop start
         const {blogList} = this.state;
-        if(!blogList){
+        if(!this.props.blogs){
             return(
                 <div>loading</div>
             )
         }
-        console.log('blogs' , blogList);
-        const blogdata = blogList.map((blog, index) => (
+        const blogdata = this.props.blogs.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
                     <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
