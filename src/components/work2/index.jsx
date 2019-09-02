@@ -113,7 +113,7 @@ export default class Work2 extends PureComponent {
                                     <img src={image.link} alt="work-img" />
 
                                     <div className="work-content">
-                                        <h4>Đồ Họa Anh Em</h4>
+                                        <h4>Đồ Họa Thế Hệ Mới</h4>
                                         <ul>
                                             <li><a href={image.facebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" />{image.author}</a></li>
                                         </ul>
@@ -166,7 +166,7 @@ Work2.defaultProps = {
     SectionbgTitle: "Trải Nghiệm",
     sectionTitle: "Sản Phẩm Học Viên",
     sectionDescription:
-        "Sản Phẩm được học viên tại Đồ Họa Anh Em Hoàn thành.",
+        "Sản Phẩm được học viên tại Đồ Họa Thế Hệ Mới Hoàn thành.",
     imageList: [
         {
             link: require("../../images/product/pts/pts-hv4.jpg"),

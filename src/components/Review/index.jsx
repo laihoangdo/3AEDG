@@ -71,7 +71,7 @@ Review.defaultProps = {
         },
         {
             clientImage: require("../../images/student/hocvien-2.jpg"),
-            Content: "Từng học nhiều trung tâm đào tạo đồ họa nhưng khi đến với trung tâm Đồ Họa Anh Em của thầy Long thì mình mới bứt phá và tự tin khi đi làm , nhờ sự chỉ bảo tận tình của thầy . Em cảm ơn.",
+            Content: "Từng học nhiều trung tâm đào tạo đồ họa nhưng khi đến với trung tâm Đồ Họa Thế Hệ Mới của thầy Long thì mình mới bứt phá và tự tin khi đi làm , nhờ sự chỉ bảo tận tình của thầy . Em cảm ơn.",
             Name: "Ngọc Thy",
             Profession: "Học Viên Khóa 2019",
         }

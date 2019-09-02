@@ -141,7 +141,7 @@ Blog.propTypes = {
 //Default Props
 Blog.defaultProps = {
     SectionbgTitle: "Tin Tức",
-    sectionTitle: "Tin Tức Từ Đồ Họa Anh Em",
+    sectionTitle: "Tin Tức Từ Đồ Họa Thế Hệ Mới",
     sectionDescription:
         "Góc chia sẻ kinh nghiệm học tập và những bài thực hành hay.",
     btnLink: "/blog-one",

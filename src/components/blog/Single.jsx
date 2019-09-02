@@ -92,7 +92,7 @@ class Single extends PureComponent {
                                                 
                                                 {/*<div className="sharing-link">*/}
                                                     {/*<ul>*/}
-                                                        {/*<li><strong>Đồ Họa Anh Em : </strong></li>*/}
+                                                        {/*<li><strong>Đồ Họa Thế Hệ Mới : </strong></li>*/}
                                                         {/*<li><a href={this.props.TwitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>*/}
                                                         {/*<li><Link to={this.props.TwitterLink}><Icofont icon="icofont-twitter" /></Link></li>*/}
                                                         {/*<li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>*/}
@@ -117,7 +117,7 @@ class Single extends PureComponent {
                                             </div>
                                             <div className="sharing-link">
                                                 <ul>
-                                                    <li><strong>Đồ Họa Anh Em : </strong></li>
+                                                    <li><strong>Đồ Họa Thế Hệ Mới : </strong></li>
                                                     <li><a href={this.props.TwitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
                                                 </ul>
                                             </div>

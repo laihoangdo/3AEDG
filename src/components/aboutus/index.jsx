@@ -132,8 +132,8 @@ AboutUs.propTypes = {
 
 //Default Props
 AboutUs.defaultProps = {
-    SectionbgTitle: "ĐỒ HỌA ANH EM",
-    sectionTitle: "ĐỒ HỌA ANH EM GIÚP BẠN GẦN HƠN VỚI THÀNH CÔNG",
+    SectionbgTitle: "ĐỒ HỌA THẾ HỆ MỚI",
+    sectionTitle: "ĐỒ HỌA THẾ HỆ MỚI GIÚP BẠN GẦN HƠN VỚI THÀNH CÔNG",
     sectionDescription:
         "CHÚNG TÔI ĐÃ VÀ ĐANG ĐÀO TẠO",
 };

@@ -87,7 +87,7 @@ export default class CourseDetail extends PureComponent {
                                                 <h3 className="title-reason"><Icofont icon="icofont-education icofont-2x" /> &nbsp;{this.state.courseDetail.courseStep}</h3>
                                                 <img src={this.state.courseDetail.ImageStep ? this.state.courseDetail.ImageStep : '' } alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
-                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id} tại Đồ Họa Anh Em ? </h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id} tại Đồ Họa Thế Hệ Mới ? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
                                                         <ul>
@@ -157,7 +157,7 @@ export default class CourseDetail extends PureComponent {
                                                                 Chỉ thực hành<br/>
 
                                                                 sản phẩm thực tế ngay trong khóa học</td>
-                                                            <td>001 Lô F 468 Phan Văn Trị Khu Nhà Ở Quân Đội , Phường 7 Quận Gò Vấp</td>
+                                                            <td>1250 Kha Vạn Cân, Thủ Đức, Hồ Chí Minh</td>
 
                                                         </tr>
                                                     </tbody>
@@ -173,7 +173,7 @@ export default class CourseDetail extends PureComponent {
 
                                                 <div className="sharing-link">
                                                     <ul>
-                                                        <li><strong>Đồ Họa Anh Em : </strong></li>
+                                                        <li><strong>Đồ Họa Thế Hệ Mới : </strong></li>
                                                         <li><Link to={this.props.FacebookLink}><Icofont icon="icofont-facebook" /></Link></li>
                                                     </ul>
                                                 </div>
@@ -188,7 +188,7 @@ export default class CourseDetail extends PureComponent {
                                                 {/*</iframe>*/}
                                             {/*</div>*/}
 
-                                            <a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-2x" /> &nbsp; <span >Bài Viết Trên Đồ Họa Anh Em</span></a>
+                                            <a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-2x" /> &nbsp; <span >Bài Viết Trên Đồ Họa Thế Hệ Mới</span></a>
 
                                             {/*Fanpage post*/}
                                             <div className="fb-video-link">

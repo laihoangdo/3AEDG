@@ -110,21 +110,21 @@ Banner.defaultProps = {
         {
             BgClass: "single-slider-item slide-bg-1",
             TopTitle: "Sáng Tạo & Đam Mê",
-            Title: "Thiết Kế Đồ Họa  Anh Em",
+            Title: "Thiết Kế Đồ Họa Thế Hệ Mới",
             Content:
                 "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         },
         {
             BgClass: "single-slider-item slide-bg-2",
             TopTitle: "Sáng Tạo & Đam Mê",
-            Title: "Thiết Kế Đồ Họa  Anh Em",
+            Title: "Thiết Kế Đồ Họa Thế Hệ Mới",
             Content:
                 "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         },
         {
             BgClass: "single-slider-item slide-bg-3",
             TopTitle: "Sáng Tạo & Đam Mê",
-            Title: "Thiết Kế Đồ Họa  Anh Em",
+            Title: "Thiết Kế Đồ Họa Thế Hệ Mới",
             Content:
                 "Cam Kết Đào Tạo ,Tạo ra Giá Trị Riêng Cho Bạn.",
         }

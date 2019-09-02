@@ -51,7 +51,7 @@ export default class  Header extends PureComponent {
                         </Navbar.Brand>
                         {/*<div>*/}
                         <div className="col-md-5 header-padding">
-                            <h3 className="h2-header">TRUNG TÂM ĐÀO TẠO ĐỒ HỌA ANH EM</h3>
+                            <h3 className="h2-header">TRUNG TÂM ĐÀO TẠO ĐỒ HỌA THẾ HỆ MỚI</h3>
                             <h4>Đào Tạo Đồ Họa 2D - 3D</h4>
                         </div>
                         <div className="col-md-3 header-padding-social">
