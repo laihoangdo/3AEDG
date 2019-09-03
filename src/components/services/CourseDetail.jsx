@@ -270,7 +270,7 @@ CourseDetail.defaultProps = {
             description:
                 "Photoshop",
             Image: require("../../images/bg/pts-bg.jpg"),
-            ImageStep: require("../../images/courses/pts-step.jpg"),
+            ImageStep: require("../../images/courses/pts-step.png"),
             courseStep : "Nôi Dung Khóa Học Photoshop Cơ Bản Và Nâng Cao",
             courseDetail: "",
             PostContent: [
@@ -333,7 +333,7 @@ CourseDetail.defaultProps = {
             target: "Mục tiêu Khoá học Illustrator (AI)",
             Image: require("../../images/bg/ai-bg.jpg"),
             courseDetail: "Adobe Illustrator  là một chương trình vẽ vector, thường được sử dụng để vẽ hình minh hoạ, hoạt hình, biểu đồ, đồ thị.  Adobe Illustrator được dùng để thiết kế : Như thiết kế những sản phẩm trong ngành thiết kế quảng cáo, thiết kế in ấn, thiết kế logo, thiết kế bản hiệu, thiết kế thời trang, thiết kế thiệp mời, Tạo các sản phẩm tờ rơi, Cataloge, Card Visit, Broucher, Profile,vẽ hoạt hình, tích hợp chuyển động cho Flash...Adobe Illustrator ưu điểm là dễ dàng thay đổi và trao đổi dữ liệu ,kích thước file nhẹ, dễ dàng tương thích với Photoshop, Corel Draw, và hỗ trợ in ấn rất tốt.",
-            ImageStep: require("../../images/courses/ai-step.jpg"),
+            ImageStep: require("../../images/courses/ai-step.png"),
             courseStep : "Nôi Dung Khóa Học Illustrator Cơ Bản Và Nâng Cao",
             Title: "Blog Details",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",

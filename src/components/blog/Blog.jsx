@@ -60,7 +60,6 @@ class Blog extends PureComponent {
     }
     render() {
         //Blog loop start
-        const {blogList} = this.state;
         if(!this.props.blogs){
             return(
                 <div>loading</div>

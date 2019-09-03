@@ -17,7 +17,7 @@ export default class  Banner extends PureComponent {
                                 <div className="container">
                                     <div className="row">
                                         <div className="main-banner-text">
-                                            <div className="col-lg-7">
+                                            <div className="col-lg-8">
                                                 <span
                                                     className={
                                                         isVisible

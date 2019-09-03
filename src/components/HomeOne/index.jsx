@@ -20,7 +20,7 @@ export default class HomeOne extends PureComponent {
             <Banner />
             <Services/>
             <Work2/>
-            {/*<Team/>*/}
+            <Team/>
             <Blog/>
             <AboutUs/>
             <Review/>

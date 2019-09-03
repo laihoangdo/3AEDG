@@ -121,6 +121,14 @@ Team.defaultProps = {
             facebookLink: "https://facebook.com/profile.php?id=100026725434352",
             skypeLink: "https://facebook.com/profile.php?id=100026725434352",
             youtubeLink: "https://facebook.com/profile.php?id=100026725434352",
+        },
+        {
+            Image: require("../../images/thay-TA.jpg"),
+            Name: "Thầy Tuấn Anh",
+            Profession: "Giảng Viên 2D ,3D",
+            facebookLink: "https://www.facebook.com/profile.php?id=100014332325166",
+            skypeLink: "https://www.facebook.com/profile.php?id=100014332325166",
+            youtubeLink: "https://www.facebook.com/profile.php?id=100014332325166",
         }
 
     ]

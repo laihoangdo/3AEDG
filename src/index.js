@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {HashRouter} from 'react-router-dom';
 import rootReducer from "./store";
-import { createLogger } from 'redux-logger';
+// import { createLogger } from 'redux-logger';
 import {applyMiddleware, createStore} from "redux";
 import {Provider} from "react-redux";
 import thunk from 'redux-thunk';
@@ -14,7 +13,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 
 const middleware = [thunk];
 // applyMiddleware(logger)
-const logger = createLogger();
+// const logger = createLogger();
 const store =  createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(...middleware))
