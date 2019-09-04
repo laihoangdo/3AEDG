@@ -12,12 +12,12 @@ self.__precacheManifest = [
     "url": "./static/media/sketchup-hv2.a9d216b9.jpg"
   },
   {
-    "revision": "a2cfb0d087098d6835b8",
-    "url": "./static/js/main.a2cfb0d0.chunk.js"
+    "revision": "55123bc4b0f3578d559f",
+    "url": "./static/js/main.55123bc4.chunk.js"
   },
   {
-    "revision": "b7c11cf1e24ada8e1127",
-    "url": "./static/js/runtime~main.b7c11cf1.js"
+    "revision": "c97ffd23246ec2bc4d9a",
+    "url": "./static/js/runtime~main.c97ffd23.js"
   },
   {
     "revision": "9826ae691f8fef71c70bb0de9c08bd98",
@@ -40,36 +40,32 @@ self.__precacheManifest = [
     "url": "./static/media/3ds-max.2d1cf99a.png"
   },
   {
-    "revision": "5b98b4a86a45c91cc987",
-    "url": "./static/js/6.5b98b4a8.chunk.js"
+    "revision": "fcc3300a3b0fca128401",
+    "url": "./static/js/6.fcc3300a.chunk.js"
   },
   {
     "revision": "280d68d40c7d9344c047ac784505defd",
     "url": "./static/media/auto-cad-hv3.280d68d4.jpg"
   },
   {
-    "revision": "5606f7f37ffc51d92246",
-    "url": "./static/js/7.5606f7f3.chunk.js"
+    "revision": "48e7801190e6881e41bd",
+    "url": "./static/js/7.48e78011.chunk.js"
   },
   {
     "revision": "119ed48c8c87a97eb9fcc3402106345b",
     "url": "./static/media/autocad-step.119ed48c.jpg"
   },
   {
-    "revision": "397c002dd029dc416626",
-    "url": "./static/js/8.397c002d.chunk.js"
+    "revision": "d0d8dbb1df1a70eb9507",
+    "url": "./static/js/8.d0d8dbb1.chunk.js"
   },
   {
-    "revision": "fbafc6ec44223c665370",
-    "url": "./static/js/9.fbafc6ec.chunk.js"
+    "revision": "8d7fcb9208584528caca",
+    "url": "./static/js/9.8d7fcb92.chunk.js"
   },
   {
     "revision": "e0567e779586f28de1e4",
     "url": "./static/js/10.e0567e77.chunk.js"
-  },
-  {
-    "revision": "3f4d646294c22b1645a9030df2ed064e",
-    "url": "./static/media/logo-big.3f4d6462.png"
   },
   {
     "revision": "1657e3c9ad93c32c7deebc87f277bbef",
@@ -80,12 +76,16 @@ self.__precacheManifest = [
     "url": "./static/media/bgn-2.ae51d905.jpg"
   },
   {
+    "revision": "3f4d646294c22b1645a9030df2ed064e",
+    "url": "./static/media/logo-big.3f4d6462.png"
+  },
+  {
     "revision": "b4ebb422c66568cc57db969d55119f47",
     "url": "./static/media/bgn-3.b4ebb422.jpg"
   },
   {
-    "revision": "f40a462f63d9ea0a66613946ca2c40eb",
-    "url": "./static/media/logo-mobile.f40a462f.png"
+    "revision": "f2833c05bb62a7b2c362be5155b6134c",
+    "url": "./static/media/logo-mobile1.f2833c05.png"
   },
   {
     "revision": "0f5c4bb9907c734a327f7baebca4d7eb",
@@ -160,12 +160,12 @@ self.__precacheManifest = [
     "url": "./static/media/thaytien-avatar01.abe99f2b.jpg"
   },
   {
-    "revision": "28555671ab0137614fe49fedd3fcd33b",
-    "url": "./static/media/thaychau-avatar01.28555671.jpg"
+    "revision": "669f45f5af522bd03bfd25adc4f7c2e0",
+    "url": "./static/media/thay-chau.669f45f5.jpg"
   },
   {
-    "revision": "b4cbde60d16349b01d0bf33337a80fb3",
-    "url": "./static/media/thay-TA.b4cbde60.jpg"
+    "revision": "56a26d23303dcf75eb03697061489ebb",
+    "url": "./static/media/thay-TA1.56a26d23.jpg"
   },
   {
     "revision": "95c895d2273df9a591ace589c2b770d7",
@@ -212,19 +212,19 @@ self.__precacheManifest = [
     "url": "./static/media/indesign-hv1.50a0c25b.jpg"
   },
   {
-    "revision": "a2cfb0d087098d6835b8",
-    "url": "./static/css/main.e1ad7de6.chunk.css"
+    "revision": "55123bc4b0f3578d559f",
+    "url": "./static/css/main.77b743a1.chunk.css"
   },
   {
-    "revision": "397c002dd029dc416626",
+    "revision": "d0d8dbb1df1a70eb9507",
     "url": "./static/css/8.07a811ce.chunk.css"
   },
   {
-    "revision": "5606f7f37ffc51d92246",
+    "revision": "48e7801190e6881e41bd",
     "url": "./static/css/7.07a811ce.chunk.css"
   },
   {
-    "revision": "5b98b4a86a45c91cc987",
+    "revision": "fcc3300a3b0fca128401",
     "url": "./static/css/6.c853e7f5.chunk.css"
   },
   {
@@ -236,7 +236,7 @@ self.__precacheManifest = [
     "url": "./static/css/4.43a04a51.chunk.css"
   },
   {
-    "revision": "961e818c49c6d7b14f131ee5c3101958",
+    "revision": "df7bac1d72d47448447f74228b0895ee",
     "url": "./index.html"
   }
 ];
