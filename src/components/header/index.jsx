@@ -363,7 +363,7 @@ Header.propTypes = {
     LogoMobile: PropTypes.string,
 };
 Header.defaultProps = {
-    LogoMobile: require('../../images/logo-mobile.png'),
+    LogoMobile: require('../../images/logo-mobile1.png'),
   MainLogo: require('../../images/logo-bigsize.png'),
   Logo2: require('../../images/logo-anhem.png'),
   mailLink: "mailto:laiquoclong90@gmail.com",

@@ -115,7 +115,7 @@ Team.defaultProps = {
             youtubeLink: "https://facebook.com/tiencanh.chonphieubong",
         },
         {
-            Image: require("../../images/thaychau-avatar01.jpg"),
+            Image: require("../../images/thay-chau.jpg"),
             Name: "Thầy Châu",
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "https://facebook.com/profile.php?id=100026725434352",
@@ -123,7 +123,7 @@ Team.defaultProps = {
             youtubeLink: "https://facebook.com/profile.php?id=100026725434352",
         },
         {
-            Image: require("../../images/thay-TA.jpg"),
+            Image: require("../../images/thay-TA1.jpg"),
             Name: "Thầy Tuấn Anh",
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "https://www.facebook.com/profile.php?id=100014332325166",

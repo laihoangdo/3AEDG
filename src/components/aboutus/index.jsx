@@ -50,7 +50,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 250
+                                                ? 1150
                                                 : 0
                                         }
                                         duration={3}
@@ -78,7 +78,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 150
+                                                ? 1000
                                                 : 0
                                         }
                                         duration={3}
@@ -106,7 +106,7 @@ export default class AboutUs extends PureComponent {
                                         start={0}
                                         end={
                                             this.state.didViewCountUp
-                                                ? 20
+                                                ? 550
                                                 : 0
                                         }
                                         duration={3}
