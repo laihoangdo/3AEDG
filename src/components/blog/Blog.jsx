@@ -113,7 +113,7 @@ class Blog extends PureComponent {
                             {blogdata}
                             <div className="col-lg-12 col-md-12 all-post">
                                 <div className="center-wrap">
-                                    <Link to={{pathname: `blog-posts/${this.props.Id}`}} className="btn-a">
+                                    <Link to={{pathname: `blog-posts/all-blogs`}} className="btn-a">
                                         <div className="button">
                                             {this.props.BlogBtn} <Icofont icon="icofont-long-arrow-right" />
                                             <div className="mask"></div>

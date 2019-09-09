@@ -4,7 +4,7 @@ import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 import Header from '../header';
 import Footer from '../footer';
-import {fetchBlogDetail, fetchBlogsAction} from "../../store/blog/action";
+import {fetchBlogDetail} from "../../store/blog/action";
 import {connect} from "react-redux";
 import CourseSidebar from "../services/CourseSidebar";
 
@@ -111,9 +111,9 @@ class Single extends PureComponent {
 
                                                     Phần mềm Photoshop, iLLustrator, Corel Draw, Indesign là các phầm
                                                     mềm...</p>Người đăng: <a
-                                                    href="https://www.facebook.com/Thi&#x1ebf;t-K&#x1ebf;-&#x110;&#x1ed3;-Ho&#x1ea1;-2604857046301739/" target="_blank">Thiết
+                                                    href="https://www.facebook.com/Thi&#x1ebf;t-K&#x1ebf;-&#x110;&#x1ed3;-Ho&#x1ea1;-2604857046301739/" rel="noopener noreferrer" target="_blank">Thiết
                                                     Kế Đồ Hoạ</a> vào&nbsp;<a
-                                                    href="https://www.facebook.com/2604857046301739/photos/a.2645051658948944/2645166245604152/?type=3&amp;theater" target="_blank">Thứ
+                                                    href="https://www.facebook.com/2604857046301739/photos/a.2645051658948944/2645166245604152/?type=3&amp;theater" rel="noopener noreferrer" target="_blank">Thứ
                                                     Hai, 29 tháng 7, 2019</a></blockquote>
                                             </div>
                                             <div className="sharing-link">
@@ -176,7 +176,6 @@ Single.propTypes = {
     TwitterLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
-    servicesData :PropTypes.array,
     tagsData : PropTypes.array
 
 };
@@ -200,22 +199,22 @@ Single.defaultProps = {
     linkedinLink: "https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     tagsData: [
         {
-            tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
+            tagName: "Học thiết kế đồ họa ở thủ đức",
         },
         {
-            tagName: "học Photoshop tại Tp Hồ Chí Minh",
+            tagName: "Học thiết kế đồ họa ở bình dương",
         },
         {
-            tagName: "Khóa học Photoshop tại Tp Hồ Chí Minh",
+            tagName: "Khóa học đồ họa ở sài gòn",
         },
         {
-            tagName: "Lop hoc photoshop tai sai gon",
+            tagName: "Học thiết kế đồ họa ở Thủ đức",
         },
         {
-            tagName: "hoc Photoshop tai Hồ Chí Minh",
+            tagName: "Học thiết kế đồ họa thầy Long",
         },
         {
-            tagName: "khoa hoc Photoshop tại Sai Gon",
+            tagName: "Học thiết kế đồ họa cần những gì",
         }
     ],
 

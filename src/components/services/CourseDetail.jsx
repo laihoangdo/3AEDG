@@ -121,13 +121,13 @@ export default class CourseDetail extends PureComponent {
                                                 <h3 className="title-reason"><Icofont icon="icofont-money icofont-2x" /> &nbsp; Khai giảng liên tục lớp: Sáng / Chiều / Tối </h3>
                                                 <div className="target-course">
                                                     <div className="course-price">
-                                                        <h3 className='course-fee'>Học phí gốc khóa học: <span>1.500.000(vnđ)</span></h3>
+                                                        <h3 className='course-fee'>Học phí gốc khóa học: <span>1.600.000(vnđ)</span></h3>
                                                         {/*<p className="course-date"><span>Từ ngày 5/8 – 12/8/2019 Hỗ trợ bạn chi phí xăng xe đi học</span></p>*/}
                                                         <p className="course-date"><span>Nhân Dịp Lễ 2-9 và ngày khai giảng năm học mới giảm 200.000/Khóa</span></p>
-                                                        <p className="course-date">Học phí cho <span>mỗi phần học</span> chỉ còn <span>1.300.000</span></p>
+                                                        <p className="course-date">Học phí cho <span>mỗi phần học</span> chỉ còn <span>1.400.000(vnđ)</span> </p>
                                                         {/*<p className="course-trust"> (Cam kết không phát sinh chi phí nào khác)</p>*/}
-                                                        {/*<p className="course-trust">(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>*/}
-                                                        {/*<p className="course-author">(Khó khăn về kinh tế hoặc cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>*/}
+                                                        <p className="course-trust">(Đã bao gồm tài liệu, phần mềm cài đặt, Chứng nhận)</p>
+                                                        <p className="course-author">(Cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
                                                     </div>
                                                 </div>
                                                 <h3 className="title-reason"> <Icofont icon="icofont-ui-calendar icofont-2x" /> &nbsp; Thời Gian Giành Cho Khóa Học Đồ Họa {this.state.courseDetail.description}</h3>
@@ -152,7 +152,7 @@ export default class CourseDetail extends PureComponent {
                                                                 Lớp: Học liền (thứ 2->thứ 6)<br/>
 
                                                                 Lớp: Thứ 7 & CN cho người bận rộn</td>
-                                                            <td>15 Buổi<br/>
+                                                            <td>10 Buổi<br/>
 
                                                                 Chỉ thực hành<br/>
 
@@ -180,13 +180,14 @@ export default class CourseDetail extends PureComponent {
                                             </div>
 
                                             {/*Google form*/}
-                                            {/*<div>*/}
-                                                {/*<iframe*/}
-                                                    {/*src="https://docs.google.com/forms/d/e/1FAIpQLSdZxBCIHuVFpggUW5cpODUbpV9K4hjj6auOUJARblPPaV9jLQ/viewform?embedded=true"*/}
-                                                    {/*width="100%" height="875" frameBorder="0" marginHeight="0"*/}
-                                                    {/*marginWidth="0">Đang tải…*/}
-                                                {/*</iframe>*/}
-                                            {/*</div>*/}
+                                            <div>
+                                                <iframe
+                                                    title="form regis"
+                                                    src="https://docs.google.com/forms/d/e/1FAIpQLSdZxBCIHuVFpggUW5cpODUbpV9K4hjj6auOUJARblPPaV9jLQ/viewform?embedded=true"
+                                                    width="100%" height="875" frameBorder="0" marginHeight="0"
+                                                    marginWidth="0">Đang tải…
+                                                </iframe>
+                                            </div>
 
                                             <a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook icofont-2x" /> &nbsp; <span >Bài Viết Trên Đồ Họa Thế Hệ Mới</span></a>
 
@@ -315,8 +316,9 @@ CourseDetail.defaultProps = {
             reason: [
                 // "Khóa học chia sẻ đam mê ĐỒ HỌA mà chúng tôi đã tạo dựng, cống hiến & làm việc cho khách hàng",
                 // "Cung cấp nhân sự cho xưởng thiết kế của chúng tôi và các công ty truyền thông",
-                // "Phong cách đào tạo: Khoa học, Hài hước của người đào tạo – học viên hiểu nhanh và hứng thú học"
-                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé."
+                "Khi bạn tới các khóa học, bạn sẽ có những “bài tập về nhà” để luyện thêm kỹ năng của mình, ôn lại những kiến thức đã học, khám phá ra những điều hay ho hay công cụ, bí kíp thiết kế mới. Thế nên, người học sẽ nhanh “quen tay”. Nếu những bạn tự học, thì hãy download bài tập trên mạng để làm nhé.",
+                "Khóa học nếu kết thúc khóa học mà học viên không đạt được kết quả như mong muốn.",
+                ""
             ],
             whatMake:[
                 "thành thạo Adobe Photoshop, làm được tốt những công việc sau: Cắt, ghép, chỉnh sửa phục chế xử lý hình ảnh các kiểu từ cơ bản đến nâng cao. Ứng dụng được trong mọi công việc như thiết kế: Website, banner sản phẩm truyền thông, kiến trúc, báo chí, in ấn, nội thất, ảnh viện…",

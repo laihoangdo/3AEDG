@@ -3,6 +3,8 @@ import Icofont from 'react-icofont';
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 import Sidebar from "./Sidebar";
+import Footer from "../footer";
+import Header from "../header";
 
 export default class BlogPost extends PureComponent {
     render() {
@@ -35,6 +37,7 @@ export default class BlogPost extends PureComponent {
         //BlogPost loop END
         return (
             <React.Fragment>
+                <Header/>
                 <section id="blog" className="our-blog main-blog">
                     <div className="container">
                         <div className="row">
@@ -62,7 +65,9 @@ export default class BlogPost extends PureComponent {
                         </div>
                     </div>
                 </section>
+                <Footer/>
             </React.Fragment>
+
         );
     }
 }

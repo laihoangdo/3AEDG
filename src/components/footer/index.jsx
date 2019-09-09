@@ -1,7 +1,6 @@
 import React,{PureComponent} from 'react';
 import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
-import { Link } from 'react-router-dom';
 import './footer.css';
 
 export default class  Footer extends PureComponent {
@@ -23,9 +22,9 @@ export default class  Footer extends PureComponent {
                                     <ul className="list-inline">
                                         <li>{this.props.socialTitle} </li>
                                         <li><a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                                        <li><Link to={this.props.ZaloLink}><Icofont icon="icofont-technorati"/></Link></li>
-                                        <li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>
-                                        <li><Link to={this.props.linkedinLink}><Icofont icon="icofont-linkedin"/></Link></li>
+                                        <li><a href={this.props.ZaloLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati" /></a></li>
+                                        <li><a href={this.props.InstagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>
+                                        <li><a href={this.props.linkedinLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-linkedin" /></a></li>
                                     </ul>
                                 </div>
                             </div>

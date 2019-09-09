@@ -22,7 +22,8 @@ export default class CourseSidebar extends PureComponent {
         //Sidebar Posts loop END
 
         //Sidebar Categories loop start
-        const categoriedata = this.props.categoriesData.map((categories, index) => (
+        // const categoriedata =
+            this.props.categoriesData.map((categories, index) => (
             <li className="list-group-item" key={index}>
                 <Link to={categories.categorieLink}>{categories.categorieName}</Link>
             </li>
@@ -76,10 +77,10 @@ export default class CourseSidebar extends PureComponent {
                     </div>
 
                     {/*<div className="side-widget">*/}
-                    {/*    <h3>{this.props.widgetTitle3}</h3>*/}
-                    {/*    <ul className="list-group">*/}
-                    {/*        {categoriedata}*/}
-                    {/*    </ul>*/}
+                        {/*<h3>{this.props.widgetTitle3}</h3>*/}
+                        {/*<ul className="list-group">*/}
+                            {/*{categoriedata}*/}
+                        {/*</ul>*/}
                     {/*</div>*/}
 
                     <div className="side-widget">

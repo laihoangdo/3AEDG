@@ -143,7 +143,7 @@ Banner.defaultProps = {
         {
             ThumbIcon: "icofont-live-support",
             ThumbTitle: "Hỗ Trợ",
-            ThumbContent: "Hỗ trợ nơi ở cho những bạn có hoàn cảnh đặc biệt khó khăn và ở xa nhà.",
+            ThumbContent: "Hỗ trợ một phần chi phí cho những bạn có hoàn cảnh đặc biệt khó khăn.",
         },
     ]
 };
