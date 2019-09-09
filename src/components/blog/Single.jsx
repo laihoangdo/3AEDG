@@ -6,6 +6,7 @@ import Header from '../header';
 import Footer from '../footer';
 import {fetchBlogDetail, fetchBlogsAction} from "../../store/blog/action";
 import {connect} from "react-redux";
+import CourseSidebar from "../services/CourseSidebar";
 
 
 
@@ -149,6 +150,7 @@ class Single extends PureComponent {
                                 </div>
                             </div>
                             {/*<Sidebar />*/}
+                            <CourseSidebar tagsData={this.props.tagsData} />
 
                         </div>
                     </div>
@@ -174,6 +176,8 @@ Single.propTypes = {
     TwitterLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
+    servicesData :PropTypes.array,
+    tagsData : PropTypes.array
 
 };
 
@@ -194,5 +198,26 @@ Single.defaultProps = {
     TwitterLink: "https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     InstagramLink: "https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     linkedinLink: "https://www.facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
+    tagsData: [
+        {
+            tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
+        },
+        {
+            tagName: "học Photoshop tại Tp Hồ Chí Minh",
+        },
+        {
+            tagName: "Khóa học Photoshop tại Tp Hồ Chí Minh",
+        },
+        {
+            tagName: "Lop hoc photoshop tai sai gon",
+        },
+        {
+            tagName: "hoc Photoshop tai Hồ Chí Minh",
+        },
+        {
+            tagName: "khoa hoc Photoshop tại Sai Gon",
+        }
+    ],
+
 
 }
