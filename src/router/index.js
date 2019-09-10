@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogList from "../components/blog/BlogsList";
+const BlogList = React.lazy(() => import("../components/blog/BlogsList"));
 const HomeOne = React.lazy(() => import("../components/HomeOne"));
 const Single = React.lazy(() => import("../components/blog/Single"));
 const CourseDetail = React.lazy(() => import("../components/services/CourseDetail"));

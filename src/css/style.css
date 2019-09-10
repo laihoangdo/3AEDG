@@ -277,7 +277,7 @@
        color: #848484;
        padding: 0px 0 10px;
        /*new*/
-       height:  8rem;
+       height:  8.5rem;
    }
    .glyph i {
        font-size: 60px;
@@ -901,6 +901,7 @@
     border-radius: 30px;
     color: #000;
     margin: 0 4px;
+    height: 50px;
 }
 .shorting-menu .filter.active, .shorting-menu .filter:hover {
     background: #3333ff;
