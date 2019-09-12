@@ -199,7 +199,7 @@ Work2.defaultProps = {
             facebookLink: "https://facebook.com/profile.php?id=100014332325166"
         },
         {
-            link: require("../../images/product/autocad/auto-cad-hv2.jpg"),
+            link: require("../../images/product/autocad/autocad-hv1.jpg"),
             name: "col-lg-4 col-md-6 mix autocad p-0 mix-target",
             author: "Thanh Châu",
             facebookLink: "https://www.facebook.com/profile.php?id=100026725434352"

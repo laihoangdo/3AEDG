@@ -555,10 +555,13 @@ CourseDetail.defaultProps = {
             ],
             imageWork: [
                 {
-                    link: require("../../images/product/autocad/auto-cad-hv3.jpg")
+                    link: require("../../images/product/autocad/autocad-hv4.jpg")
                 },
                 {
-                    link: require("../../images/product/autocad/auto-cad-hv2.jpg")
+                    link: require("../../images/product/autocad/autocad-hv1.jpg")
+                },
+                {
+                    link: require("../../images/product/autocad/autocad-hv5.jpg")
                 },
 
             ],
@@ -713,6 +716,9 @@ CourseDetail.defaultProps = {
                 },
                 {
                     link: require("../../images/product/sketchup/sketchup-hv3.jpg")
+                },
+                {
+                    link: require("../../images/product/sketchup/sketchup-hv4.jpg")
                 },
             ],
             reason: [
