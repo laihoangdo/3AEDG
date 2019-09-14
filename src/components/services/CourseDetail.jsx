@@ -47,7 +47,7 @@ export default class CourseDetail extends PureComponent {
                                                 {/*    {this.props.CourseDetailDate} <span className="month">{this.props.CourseDetailMonth}</span>*/}
                                                 {/*</div>*/}
                                                 <div className="title-meta">
-                                                    <h2>{this.state.courseDetail.heading}</h2>
+                                                    <h1>{this.state.courseDetail.heading}</h1>
 
                                                     <div className="post-meta">
                                                         {/*<ul>*/}
@@ -55,7 +55,7 @@ export default class CourseDetail extends PureComponent {
                                                         {/*    <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>*/}
                                                         {/*    <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>*/}
                                                         {/*</ul>*/}
-                                                        <p><Icofont icon="icofont-tags icofont-1x" /> &nbsp;Tags: Lớp học {this.state.courseDetail.Id} tại Sài Gòn, học {this.state.courseDetail.Id} tại Sài Gòn, Khóa học {this.state.courseDetail.Id} tại Sài Gòn, Lop hoc illutrator tai sai gon, hoc {this.state.courseDetail.Id} tai Hồ Chí Minh, khoa hoc {this.state.courseDetail.Id} tại Sai Gon , Học đồ họa cần những gì.</p>
+                                                        <p><Icofont icon="icofont-tags icofont-1x" /> &nbsp;Tags: Lớp học {this.state.courseDetail.description} tại Sài Gòn, học {this.state.courseDetail.description} tại Sài Gòn, Khóa học {this.state.courseDetail.description} tại Sài Gòn, Lop hoc {this.state.courseDetail.description} tai sai gon, hoc {this.state.courseDetail.description} tai Hồ Chí Minh, khoa hoc {this.state.courseDetail.description} tại Sai Gon , Học đồ họa cần những gì.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@ export default class CourseDetail extends PureComponent {
                                                 <h3 className="title-reason"><Icofont icon="icofont-education icofont-2x" /> &nbsp;{this.state.courseDetail.courseStep}</h3>
                                                 <img src={this.state.courseDetail.ImageStep ? this.state.courseDetail.ImageStep : '' } alt="Photoshop"/>
                                                 {/*return <div dangerouslySetInnerHTML={{ __html:  }} />;*/}
-                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.Id} tại Đồ Họa Thế Hệ Mới ? </h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Tại sao nên lựa chọn học thiết kế đồ họa {this.state.courseDetail.description} tại Đồ Họa Thế Hệ Mới ? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
                                                         <ul>
@@ -104,7 +104,7 @@ export default class CourseDetail extends PureComponent {
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Kết thúc khóa học {this.state.courseDetail.Id} làm được gì? </h3>
+                                                <h3 className="title-reason"><Icofont icon="icofont-question-square icofont-2x" /> &nbsp; Kết thúc khóa học {this.state.courseDetail.description} làm được gì? </h3>
                                                 <div className="target-course">
                                                     <div className="target-one">
                                                         {/*<div className="target-li">*/}
@@ -263,7 +263,7 @@ CourseDetail.defaultProps = {
     muctieu: "Tạo ra các ấn  nhận diện thương hiệu, chỉnh sửa ảnh, dàn trang, thiết kế tạp chí… bằng các phần mềm đồ họa như Adobe Photoshop, Adobe Illustrator, Adobe Indesign. Bên cạnh đó, sin viên cũng nắm được quy trình thiết kế và sản xuất các ấn phẩm từ bản thiết kế trên máy tính tới lúc thành phẩm.",
     servicesData: [
         {
-            Id: "photoshop",
+            Id: "khoa-hoc-co-ban-va-nang-cao-photoshop",
             icon: "icofont-automation",
             heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
             title:"Học Photoshop - Chỉnh sửa hình ảnh chuyên nghiệp với photoshop",
@@ -285,21 +285,27 @@ CourseDetail.defaultProps = {
             tagsData: [
                 {
                     tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "học Photoshop tại Tp Hồ Chí Minh",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "Khóa học Photoshop tại Tp Hồ Chí Minh",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "Lop hoc photoshop tai sai gon",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "hoc Photoshop tai Hồ Chí Minh",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "khoa hoc Photoshop tại Sai Gon",
+                    tagLink: "/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 }
             ],
             imageWork: [
@@ -326,7 +332,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "illustrator",
+            Id: "khoa-hoc-co-ban-va-nang-cao-illustrator",
             icon: "icofont-bullseye",
             heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
@@ -374,6 +380,9 @@ CourseDetail.defaultProps = {
                     link: require("../../images/product/ai/ai-hv1.jpg")
                 },
                 {
+                    link: require("../../images/product/ai/ai-hv4.jpg")
+                },
+                {
                     link: require("../../images/product/ai/ai-hv2.jpg")
                 }
             ],
@@ -389,7 +398,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "corel",
+            Id: "khoa-hoc-co-ban-va-nang-cao-corel",
             icon: "icofont-woman-in-glasses",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA COREL DRAW",
             description:
@@ -433,7 +442,10 @@ CourseDetail.defaultProps = {
                     link: require("../../images/product/corel/corel-hv1.jpg")
                 },
                 {
-                    link: require("../../images/product/corel/corel-hv2.jpg")
+                    link: require("../../images/product/corel/corel-hv3.jpg")
+                },
+                {
+                    link: require("../../images/product/corel/corel-hv4.jpg")
                 }
             ],
             reason: [
@@ -449,7 +461,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "indesign",
+            Id: "khoa-hoc-co-ban-va-nang-cao-indesign",
             icon: "icofont-chart-growth",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA IN DESIGN",
             description:
@@ -515,7 +527,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "autocad",
+            Id: "khoa-hoc-co-ban-va-nang-cao-autocad",
             icon: "icofont-network-tower",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA AUTOCAD",
             description:
@@ -581,7 +593,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "3ds-max",
+            Id: "khoa-hoc-co-ban-va-nang-cao-3ds-max",
             icon: "icofont-laptop-alt",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
             description:
@@ -648,7 +660,7 @@ CourseDetail.defaultProps = {
             ]
         },
         {
-            Id: "sketchup",
+            Id: "khoa-hoc-co-ban-va-nang-cao-sketchup",
             icon: "icofont-laptop-alt",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
             description:

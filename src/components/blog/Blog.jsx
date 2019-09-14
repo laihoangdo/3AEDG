@@ -68,13 +68,13 @@ class Blog extends PureComponent {
         const blogdata = this.props.blogs.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
-                    <Link to={{pathname: `blog-posts/${blog.Id}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+                    <Link to={{pathname: `tin-tuc/${blog.Url__c}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
                     <div className="blog-info">
                         {/*<div className="date-box">*/}
                             {/*4<span className="month">5</span>*/}
                         {/*</div>*/}
                         <div className="title-meta">
-                            <h2><Link to={{pathname: `blog-posts/${blog.Id}`}}>{blog.Tittle__c}</Link></h2>
+                            <h2><Link to={{pathname: `tin-tuc/${blog.Url__c}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
                                 <ul>
                                     <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
@@ -113,7 +113,7 @@ class Blog extends PureComponent {
                             {blogdata}
                             <div className="col-lg-12 col-md-12 all-post">
                                 <div className="center-wrap">
-                                    <Link to={{pathname: `blog-posts/all-blogs`}} className="btn-a">
+                                    <Link to={{pathname: `tin-tuc/tat-ca`}} className="btn-a">
                                         <div className="button">
                                             {this.props.BlogBtn} <Icofont icon="icofont-long-arrow-right" />
                                             <div className="mask"></div>

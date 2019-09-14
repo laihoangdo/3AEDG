@@ -33,7 +33,7 @@ export default class CourseSidebar extends PureComponent {
         //Sidebar Tags loop start
         const tagdata = this.props.tagsData.map((tag, index) => (
             <li key={index}>
-                <p><Icofont icon="icofont-tags icofont-1x" /> &nbsp;{tag.tagName}</p>
+                <Link to={tag.tagLink}><Icofont icon="icofont-tags icofont-1x" /> &nbsp;{tag.tagName}</Link>
                 {/*<Link to={tag.tagLink}>{tag.tagName}</Link>*/}
             </li>
         ));
@@ -113,7 +113,7 @@ CourseSidebar.defaultProps = {
     widgetTitle4: "Tags",
     sideData: [
         {
-            postsLink: "/khoa-hoc/illustrator",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-illustrator",
             Image: require("../../images/bg/ai-bg.jpg"),
             PostTitle: "Khóa Học Illustrator",
             postContent: "Khóa Học Illustrator",
@@ -122,7 +122,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/photoshop",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-photoshop",
             Image: require("../../images/bg/pts-bg.jpg"),
             PostTitle: "Khóa Học Photoshop",
             postContent: "Khóa Học Photoshop",
@@ -131,7 +131,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/corel",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-corel",
             Image: require("../../images/corel.jpg"),
             PostTitle: "Khóa Học Corel",
             postContent: "Khóa Học Corel",
@@ -140,7 +140,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/autocad",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-autocad",
             Image: require("../../images/bg/autocad-bg.jpg"),
             PostTitle: "Khóa Học Autocad",
             postContent: "Khóa Học Autocad",
@@ -149,7 +149,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/indesign",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-indesign",
             Image: require("../../images/bg/indesign-bg.jpg"),
             PostTitle: "Khóa Học Indesign",
             postContent: "Khóa Học Indesign",
@@ -158,7 +158,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/3ds-max",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max",
             Image: require("../../images/bg/3dsmax-bg.jpg"),
             PostTitle: "Khóa Học 3Ds Max",
             postContent: "Khóa Học 3Ds Max",
@@ -167,7 +167,7 @@ CourseSidebar.defaultProps = {
             facebookLink : "https://facebook.com/tiencanh.chonphieubong"
         },
         {
-            postsLink: "/khoa-hoc/sketchup",
+            postsLink: "/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-sketchup",
             Image: require("../../images/bg/sketchup-bg.jpg"),
             PostTitle: "Khóa Học SketChup",
             postContent: "Khóa Học SketChup",

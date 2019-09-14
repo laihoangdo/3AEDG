@@ -77,7 +77,7 @@ class Single extends PureComponent {
                                                 {/*{this.props.SingleDate} <span className="month">{this.props.SingleMonth}</span>*/}
                                                 {/*</div>*/}
                                                 <div className="title-meta">
-                                                    <h2>{Tittle__c}</h2>
+                                                    <h1>{Tittle__c}</h1>
                                                     <div className="post-meta">
                                                         <ul>
                                                             <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>
@@ -88,18 +88,8 @@ class Single extends PureComponent {
                                                 </div>
                                             </div>
                                 
-                                            <div className="post-content">
+                                            <div className="post-content-blog">
                                                 <div dangerouslySetInnerHTML={{ __html: Content__c }} />
-                                                
-                                                {/*<div className="sharing-link">*/}
-                                                    {/*<ul>*/}
-                                                        {/*<li><strong>Đồ Họa Thế Hệ Mới : </strong></li>*/}
-                                                        {/*<li><a href={this.props.TwitterLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>*/}
-                                                        {/*<li><Link to={this.props.TwitterLink}><Icofont icon="icofont-twitter" /></Link></li>*/}
-                                                        {/*<li><Link to={this.props.InstagramLink}><Icofont icon="icofont-instagram"/></Link></li>*/}
-                                                        {/*<li><Link to={this.props.linkedinLink}><Icofont icon="icofont-linkedin"/></Link></li>*/}
-                                                    {/*</ul>*/}
-                                                {/*</div>*/}
                                             </div>
                                             <div className="fb-post"
                                                  data-href="https://www.facebook.com/2604857046301739/photos/a.2645051658948944/2645166245604152/?type=3&amp;theater"

@@ -91,7 +91,7 @@ Contact.defaultProps = {
     AddTitle: "Địa Chỉ",
     Address: "1250 Kha Vạn Cân, Thủ Đức, Hồ Chí Minh",
     EmailTitle: "Email",
-    Email: "dreamhighx00@gmail.com",
+    Email: "dohoathehemoi@gmail.com",
     PhoneTitle: "Phone",
     Phone: "0938636843",
     center: {

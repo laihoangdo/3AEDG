@@ -41,13 +41,13 @@ class BlogList extends PureComponent {
         // const blogdata = this.props.blogsData.map((blog, index) => (
             <div className="col-md-6 col-lg-6" key={index}>
                 <div className="blog-item">
-                    <Link to={blog.postLink} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
+                    <Link to={{pathname: `${blog.Url__c}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
                     <div className="blog-info">
                         <div className="date-box">
                             {blog.date} <span className="month">{blog.month}</span>
                         </div>
                         <div className="title-meta">
-                            <h2><Link to={{pathname: `${blog.Id}`}}>{blog.Tittle__c}</Link></h2>
+                            <h2><Link to={{pathname: `${blog.Url__c}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
                                 <ul>
                                     <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>

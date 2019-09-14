@@ -181,13 +181,13 @@ Work2.defaultProps = {
             facebookLink: "https://facebook.com/profile.php?id=100014332325166"
         },
         {
-            link: require("../../images/product/ai/ai-hv1.jpg"),
+            link: require("../../images/product/ai/ai-hv2.jpg"),
             name: "col-lg-4 col-md-6 mix illustrator p-0 mix-target",
             author: "Tuấn Anh",
             facebookLink: "https://facebook.com/profile.php?id=100014332325166"
         },
         {
-            link: require("../../images/product/corel/corel-hv2.jpg"),
+            link: require("../../images/product/corel/corel-hv3.jpg"),
             name: "col-lg-4 col-md-6 mix corel p-0 mix-target",
             author: "Tuấn Anh",
             facebookLink: "https://facebook.com/profile.php?id=100014332325166"

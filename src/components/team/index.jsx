@@ -111,7 +111,7 @@ Team.defaultProps = {
             Profession: "Giảng Viên 2D ,3D",
             facebookLink: "https://facebook.com/tiencanh.chonphieubong",
             skypeLink: "skype:live:lai.do_1?chat",
-            youtubeLink: "https://zalo.me/0337590737",
+            youtubeLink: "https://zalo.me/0938636843",
         },
         {
             Image: require("../../images/thay-chau.jpg"),

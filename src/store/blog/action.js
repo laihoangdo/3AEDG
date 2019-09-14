@@ -35,6 +35,23 @@ export  const fetchBlogsAction = ()=> async dispatch =>{
     }
 
 }
+export  const fetchBlogsLimitAction = ()=> async dispatch =>{
+
+    try {
+        const res = await fetch('https://nodejssalesforce.herokuapp.com/blogs-limit' , { method: 'GET' ,mode: 'cors' ,Headers: {'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json'} });
+        const data = await res.json();
+        dispatch({
+            type: FETCH_BLOGS_SUCCESS,
+            payload: data
+        })
+    }catch (e) {
+        dispatch({
+            type: FETCH_BLOGS_ERROR,
+            payload: e.response.data
+        })
+    }
+
+}
 
 export const fetchBlogDetail = (id) => async dispatch =>{
     try {

@@ -1272,6 +1272,9 @@
     .post-content img{
         width: 100% !important;
     }
+    .post-content-blog img{
+        width: 100%;
+    }
     .line-opacity{
         border-right: 1px solid #e5e5e5;
     }
@@ -1408,7 +1411,7 @@
    .blog-details .date-box {
        padding: 23px 24px 20px;
    }
-   .blog-details .title-meta h2 {
+   .blog-details .title-meta h1 {
        /*font-size: 24px;*/
        /*color: #626262;*/
        color: #3333ff;

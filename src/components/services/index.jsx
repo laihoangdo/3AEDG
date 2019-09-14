@@ -120,7 +120,7 @@ Services.defaultProps = {
 
     servicesData: [
         {
-            Id: "photoshop",
+            Id: "khoa-hoc-co-ban-va-nang-cao-photoshop",
             icon: "icofont-automation",
             heading: "KHOÁ HỌC ĐỒ HỌA PHOTOSHOP",
             description:
@@ -128,7 +128,7 @@ Services.defaultProps = {
             Image: require("../../images/bg/pts-bg.jpg"),
         },
         {
-            Id: "illustrator",
+            Id: "khoa-hoc-co-ban-va-nang-cao-illustrator",
             icon: "icofont-bullseye",
             heading: "KHÓA HỌC ĐỒ HỌA ILLUSTRATOR",
             description:
@@ -136,7 +136,7 @@ Services.defaultProps = {
             Image: require("../../images/bg/ai-bg.jpg"),
         },
         {
-            Id: "corel",
+            Id: "khoa-hoc-co-ban-va-nang-cao-corel",
             icon: "icofont-woman-in-glasses",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA COREL DRAW",
             description:
@@ -144,7 +144,7 @@ Services.defaultProps = {
             Image: require("../../images/corel.jpg"),
         },
         {
-            Id: "indesign",
+            Id: "khoa-hoc-co-ban-va-nang-cao-indesign",
             icon: "icofont-chart-growth",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA IN DESIGN",
             description:
@@ -152,7 +152,7 @@ Services.defaultProps = {
             Image: require("../../images/bg/indesign-bg.jpg"),
         },
         {
-            Id: "autocad",
+            Id: "khoa-hoc-co-ban-va-nang-cao-autocad",
             icon: "icofont-network-tower",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA AUTOCAD",
             description:
@@ -160,7 +160,7 @@ Services.defaultProps = {
             Image: require("../../images/bg/autocad-bg.jpg"),
         },
         {
-            Id: "3ds-max",
+            Id: "khoa-hoc-co-ban-va-nang-cao-3ds-max",
             icon: "icofont-laptop-alt",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA 3Ds MAX",
             description:
@@ -168,7 +168,7 @@ Services.defaultProps = {
             Image: require("../../images/bg/3dsmax-bg.jpg"),
         },
         {
-            Id: "sketchup",
+            Id: "khoa-hoc-co-ban-va-nang-cao-sketchup",
             icon: "icofont-laptop-alt",
             heading: "HỌC THIẾT KẾ ĐỒ HỌA SKETCHUP",
             description:

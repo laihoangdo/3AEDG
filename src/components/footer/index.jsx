@@ -122,7 +122,7 @@ Footer.defaultProps = {
     copyrightText: "2019 © All Rights Reserved.",
     socialTitle: "Follow Us On:",
     FacebookLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
-    ZaloLink: "https://zalo.me/0337590737",
+    ZaloLink: "https://zalo.me/0938636843",
     InstagramLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
     linkedinLink: "//facebook.com/Thi%E1%BA%BFt-K%E1%BA%BF-%C4%90%E1%BB%93-Ho%E1%BA%A1-2604857046301739/",
 };

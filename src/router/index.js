@@ -19,11 +19,11 @@ const routes = [
     component: AboutUs
   },
     {
-      path: '/blog-posts/all-blogs',
+      path: '/tin-tuc/tat-ca',
       component: BlogList
     },
   {
-    path: '/blog-posts/:id',
+    path: '/tin-tuc/:id',
     component: Single
   },
     {
