@@ -130,6 +130,7 @@ export default class CourseDetail extends PureComponent {
                                                         <p className="course-author">(Cần tư vấn đừng ngại cứ gọi Mr. Long 0938636843)</p>
                                                     </div>
                                                 </div>
+                                                <img className="image-course-detail" src={require("../../images/class/khoa-hoc.jpg")} alt="khóa học đồ họa 2d , 3d tại đồ họa thế hệ mới"/>
                                                 <h3 className="title-reason"> <Icofont icon="icofont-ui-calendar icofont-2x" /> &nbsp; Thời Gian Giành Cho Khóa Học Đồ Họa {this.state.courseDetail.description}</h3>
                                                 <table className="table-course">
                                                     <thead>
@@ -163,9 +164,27 @@ export default class CourseDetail extends PureComponent {
                                                     </tbody>
                                                 </table>
                                                 <div className="product-student">
+                                                    <h3 className="title-reason"><Icofont icon="icofont-university icofont-2x" /> &nbsp; Một số Hình ảnh về lớp học và học viên tại trung tâm</h3>
+                                                    {/*{this.state.courseDetail.imageWork.map((product , index) => (*/}
+                                                        {/*<img key={index} src={product.link} alt=""/>*/}
+                                                    {/*))}*/}
+                                                    <div className="row">
+                                                        <div className="col-md-6">
+                                                            <img className="image-course-detail" src={require("../../images/class/lop-1.jpg")} alt="khóa học đồ họa 2d , 3d tại đồ họa thế hệ mới"/>
+                                                        </div>
+                                                        <div className="col-md-6">
+                                                            <img className="image-course-detail" src={require("../../images/class/lop-2.jpg")} alt="khóa học đồ họa 2d , 3d tại đồ họa thế hệ mới"/>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                     <img className="image-course-detail" src={require("../../images/class/lop-3.jpg")} alt="khóa học đồ họa 2d , 3d tại đồ họa thế hệ mới"/>
+                                                </div>
+                                                <div className="product-student">
                                                     <h3 className="title-reason"><Icofont icon="icofont-graduate-alt icofont-2x" /> &nbsp; Sản Phẩm Học Viên Sau Khi Hoàn Thành Khóa Học {this.state.courseDetail.description}</h3>
                                                     {this.state.courseDetail.imageWork.map((product , index) => (
-                                                        <img key={index} src={product.link} alt=""/>
+                                                        <img className="image-product-detail" key={index} src={product.link} alt=""/>
                                                     ))}
                                                 </div>
                                                 {/*<h3>Tại sao nên lựa chọn học thiết kế đồ họa adobe illustrator?</h3>*/}
@@ -617,22 +636,28 @@ CourseDetail.defaultProps = {
             ],
             tagsData: [
                 {
-                    tagName: "Lớp học 3Ds Max tại Tp Hồ Chí Minh",
+                    tagName: "Lớp học Photoshop tại Tp Hồ Chí Minh",
+                    tagLink:"/tin-tuc/hoc-photoshop-tai-thu-duc-lop-day-photoshop-chuyen-nghiep"
                 },
                 {
                     tagName: "học 3Ds Max tại Tp Hồ Chí Minh",
+                    tagLink:"/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max"
                 },
                 {
                     tagName: "Khóa học 3Ds Max tại Tp Hồ Chí Minh",
+                    tagLink:"/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max"
                 },
                 {
                     tagName: "Lop hoc 3ds max tai sai gon",
+                    tagLink:"/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max"
                 },
                 {
                     tagName: "hoc 3Ds Max tai Hồ Chí Minh",
+                    tagLink:"/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max"
                 },
                 {
                     tagName: "khoa hoc 3Ds Max tại Sai Gon",
+                    tagLink:"/khoa-hoc/khoa-hoc-co-ban-va-nang-cao-3ds-max"
                 }
             ],
             imageWork: [

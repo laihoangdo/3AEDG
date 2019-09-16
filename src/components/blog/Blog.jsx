@@ -4,7 +4,7 @@ import Icofont from 'react-icofont';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {connect} from "react-redux";
-import {fetchBlogsAction} from "../../store/blog/action";
+import {fetchBlogsLimitAction} from "../../store/blog/action";
 
 // const mapStateToProps = state => ({
 //     // blogs: fetchBlogs(state),
@@ -20,7 +20,7 @@ function mapStateToProps(state) {
 //     fetchBlogs: fetchBlogsAction
 // }, dispatch)
 const mapDispatchToProps = {
-    fetchBlogs : fetchBlogsAction
+    fetchBlogs :fetchBlogsLimitAction
 };
 // function mapDispatchToProps(dispatch) {
 //     return { actions: bindActionCreators(fetchBlogsAction, dispatch) }
@@ -76,11 +76,11 @@ class Blog extends PureComponent {
                         <div className="title-meta">
                             <h2><Link to={{pathname: `tin-tuc/${blog.Url__c}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
-                                <ul>
-                                    <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-                                    <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-                                    <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>
-                                </ul>
+                                {/*<ul>*/}
+                                    {/*<li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>*/}
+                                    {/*<li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>*/}
+                                    {/*<li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>*/}
+                                {/*</ul>*/}
                             </div>
                         </div>
                     </div>

@@ -119,3 +119,6 @@ table thead tr th:first-child{
 .title-heading-course{
     color: #3333FF;
 }
+.post-content .image-course-detail{
+    margin-top: 2rem !important;
+}

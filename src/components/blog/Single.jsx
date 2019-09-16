@@ -69,7 +69,7 @@ class Single extends PureComponent {
                                     <div className="col-lg-12">
                                         <div className="blog-details">
                                             <div className="post-img">
-                                                <img src={Image__c} alt="blog-one" />
+                                                <img src={Image__c} alt="Học thiết kế đồ họa ở thủ đức" />
                                             </div>
                                             
                                             <div className="blog-info">
@@ -79,11 +79,11 @@ class Single extends PureComponent {
                                                 <div className="title-meta">
                                                     <h1>{Tittle__c}</h1>
                                                     <div className="post-meta">
-                                                        <ul>
-                                                            <li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>
-                                                            <li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>
-                                                            <li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>
-                                                        </ul>
+                                                        {/*<ul>*/}
+                                                            {/*<li>Posted By: <Link to={this.props.authorLink}>{this.props.authorName}</Link> <Icofont icon="icofont-funky-man" /></li>*/}
+                                                            {/*<li>Comments: <Link to={this.props.CommentsLink}>{this.props.TotalComments}</Link> <Icofont icon="icofont-speech-comments" /> </li>*/}
+                                                            {/*<li> Tags: <Link to={this.props.TagLink}>{this.props.TagName}</Link> <Icofont icon="icofont-tags" /></li>*/}
+                                                        {/*</ul>*/}
                                                     </div>
                                                 </div>
                                             </div>

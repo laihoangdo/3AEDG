@@ -1209,7 +1209,7 @@
    .blog-item .blog-img img{
        width: 100%;
        /* height: auto; */
-       height: 22rem;
+       height: 13rem;
        transform: scale(1.1);
        transition: all 1s ease 0s;
        -webkit-transition: all 1s ease 0s;

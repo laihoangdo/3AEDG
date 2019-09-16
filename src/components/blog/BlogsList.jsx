@@ -43,17 +43,17 @@ class BlogList extends PureComponent {
                 <div className="blog-item">
                     <Link to={{pathname: `${blog.Url__c}`}} className="blog-img"><img src={blog.Image__c} alt="blog-one" /></Link>
                     <div className="blog-info">
-                        <div className="date-box">
-                            {blog.date} <span className="month">{blog.month}</span>
-                        </div>
+                        {/*<div className="date-box">*/}
+                            {/*{blog.date} <span className="month">{blog.month}</span>*/}
+                        {/*</div>*/}
                         <div className="title-meta">
                             <h2><Link to={{pathname: `${blog.Url__c}`}}>{blog.Tittle__c}</Link></h2>
                             <div className="post-meta">
-                                <ul>
-                                    <li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-                                    <li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>
-                                    <li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>
-                                </ul>
+                                {/*<ul>*/}
+                                    {/*<li><Icofont icon="icofont-funky-man" /> Posted By: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>*/}
+                                    {/*<li><Icofont icon="icofont-speech-comments" /> Comments: <Link to={blog.Author__c}>{blog.Author__c}</Link></li>*/}
+                                    {/*<li><Icofont icon="icofont-tags" /> Tags: <Link to={blog.Tag__c}>{blog.Tag__c}</Link></li>*/}
+                                {/*</ul>*/}
                             </div>
                         </div>
                     </div>
