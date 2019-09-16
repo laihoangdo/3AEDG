@@ -5,7 +5,7 @@
    /*@import url('https://fonts.googleapis.com/css?family=Monoton');*/
     @import "~animate.css/animate.css";
    html, body {
-       font-family: 'Open Sans', sans-serif;
+       /*font-family: 'Open Sans', sans-serif;*/
        -moz-osx-font-smoothing: grayscale;
        font-size: 14px;
        font-weight: 400;
@@ -1518,6 +1518,11 @@
        max-width: 210px;
        margin: auto;
    }
+
+.container .row .h1-style {
+    font-weight: 500;
+    font-size: 2rem;
+}
    
    /* =========================
        End Blog & News Area CSS 

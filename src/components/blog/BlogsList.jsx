@@ -71,23 +71,29 @@ class BlogList extends PureComponent {
                 {/*NavBar: src/components/NavBer.jsx */}
                 <Header/>
 
-                <div className="bread-cumbs-area bread-cumbs-bg">
-                    <div className="diplay-table">
-                        <div className="display-table-cell">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-7">
-                                        <h1>{this.props.Title}</h1>
-                                        <p>{this.props.Content}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="bread-cumbs-area bread-cumbs-bg">*/}
+                {/*    <div className="diplay-table">*/}
+                {/*        <div className="display-table-cell">*/}
+                {/*            <div className="container">*/}
+                {/*                <div className="row">*/}
+                {/*                    <div className="col-lg-7">*/}
+                {/*                        <h1 className="h1-style">{this.props.Title}</h1>*/}
+                {/*                        <span>{this.props.Content}</span>*/}
+                {/*                    </div>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 <section id="blog" className="our-blog main-blog">
                     <div className="container">
+                        <div className="row">
+                            <div className="col-lg-7">
+                                <h1 className="h1-style">{this.props.Title}</h1>
+                                <h3>{this.props.Content}</h3>
+                            </div>
+                        </div>
                         <div className="row">
                             {blogdata}
                             {/*<div className="col-lg-12 pagination-area text-center">*/}
@@ -118,8 +124,8 @@ BlogList.propTypes = {
 
 //Default Props
 BlogList.defaultProps = {
-    Title: "Tin Tức",
-    Content: "Cập nhật tin tức các khóa học lịch khai giảng trung tâm Đồ Họa Thế Hệ Mới."
+    Title: "Tin Tức / Lịch Khai Giảng / Thủ Thuật",
+    Content: "Cập nhật tin tức các khóa học , lịch khai giảng , thủ thuật học tại trung tâm Đồ Họa Thế Hệ Mới."
 };
 
 

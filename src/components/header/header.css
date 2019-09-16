@@ -6,11 +6,13 @@
 }
 .header-padding .h2-header{
     color: #3333FF;
-    font-weight: 800;
+    font-weight: 600;
     margin-top: 4px;
-    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    /*font-family: 'Monoton', cursive;*/
 
 }
+
 .header-padding-social {
     padding: 17px 0px 43px 7px;
     font-size: large;

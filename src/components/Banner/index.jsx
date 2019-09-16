@@ -31,21 +31,21 @@ export default class  Banner extends PureComponent {
                                                 <h1
                                                     className={
                                                         isVisible
-                                                            ? "animated fadeInDown slow opacityOne"
-                                                            : "opacityZero"
+                                                            ? "animated fadeInDown slow opacityOne h1-style"
+                                                            : "opacityZero h1-style"
                                                     }
                                                 >
                                                     {bannerone.Title}
                                                 </h1>
-                                                <p
-                                                    className={
-                                                        isVisible
-                                                            ? "animated fadeInDown slow opacityOne"
-                                                            : "opacityZero"
-                                                    }
-                                                >
-                                                    {bannerone.Content}
-                                                </p>
+                                                {/*<p*/}
+                                                {/*    className={*/}
+                                                {/*        isVisible*/}
+                                                {/*            ? "animated fadeInDown slow opacityOne"*/}
+                                                {/*            : "opacityZero"*/}
+                                                {/*    }*/}
+                                                {/*>*/}
+                                                {/*    {bannerone.Content}*/}
+                                                {/*</p>*/}
                                                 <div className="center-wrap">
                                                     {/*<AnchorLink href="#services" className="btn btn-primary">Khóa Học <Icofont icon="icofont-long-arrow-right" /></AnchorLink>*/}
                                                 </div>

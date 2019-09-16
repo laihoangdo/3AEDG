@@ -171,56 +171,56 @@ Work2.defaultProps = {
         {
             link: require("../../images/product/pts/pts-hv4.jpg"),
             name: "col-lg-4 col-md-6 mix photoshop p-0 mix-target",
-            author: "Tuấn Anh",
-            facebookLink: "https://facebook.com/profile.php?id=100014332325166"
+            author: "Thành Bộ",
+            facebookLink: "https://www.facebook.com/thanh.bo.9256"
         },
         {
             link: require("../../images/product/pts/pts-hv1.jpg"),
             name: "col-lg-4 col-md-6 mix photoshop p-0 mix-target",
-            author: "Tuấn Anh",
-            facebookLink: "https://facebook.com/profile.php?id=100014332325166"
+            author: "Thành Bộ",
+            facebookLink: "https://www.facebook.com/thanh.bo.9256"
         },
         {
             link: require("../../images/product/ai/ai-hv2.jpg"),
             name: "col-lg-4 col-md-6 mix illustrator p-0 mix-target",
-            author: "Tuấn Anh",
-            facebookLink: "https://facebook.com/profile.php?id=100014332325166"
+            author: "Thành Bộ",
+            facebookLink: "https://www.facebook.com/thanh.bo.9256"
         },
         {
             link: require("../../images/product/corel/corel-hv3.jpg"),
             name: "col-lg-4 col-md-6 mix corel p-0 mix-target",
-            author: "Tuấn Anh",
-            facebookLink: "https://facebook.com/profile.php?id=100014332325166"
+            author: "Thành Bộ",
+            facebookLink: "https://www.facebook.com/thanh.bo.9256"
         },
         {
             link: require("../../images/product/indesign/indesign-hv2.jpg"),
             name: "col-lg-4 col-md-6 mix indesign p-0 mix-target",
-            author: "Tuấn Anh",
-            facebookLink: "https://facebook.com/profile.php?id=100014332325166"
+            author: "Thành Bộ",
+            facebookLink: "https://www.facebook.com/thanh.bo.9256"
         },
         {
             link: require("../../images/product/autocad/autocad-hv1.jpg"),
             name: "col-lg-4 col-md-6 mix autocad p-0 mix-target",
-            author: "Thanh Châu",
-            facebookLink: "https://www.facebook.com/profile.php?id=100026725434352"
+            author: "Hoàng Đô",
+            facebookLink: "https://www.facebook.com/laihoang.do"
         },
         {
             link: require("../../images/product/3ds-max/3ds-max-hv1.jpg"),
             name: "col-lg-4 col-md-6 mix dmax p-0 mix-target",
-            author: "Thanh Châu",
-            facebookLink: "https://www.facebook.com/profile.php?id=100026725434352"
+            author: "Hoàng Đô",
+            facebookLink: "https://www.facebook.com/laihoang.do"
         },
         {
             link: require("../../images/product/3ds-max/3ds-max-hv2.jpg"),
             name: "col-lg-4 col-md-6 mix dmax p-0 mix-target",
-            author: "Thanh Châu",
-            facebookLink: "https://www.facebook.com/profile.php?id=100026725434352"
+            author: "Hoàng Đô",
+            facebookLink: "https://www.facebook.com/laihoang.do"
         },
         {
             link: require("../../images/product/sketchup/sketchup-hv3.jpg"),
             name: "col-lg-4 col-md-6 mix  p-0 mix-target sketchup",
-            author: "Thanh Châu",
-            facebookLink: "https://www.facebook.com/profile.php?id=100026725434352"
+            author: "Hoàng Đô",
+            facebookLink: "https://www.facebook.com/laihoang.do"
         },
     ]
 };
