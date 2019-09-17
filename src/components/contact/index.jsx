@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React,{}  from 'react';
 import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -7,8 +7,16 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import GoogleMapReact from 'google-map-react';
 import icon from '../../images/icons/marker-icon.png';
 const CustomComponent = ({ text }) => <div><img src={icon} alt="map" /></div>;
-export default class Contact extends PureComponent {
-    render() {
+export default function Contact ({SectionbgTitle,
+    sectionTitle,
+    sectionDescription,
+    AddTitle,
+    Address,
+    EmailTitle,
+    Email,
+    PhoneTitle,
+    center,zoom,
+    Phone}) {
         return (
             <React.Fragment>
                 <section id="contact" className="contact-area ptb-100">
@@ -17,9 +25,9 @@ export default class Contact extends PureComponent {
                             <div className="col-lg-12 text-center">
                                 <ScrollAnimation animateIn="fadeInUp">
                                     <div className="section-title">
-                                        <h2>{this.props.sectionTitle}</h2>
-                                        <h3>{this.props.sectionDescription}</h3>
-                                        <span className="section-title-bg">{this.props.SectionbgTitle}</span>
+                                        <h2>{sectionTitle}</h2>
+                                        <h3>{sectionDescription}</h3>
+                                        <span className="section-title-bg">{SectionbgTitle}</span>
                                     </div>
                                 </ScrollAnimation>
                         </div>
@@ -29,18 +37,18 @@ export default class Contact extends PureComponent {
                                 <div className="address-area">
                                     <div className="addess">
 
-                                        <h4>{this.props.AddTitle}  &nbsp;  <Icofont icon="icofont-google-map"/></h4>
-                                        <p>{this.props.Address}</p>
+                                        <h4>{AddTitle}  &nbsp;  <Icofont icon="icofont-google-map"/></h4>
+                                        <p>{Address}</p>
                                     </div>
                                     <div className="email">
 
-                                        <h4>{this.props.EmailTitle}  &nbsp; <Icofont icon="icofont-email"/></h4>
-                                        <p>{this.props.Email}</p>
+                                        <h4>{EmailTitle}  &nbsp; <Icofont icon="icofont-email"/></h4>
+                                        <p>{Email}</p>
                                     </div>
                                     <div className="phone">
 
-                                        <h4>{this.props.PhoneTitle} &nbsp; <Icofont icon="icofont-phone"/></h4>
-                                        <p>{this.props.Phone}</p>
+                                        <h4>{PhoneTitle} &nbsp; <Icofont icon="icofont-phone"/></h4>
+                                        <p>{Phone}</p>
                                     </div>
                                 </div>
                             </div>
@@ -50,8 +58,8 @@ export default class Contact extends PureComponent {
                                     <div style={{ height: '100%', width: '100%' }}>
                                     <GoogleMapReact
                                         bootstrapURLKeys={{ key: 'AIzaSyDTWAxQ7Z4GNC28ljvgSDBAmTiZ-eYiGog' }}
-                                        defaultCenter={this.props.center}
-                                        defaultZoom={this.props.zoom}
+                                        defaultCenter={center}
+                                        defaultZoom={zoom}
                                     >
                                         <CustomComponent
                                             lat={10.863770}
@@ -68,7 +76,6 @@ export default class Contact extends PureComponent {
                 </section>
             </React.Fragment>
         );
-    }
 }
 //Props Types
 Contact.propTypes = {

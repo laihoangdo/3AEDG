@@ -1,12 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, {} from 'react';
 import Icofont from 'react-icofont';
 import OwlCarousel from "react-owl-carousel3";
 import PropTypes from "prop-types";
 
-export default class Review extends PureComponent {
-    render() {
+export default function Review({testimonialsData}){
         //Testimonials loop start
-        const testimonialsitem = this.props.testimonialsData.map((testimonials, index) => (
+        const testimonialsitem = testimonialsData.map((testimonials, index) => (
             <div className="single-testimonial-item text-center" key={index}>
                 <Icofont icon="icofont-quote-left" />
                 <p>{testimonials.Content}</p>
@@ -46,7 +45,6 @@ export default class Review extends PureComponent {
                 </section>
             </React.Fragment>
         );
-    }
 }
 
 //Props Types

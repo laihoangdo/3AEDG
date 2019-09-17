@@ -1,10 +1,13 @@
-import React,{PureComponent} from 'react';
+import React,{} from 'react';
 import PropTypes from "prop-types";
 import Icofont from 'react-icofont';
-import './footer.css';
 
-export default class  Footer extends PureComponent {
-    render(){
+export default function Footer({copyrightText,
+    FacebookLink,
+    ZaloLink,
+    InstagramLink,
+    socialTitle,
+    linkedinLink}){
         return(
         <React.Fragment>
                 <footer className="footer">
@@ -15,16 +18,16 @@ export default class  Footer extends PureComponent {
                              data-show-faces="true" data-share="true"></div>
                         <div className="row">
                             <div className="col-md-5">
-                                <p className="copyright">{this.props.copyrightText}</p>
+                                <p className="copyright">{copyrightText}</p>
                             </div>
                             <div className="col-md-7">
                                 <div className="social-icons bottom">
                                     <ul className="list-inline">
-                                        <li>{this.props.socialTitle} </li>
-                                        <li><a href={this.props.FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
-                                        <li><a href={this.props.ZaloLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati" /></a></li>
-                                        <li><a href={this.props.InstagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>
-                                        <li><a href={this.props.linkedinLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-linkedin" /></a></li>
+                                        <li>{socialTitle} </li>
+                                        <li><a href={FacebookLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-facebook" /></a></li>
+                                        <li><a href={ZaloLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-technorati" /></a></li>
+                                        <li><a href={InstagramLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-instagram" /></a></li>
+                                        <li><a href={linkedinLink} rel="noopener noreferrer" target="_blank"><Icofont icon="icofont-linkedin" /></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -105,7 +108,6 @@ export default class  Footer extends PureComponent {
                 </footer>
             </React.Fragment>
         )
-    }
 
 }
 //Props Types
@@ -115,6 +117,7 @@ Footer.propTypes = {
     ZaloLink: PropTypes.string,
     InstagramLink: PropTypes.string,
     linkedinLink: PropTypes.string,
+    socialTitle: PropTypes.string
 };
 
 //Default Props

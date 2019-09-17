@@ -1,13 +1,11 @@
-import React,{PureComponent} from 'react';
+import React,{} from 'react';
 import OwlCarousel from "react-owl-carousel3";
 import Icofont from "react-icofont";
 import PropTypes from "prop-types";
 import VisibilitySensor from "react-visibility-sensor";
 
-export default class  Banner extends PureComponent {
-
-    render(){
-        const banneronedata = this.props.banneronesData.map(
+ export default function Banner({banneronesData ,thumbsData}){
+        const banneronedata = banneronesData.map(
             (bannerone, index) => (
                 <div className={bannerone.BgClass} key={index}>
                     <div className="diplay-table">
@@ -63,7 +61,7 @@ export default class  Banner extends PureComponent {
         //BannerOne loop END
 
         //Thumbs loop Start
-        const thumbdata = this.props.thumbsData.map((thumb, index) => (
+        const thumbdata = thumbsData.map((thumb, index) => (
             <div className="owl-thumb-item" key={index}>
                 <Icofont icon={thumb.ThumbIcon} />
                 <h3>{thumb.ThumbTitle}</h3>
@@ -95,7 +93,6 @@ export default class  Banner extends PureComponent {
             </div>
         </React.Fragment>
         )
-    }
 
 }
 //Props Types

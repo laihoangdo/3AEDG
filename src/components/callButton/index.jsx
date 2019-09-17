@@ -1,9 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, {} from 'react';
 import './callButton.css';
 import Icofont from 'react-icofont';
 
-export default class CallButton extends PureComponent {
-    render() {
+export default function CallButton(){
         return (
             <React.Fragment>
                 <div className="link-text">
@@ -15,5 +14,5 @@ export default class CallButton extends PureComponent {
                 </div>
             </React.Fragment>
         );
-    }
+
 }
