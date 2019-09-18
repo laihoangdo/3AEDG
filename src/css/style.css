@@ -473,7 +473,7 @@
      background-size: cover;
      background-position: center center;
      background-color: #dddddd;
-     height: 400px;
+     height: 32rem;
      font-size: 20px;
      color: #fff;
    }
@@ -652,7 +652,7 @@
    ========================= */
    .services {
        background-color: #fff;
-       margin-top: 130px;
+       /*margin-top: 130px;*/
    }
    .service-item {
        background-color: #f5f8f9;

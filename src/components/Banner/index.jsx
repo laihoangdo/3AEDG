@@ -87,9 +87,9 @@ import VisibilitySensor from "react-visibility-sensor";
                     {banneronedata}
                 </OwlCarousel>
 
-                <div className="owl-thumbs">
-                    {thumbdata}
-                </div>
+                {/*<div className="owl-thumbs">*/}
+                    {/*{thumbdata}*/}
+                {/*</div>*/}
             </div>
         </React.Fragment>
         )
