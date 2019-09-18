@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {HashRouter , BrowserRouter} from 'react-router-dom';
+// import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory as createHistory } from 'history'
+import ConnectedRouter from 'react-router-redux';
 import rootReducer from "./store";
 // import { createLogger } from 'redux-logger';
 import {applyMiddleware, createStore} from "redux";
@@ -19,11 +22,14 @@ const store =  createStore(
     composeWithDevTools(applyMiddleware(...middleware))
 
 );
+const history = createHistory({
+    basename: process.env.PUBLIC_URL,
+});
 ReactDOM.render(
     <Provider store={store}>
-    <BrowserRouter>
+        <BrowserRouter history={history}>
         <App />
-    </BrowserRouter>
+        </BrowserRouter>
     </Provider>
      
      , document.getElementById('root'));
