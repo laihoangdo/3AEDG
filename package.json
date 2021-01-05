@@ -6,7 +6,7 @@
   "proxy": "https://nodejssalesforce.herokuapp.com/",
   "dependencies": {
     "animate.css": "^3.7.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "mdbreact": "^4.18.0",
     "react": "^16.8.2",
